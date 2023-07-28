@@ -22,6 +22,16 @@
 };
 
 / {
+    behaviors {
+        caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            continue-list = <>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
