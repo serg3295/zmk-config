@@ -46,7 +46,6 @@
         label = "CAPS_WORD";
         #binding-cells = <0>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
-        continue-list = <>;
       };
       sl_sk: sl_sk {
         compatible = "zmk,behavior-hold-tap";
