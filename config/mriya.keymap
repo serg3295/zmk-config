@@ -98,10 +98,10 @@
 
       lower_layer {
         bindings = <
-                  &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1      &kp F9         &kp F10       &kp F2        &kp F4                &kp F6              &kp F8                 &kp LA(RIGHT)
-          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)            &sl_sk CA LC(LALT)  &kp LS(LC(BSPC))       &kp LS(LC(DEL))      &trans
-                  &trans        &td0       &kp LEFT     &kp DOWN    &kp RIGHT   &td1           &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)          &kp LC(RIGHT)       &sl CTL                &sl_sk CS LC(LSHFT)
-                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS) &kp DEL        &kp LA(DOWN)  &kp LC(PG_UP) &kp LC(LS(LA(DOWN)))  &kp LC(PG_DN)       &sl sl_sk SA LS(LALT)  &trans
+                  &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1      &kp F9         &kp F10       &kp F2        &kp F4                &kp F6              &kp F8              &kp LA(RIGHT)
+          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)            &sl_sk CA LC(LALT)  &kp LS(LC(BSPC))    &kp LS(LC(DEL))     &trans
+                  &trans        &td0       &kp LEFT     &kp DOWN    &kp RIGHT   &td1           &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)          &kp LC(RIGHT)       &sl CTL             &sl_sk CS LC(LSHFT)
+                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS) &kp DEL        &kp LA(DOWN)  &kp LC(PG_UP) &kp LC(LS(LA(DOWN)))  &kp LC(PG_DN)       &sl_sk SA LS(LALT)  &trans
                                            &trans       &trans      &trans      &trans         &trans        &mo ADJ       &trans                &trans
         >;
       };
