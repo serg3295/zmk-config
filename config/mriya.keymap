@@ -119,7 +119,7 @@
       adjust_layer {
         bindings = <
                       &prev_cgh    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR      &bt BT_CLR  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &next_cgh
-          &kp PSCRN   &bootloader  &kp GRAVE     &kp LT        &kp EQUAL     &kp GT        &kp EXCL        &kp CARET   &kp LBKT      &kp HASH      &kp RBKT      &none         &bootloader  &sk RGUI
+          &kp PSCRN   &bootloader  &kp GRAVE     &kp LT        &kp EQUAL     &kp GT        &kp EXCL        &kp CARET   &kp LBKT      &kp HASH      &kp RBKT      &none         &bootloader  &key_repeat
                       &trans       &kp UNDER     &kp LPAR      &kp MINUS     &kp RPAR      &kp BSLH        &kp PRCNT   &kp LBRC      &kp PLUS      &kp RBRC      &kp SEMI      &kp SQT
                       &sys_reset   &kp SPACE     &kp PIPE      &kp TILDE     &kp AMPS      &kp AT          &kp DLLR    &kp STAR      &kp COMMA     &kp DOT       &kp FSLH      &sys_reset
                                                  &trans        &trans        &none         &trans          &trans      &none         &trans        &trans
