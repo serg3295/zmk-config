@@ -16,6 +16,9 @@
 #define CS  5
 #define SA  6
 #define CA  7
+#define COPY_LN LC(LA(FSLH)) LC(LA(LS(DOWN)))
+#define NEXT_ED LC(PG_UP) &next_ed
+#define PREV_ED LC(PG_DN) &prev_ed
 
 &lt {
   quick_tap_ms = <200>;
@@ -27,6 +30,39 @@
 
 / {
     behaviors {
+      macros {
+        next_ed: next_ed {
+          label = "View:_Open_Next_Editor_in_Group";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp K &kp PG_DN>
+            , <&macro_release &kp LCTRL>
+            ;
+        };
+      };
+        prev_ed: prev_ed {
+          label = "View:_Open_Previous_Editor_in_Group";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp K &kp PG_UP>
+            , <&macro_release &kp LCTRL>
+            ;
+        };
+        show_hover: show_hover {
+          label = "Show hover";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp K &kp I>
+            , <&macro_release &kp LCTRL>
+            ;
+        };
+
       td0: tap_dance_0 {
         compatible = "zmk,behavior-tap-dance";
         label = "Home";
@@ -41,6 +77,18 @@
         tapping-term-ms = <200>;
         bindings = <&kp END>, <&kp LC(END)>;
        };
+
+      // copy_line: copy_line_down {
+      //   compatible = "zmk,behavior-hold-tap";
+      //   label = "Copy line down & comment";
+      //   #binding-cells = <2>;
+      //   flavor = "tap-preferred";
+      //   tapping-term-ms = <200>;
+      //   // quick-tap-ms = <125>;
+      //   copy_line_down;
+      //   bindings = <&kp LC(LA(LS(DOWN)))>, <&kp LC(LA(/))>;
+      //  };
+
       caps_word: caps_word {
         compatible = "zmk,behavior-caps-word";
         label = "CAPS_WORD";
@@ -48,50 +96,14 @@
         mods = <(MOD_LSFT|MOD_RSFT)>;
         continue-list = <>;
       };
-      sl_sk: sl_sk {
-        compatible = "zmk,behavior-hold-tap";
-        label = "sl_sk";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&sl>, <&sk>;
-      };
-      macros {
-        next_cgh: next_cgh {
-          label = "Go_to_next_change";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp K>
-            , <&macro_release &kp LCTRL>
-            , <&macro_tap &kp F8>
-            ;
-        };
-      };
-        prev_cgh: prev_cgh {
-          label = "Go_to_previous_change";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp K>
-            , <&macro_release &kp LCTRL>
-            , <&macro_press &kp LSHIFT>
-            , <&macro_tap &kp F8>
-            , <&macro_release &kp LSHIFT>
-            ;
-        };
-        sh_hover: show_hover {
-          label = "Show hover";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp K &kp I>
-            , <&macro_release &kp LCTRL>
-            ;
-        };
+      // sl_sk: sl_sk {
+      //   compatible = "zmk,behavior-hold-tap";
+      //   label = "sl_sk";
+      //   #binding-cells = <2>;
+      //   flavor = "tap-preferred";
+      //   tapping-term-ms = <200>;
+      //   bindings = <&sl>, <&sk>;
+      // };
     };
 
     keymap {
@@ -108,31 +120,31 @@
 
       lower_layer {
         bindings = <
-                  &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1      &kp F9         &kp F10       &kp F2        &kp F4                &kp F6              &kp F8              &kp LA(RIGHT)
-          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)            &sl_sk CA LC(LALT)  &kp LC(BSPC)        &kp LC(DEL)         &sh_hover
-                  &trans        &td0       &kp LEFT     &kp DOWN    &kp RIGHT   &td1           &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)          &kp LC(RIGHT)       &sl CTL             &sl_sk CS LC(LSHFT)
-                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS) &kp DEL        &kp LA(DOWN)  &kp LC(PG_UP) &kp LC(LS(LA(DOWN)))  &kp LC(PG_DN)       &sl_sk SA LS(LALT)  &trans
-                                           &trans       &trans      &trans      &trans         &trans        &mo ADJ       &trans                &trans
+                  &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1      &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8        &kp LA(RIGHT)
+          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)    &show_hover    &kp LC(BSPC)  &kp LC(DEL)         &sl CA
+                  &trans        &td0       &kp LEFT     &kp DOWN    &kp RIGHT   &td1           &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CTL       &mt CS LC(LSHFT)
+                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS) &kp DEL        &kp LA(DOWN)  &sl SA        &mt COPY_LN   &key_repeat    &kp LC(F)     &trans
+                                           &trans       &trans      &trans      &trans         &trans        &mo ADJ       &trans        &trans
         >;
       };
 
       raise_layer {
         bindings = <
-                    &prev_cgh  &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans            &next_cgh
-          &kp PSCRN &trans     &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &kp LS(LC(BSPC))  &kp LS(LC(DEL))  &key_repeat
-                    &trans     &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp PRCNT  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI          &kp SQT
-                    &trans     &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH          &trans
-                                          &trans    &trans     &mo ADJ   &trans           &trans     &none     &trans     &trans
+                    &kp LC(LA(LBKT))  &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans            &kp LC(LA(RBKT))
+          &kp PSCRN &trans            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &kp LS(LC(BSPC))  &kp LS(LC(DEL))  &none
+                    &trans            &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp PRCNT  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI          &kp SQT
+                    &trans            &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH          &trans
+                                                 &trans    &trans     &mo ADJ   &trans           &trans     &none     &trans     &trans
         >;
       };
 
       adjust_layer {
         bindings = <
-                    &prev_cgh    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR          &bt BT_CLR  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &next_cgh
-          &kp CAPS  &bootloader  &kp GRAVE     &kp LT        &kp EQUAL     &kp GT        &kp EXCL            &kp CARET   &kp LBKT      &kp HASH      &kp RBKT      &none         &bootloader  &sk RGUI
-                    &trans       &kp UNDER     &kp LPAR      &kp MINUS     &kp RPAR      &kp BSLH            &kp PRCNT   &kp LBRC      &kp PLUS      &kp RBRC      &kp SEMI      &kp SQT
-                    &sys_reset   &kp SPACE     &kp PIPE      &kp TILDE     &kp AMPS      &kp AT              &kp DLLR    &kp STAR      &kp COMMA     &kp DOT       &kp FSLH      &sys_reset
-                                               &trans        &trans        &none         &trans              &trans      &none         &trans        &trans
+                    &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR   &bt BT_SEL 3      &bt BT_SEL 2  &bt BT_SEL 1      &bt BT_SEL 0  &bootloader
+          &kp CAPS  &sys_reset  &none         &none            &kp LS(LA(UP))   &none             &kp C_BRI_UP        &kp LC(BSLH) &kp LC(LA(LEFT))  &none         &kp LC(LA(RIGHT)) &none         &sys_reset  &sk RGUI
+                    &trans      &none         &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(LA(I))       &none        &kp LC(LS(PG_UP)) &none         &kp LC(LS(PG_DN)) &none         &none
+                    &none       &kp LC(U)     &kp LS(LA(LEFT)) &none            &kp LS(LA(RIGHT)) &kp C_BRI_DN        &kp LA(BSLH) &mt PREV_ED       &none         &mt NEXT_ED       &none         &none
+                                              &trans           &trans           &none             &trans              &trans       &none             &trans        &trans
         >;
       };
 
