@@ -66,6 +66,17 @@
           , <&macro_release &kp LCTRL>
           ;
       };
+      chg_case: transform_to {
+        label = "TRANSFORM_TO";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+          = <&macro_press &kp LCTRL &kp LSHIFT>
+          , <&macro_tap &kp P>
+          , <&macro_release &kp LSHIFT &kp LCTRL>
+          , <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M
+          ;
+      };
     };
 
     behaviors {
@@ -100,8 +111,8 @@
       lower_layer {
         bindings = <
                   &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1      &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8        &kp LA(RIGHT)
-          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)    &show_hover    &kp LC(BSPC)  &kp LC(DEL)         &sl CA
-                  &trans        &td0       &kp LEFT     &kp DOWN    &kp RIGHT   &td1           &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CTL       &mt CS LC(LSHFT)
+          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)    &show_hover    &kp LC(BSPC)  &kp LC(DEL)       &sl CA
+                  &trans        &td0       &kp LEFT     &kp DOWN    &kp RIGHT   &td1           &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CTL       &mt CS LC(LSHIFT)
                   &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS) &kp DEL        &kp LA(DOWN)  &sl SA        &mt COPY_LN   &key_repeat    &kp LC(F)     &trans
                                            &trans       &trans      &trans      &trans         &trans        &mo ADJ       &trans        &trans
         >;
@@ -110,7 +121,7 @@
       raise_layer {
         bindings = <
                     &kp LC(LA(LBKT))  &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans            &kp LC(LA(RBKT))
-          &kp PSCRN &trans            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &kp LS(LC(BSPC))  &kp LS(LC(DEL))  &none
+          &kp CAPS  &trans            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &kp LS(LC(BSPC))  &kp LS(LC(DEL))  &kp PSCRN
                     &trans            &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp PRCNT  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI          &kp SQT
                     &trans            &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH          &trans
                                                  &trans    &trans     &mo ADJ   &trans           &trans     &trans    &trans     &trans
@@ -120,7 +131,7 @@
       adjust_layer {
         bindings = <
                     &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bootloader
-          &kp CAPS  &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &kp C_BRI_UP        &none        &none         &none         &none         &none          &sys_reset  &sk RGUI
+          &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &kp C_BRI_UP        &none        &none         &none         &none         &none          &sys_reset  &sk RGUI
                     &trans      &LS(HOME)     &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LC(BSLH) &mt MOVE_L    &none         &mt MOVE_R    &kp LS(LA(F3)) &none
                     &none       &kp LC(U)     &kp LS(LC(LEFT)) &LS(LA(I))       &kp LS(LC(RIGHT)) &kp C_BRI_DN        &kp LA(BSLH) &mt PREV_ED   &none         &mt NEXT_ED   &kp LA(F3)     &none
                                               &trans           &trans           &trans            &trans              &trans       &trans        &trans        &trans
