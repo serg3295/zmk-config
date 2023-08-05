@@ -21,6 +21,8 @@
 #define PREV_ED LC(PG_DN) &prev_ed
 #define MOVE_L  LC(LS(PG_UP)) LC(LA(LEFT))
 #define MOVE_R  LC(LS(PG_DN)) LC(LA(RIGHT))
+#define K_E     LC(END) END
+#define K_H     LC(HOME) HOME
 
 &lt {
   quick_tap_ms = <200>;
@@ -80,20 +82,28 @@
     };
 
     behaviors {
-      td0: tap_dance_0 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "HOME";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp HOME>, <&kp LC(HOME)>;
+      // td0: tap_dance_0 {
+      //   compatible = "zmk,behavior-tap-dance";
+      //   label = "HOME";
+      //   #binding-cells = <0>;
+      //   tapping-term-ms = <200>;
+      //   bindings = <&kp HOME>, <&kp LC(HOME)>;
+      // };
+      // td1: tap_dance_1 {
+      //   compatible = "zmk,behavior-tap-dance";
+      //   label = "END";
+      //   #binding-cells = <0>;
+      //   tapping-term-ms = <200>;
+      //   bindings = <&kp END>, <&kp LC(END)>;
+      //  };
+      ht3: ht_300ms {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_TAP_300ms";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&kp>, <&kp>;
       };
-      td1: tap_dance_1 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "END";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp END>, <&kp LC(END)>;
-       };
     };
 
     keymap {
@@ -112,7 +122,7 @@
         bindings = <
                   &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1      &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8        &kp LA(RIGHT)
           &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)    &show_hover    &kp LC(BSPC)  &kp LC(DEL)       &sl CA
-                  &trans        &td0       &kp LEFT     &kp DOWN    &kp RIGHT   &td1           &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CTL       &mt CS LC(LSHIFT)
+                  &trans        &ht3 K_H   &kp LEFT     &kp DOWN    &kp RIGHT   &ht3 K_E       &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CTL       &mt CS LC(LSHIFT)
                   &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS) &kp DEL        &kp LA(DOWN)  &sl SA        &mt COPY_LN   &key_repeat    &kp LC(F)     &trans
                                            &trans       &trans      &trans      &trans         &trans        &mo ADJ       &trans        &trans
         >;
@@ -140,11 +150,11 @@
 
       ctrl_layer {
         bindings = <
-                &kp LC(GRAVE) &kp LC(N7)  &kp LC(N5)  &kp LC(N3)  &kp LC(N1)  &kp LC(N9)    &kp LC(N0)  &kp LC(N2)  &kp LC(N4)     &kp LC(N6)   &kp LC(N8)    &kp LC(MINUS)
-          &none &kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)     &kp LC(Y)   &kp LC(U)   &kp LC(I)      &kp LC(O)    &kp LC(P)     &kp LC(LBKT)   &kp LC(RBKT)
-                &trans        &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)     &kp LC(H)   &kp LC(J)   &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(SQT)
-                &none         &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)     &kp LC(N)   &kp LC(M)   &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)  &none
-                                          &kp LC(RET) &kp LC(BSPC)  &none     &none         &none       &none       &kp LC(SPACE)  &none
+                &kp LC(GRAVE) &kp LC(N7)  &kp LC(N5)  &kp LC(N3)  &kp LC(N1)  &kp LC(N9)          &kp LC(N0)  &kp LC(N2)  &kp LC(N4)     &kp LC(N6)   &kp LC(N8)    &kp LC(MINUS)
+          &none &kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)           &kp LC(Y)   &kp LC(U)   &kp LC(I)      &kp LC(O)    &kp LC(P)     &kp LC(LBKT)   &kp LC(RBKT)
+                &trans        &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)           &kp LC(H)   &kp LC(J)   &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(SQT)
+                &none         &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)           &kp LC(N)   &kp LC(M)   &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)  &none
+                                          &kp LC(RET) &kp LC(BSPC)  &none     &none               &none       &none       &kp LC(SPACE)  &none
         >;
       };
 
