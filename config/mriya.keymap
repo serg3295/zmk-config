@@ -76,7 +76,7 @@
           = <&macro_press &kp LCTRL &kp LSHIFT>
           , <&macro_tap &kp P>
           , <&macro_release &kp LSHIFT &kp LCTRL>
-          , <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M
+          , <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>
           ;
       };
     };
@@ -142,8 +142,8 @@
         bindings = <
                     &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bootloader
           &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &kp C_BRI_UP        &none        &none         &none         &none         &none          &sys_reset  &sk RGUI
-                    &trans      &LS(HOME)     &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LC(BSLH) &mt MOVE_L    &none         &mt MOVE_R    &kp LS(LA(F3)) &none
-                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &LS(LA(I))       &kp LS(LC(RIGHT)) &kp C_BRI_DN        &kp LA(BSLH) &mt PREV_ED   &none         &mt NEXT_ED   &kp LA(F3)     &none
+                    &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LC(BSLH) &mt MOVE_L    &none         &mt MOVE_R    &kp LS(LA(F3)) &none
+                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I))    &kp LS(LC(RIGHT)) &kp C_BRI_DN        &kp LA(BSLH) &mt PREV_ED   &none         &mt NEXT_ED   &kp LA(F3)     &none
                                               &trans           &trans           &trans            &trans              &trans       &trans        &trans        &trans
         >;
       };
