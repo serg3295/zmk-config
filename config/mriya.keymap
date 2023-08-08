@@ -162,7 +162,7 @@
         bindings = <
                 &kp LS(LC(GRAVE)) &kp LS(LC(N7))  &kp LS(LC(N5))  &kp LS(LC(N3))  &kp LS(LC(N1))  &kp LS(LC(N9))    &kp LS(LC(N0))  &kp LS(LC(N2))  &kp LS(LC(N4))     &kp LS(LC(N6))   &kp LS(LC(N8))    &kp LS(LC(MINUS))
           &none &kp LS(LC(TAB))   &kp LS(LC(Q))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))     &kp LS(LC(Y))   &kp LS(LC(U))   &kp LS(LC(I))      &kp LS(LC(O))    &kp LS(LC(P))     &kp LS(LC(LBKT))   &kp LS(LC(RBKT))
-                &trans            &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))     &kp LS(LC(H))   &kp LS(LC(J))   &kp LS(LC(K))      &kp LS(LC(L))    &kp LS(LC(SEMI))  &kp LS(LC(SQT))
+                &trans            &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))     &kp LS(LC(H))   &kp LS(LC(J))   &kp LS(LC(K))      &kp LS(LC(L))    &kp LS(LC(SEMI))  &trans
                 &none             &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))     &kp LS(LC(N))   &kp LS(LC(M))   &kp LS(LC(COMMA))  &kp LS(LC(DOT))  &kp LS(LC(FSLH))  &none
                                                   &kp LS(LC(RET)) &kp LS(LC(BSPC))  &none         &none             &none           &none           &kp LS(LC(SPACE))  &none
         >;
