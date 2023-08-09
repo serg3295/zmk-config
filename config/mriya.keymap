@@ -122,7 +122,7 @@
         bindings = <
                   &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1      &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8        &kp LA(RIGHT)
           &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS     &kp F11        &kp F12       &kp LC(K)     &kp LC(UP)    &show_hover    &kp LC(BSPC)  &kp LC(DEL)       &key_repeat
-                  &trans        &ht3 K_H   &kp LEFT     &kp DOWN    &kp RIGHT   &ht3 K_E       &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CTL       &mt CS LC(LSHIFT)
+                  &trans        &ht3 K_H   &kp LEFT     &kp DOWN    &kp RIGHT   &ht3 K_E       &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &mt CS LC(LSHIFT)  &sl CTL
                   &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS) &kp DEL        &kp LA(DOWN)  &sl SA        &mt COPY_LN   &sl CA         &kp LC(F)     &trans
                                            &trans       &trans      &trans      &trans         &trans        &mo ADJ       &trans        &trans
         >;
