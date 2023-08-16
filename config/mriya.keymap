@@ -81,23 +81,42 @@
           , <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>
           ;
       };
+      ctrl_k: ctrl_k_keycode {
+        label = "CTRL_K_KEYCODE";
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_press &kp LCTRL>,
+          <&macro_tap &kp K>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>,
+          <&macro_release &kp LCTRL>;
+      };
     };
 
     behaviors {
-      // td0: tap_dance_0 {
-      //   compatible = "zmk,behavior-tap-dance";
-      //   label = "HOME";
-      //   #binding-cells = <0>;
-      //   tapping-term-ms = <200>;
-      //   bindings = <&kp HOME>, <&kp LC(HOME)>;
-      // };
-      // td1: tap_dance_1 {
-      //   compatible = "zmk,behavior-tap-dance";
-      //   label = "END";
-      //   #binding-cells = <0>;
-      //   tapping-term-ms = <200>;
-      //   bindings = <&kp END>, <&kp LC(END)>;
-      //  };
+      fold: fold {
+        compatible = "zmk,behavior-tap-dance";
+        label = "FOLD";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&ht_mt N0 LS(LC(LBKT))>, <&ctrl_k LBKT>;
+      };
+      unfold: unfold {
+        compatible = "zmk,behavior-tap-dance";
+        label = "UNFOLD";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&ht_mt J LS(LC(RBKT))>, <&ctrl_k RBKT>;
+      };
+      ht_mt: hold_tap_ctrl_k {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_TAP_CTRL_K";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&ctrl_k>, <&kp>;
+      };
       ht3: ht_300ms {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLD_TAP_300ms";
@@ -142,11 +161,11 @@
 
       adjust_layer {
         bindings = <
-                    &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bootloader
-          &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &none               &none        &none         &none         &none         &none          &sys_reset  &sk RGUI
-                    &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LC(BSLH) &mt MOVE_L    &none         &mt MOVE_R    &kp LS(LA(F3)) &kp C_BRI_UP
-                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I))    &kp LS(LC(RIGHT)) &none               &kp LA(BSLH) &mt PREV_ED   &none         &mt NEXT_ED   &kp LA(F3)     &kp C_BRI_DN
-                                              &trans           &trans           &trans            &trans              &trans       &trans        &trans        &trans
+                    &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader
+          &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &none               &kp LS(LA(F3)) &none         &none         &none         &none         &sys_reset  &sk RGUI
+                    &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &mt MOVE_L    &kp LC(BSLH)  &mt MOVE_R    &fold         &kp C_BRI_UP
+                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I))    &kp LS(LC(RIGHT)) &none               &kp LA(F3)     &mt PREV_ED   &kp LA(BSLH)  &mt NEXT_ED   &unfold       &kp C_BRI_DN
+                                              &trans           &trans           &trans            &trans              &trans         &trans        &trans        &trans
         >;
       };
 
