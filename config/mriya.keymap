@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Andrei Gaevskii
+ * Copyright (c) 2023 serg3295
  *
  * SPDX-License-Identifier: MIT
  */
@@ -17,8 +17,8 @@
 #define SA  6
 #define CA  7
 #define COPY_LN LC(LA(FSLH)) LC(LA(LS(DOWN)))
-#define NEXT_ED LC(PG_UP) &next_ed
-#define PREV_ED LC(PG_DN) &prev_ed
+#define NEXT_ED PG_DN LC(PG_DN)
+#define PREV_ED PG_UP LC(PG_UP)
 #define MOVE_L  LC(LS(PG_UP)) LC(LA(LEFT))
 #define MOVE_R  LC(LS(PG_DN)) LC(LA(RIGHT))
 #define K_E     LC(END) END
@@ -40,26 +40,26 @@
 
 / {
     macros {
-      next_ed: next_ed {
-        label = "OPEN_NEXT_EDITOR";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-          = <&macro_press &kp LCTRL>
-          , <&macro_tap &kp K &kp PG_DN>
-          , <&macro_release &kp LCTRL>
-          ;
-      };
-      prev_ed: prev_ed {
-        label = "OPEN_PREVIOUS_EDITOR";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-          = <&macro_press &kp LCTRL>
-          , <&macro_tap &kp K &kp PG_UP>
-          , <&macro_release &kp LCTRL>
-          ;
-      };
+      // next_ed: next_ed {
+      //   label = "OPEN_NEXT_EDITOR";
+      //   compatible = "zmk,behavior-macro";
+      //   #binding-cells = <0>;
+      //   bindings
+      //     = <&macro_press &kp LCTRL>
+      //     , <&macro_tap &kp K &kp PG_DN>
+      //     , <&macro_release &kp LCTRL>
+      //     ;
+      // };
+      // prev_ed: prev_ed {
+      //   label = "OPEN_PREVIOUS_EDITOR";
+      //   compatible = "zmk,behavior-macro";
+      //   #binding-cells = <0>;
+      //   bindings
+      //     = <&macro_press &kp LCTRL>
+      //     , <&macro_tap &kp K &kp PG_UP>
+      //     , <&macro_release &kp LCTRL>
+      //     ;
+      // };
       show_hover: show_hover {
         label = "SHOW_HOVER";
         compatible = "zmk,behavior-macro";
@@ -109,6 +109,21 @@
         tapping-term-ms = <200>;
         bindings = <&ht_mt J LS(LC(RBKT))>, <&ctrl_k RBKT>;
       };
+      // next_ed: next_editor {
+      //   compatible = "zmk,behavior-hold-tap";
+      //   label = "NEXT_EDITOR";
+      //   #binding-cells = <2>;
+      //   tapping-term-ms = <300>;
+      //   bindings = <&ctrl_k>, <&kp>;
+      // };
+      // prev_ed: previous_editor {
+      //   compatible = "zmk,behavior-hold-tap";
+      //   label = "PREVIOUS_EDITOR";
+      //   #binding-cells = <2>;
+      //   tapping-term-ms = <300>;
+      //   bindings = <&ctrl_k>, <&kp>;
+      // };
+
       ht_mt: hold_tap_ctrl_k {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLD_TAP_CTRL_K";
@@ -161,11 +176,11 @@
 
       adjust_layer {
         bindings = <
-                    &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader
-          &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &none               &kp LS(LA(F3)) &none         &none         &none         &none         &sys_reset  &sk RGUI
-                    &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &mt MOVE_L    &kp LC(BSLH)  &mt MOVE_R    &fold         &kp C_BRI_UP
-                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I))    &kp LS(LC(RIGHT)) &none               &kp LA(F3)     &mt PREV_ED   &kp LA(BSLH)  &mt NEXT_ED   &unfold       &kp C_BRI_DN
-                                              &trans           &trans           &trans            &trans              &trans         &trans        &trans        &trans
+                    &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0  &bootloader
+          &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &none               &kp LS(LA(F3)) &none          &none         &none           &none         &sys_reset  &sk RGUI
+                    &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &mt MOVE_L     &kp LC(BSLH)  &mt MOVE_R      &fold         &kp C_BRI_UP
+                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I))    &kp LS(LC(RIGHT)) &none               &kp LA(F3)     &ht_mt PREV_ED &kp LA(BSLH)  &ht_mt NEXT_ED  &unfold       &kp C_BRI_DN
+                                              &trans           &trans           &trans            &trans              &trans         &trans         &trans        &trans
         >;
       };
 
