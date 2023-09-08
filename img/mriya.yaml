@@ -1,0 +1,479 @@
+layers:
+  Base:
+  - '`'
+  - '7'
+  - '5'
+  - '3'
+  - '1'
+  - '9'
+  - '0'
+  - '2'
+  - '4'
+  - '6'
+  - '8'
+  - '-'
+  - {t: LGUI, h: sticky}
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - ']'
+  - ESCAPE
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - ⇧
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ⇧
+  - ⮐
+  - BSPC
+  - Lower
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - Raise
+  - ⎵
+  - RALT
+  Lower:
+  - LA(LEFT)
+  - F7
+  - F5
+  - F3
+  - F1
+  - F9
+  - F10
+  - F2
+  - F4
+  - F6
+  - F8
+  - LA(RIGHT)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PG UP
+  - PG DN
+  - ↑
+  - INS
+  - F11
+  - F12
+  - LC(K)
+  - ^↑
+  - '&show_hover'
+  - {t: LC(BSPC), h: LC(LS(BSPC))}
+  - {t: LC(DEL), h: LC(LS(DEL))}
+  - '&key_repeat'
+  - {t: ▽, type: trans}
+  - {t: HOME, h: ⇤}
+  - ←
+  - ↓
+  - →
+  - {t: END, h: ⇥}
+  - LA(UP)
+  - ^←
+  - ^↓
+  - ^→
+  - {t: LC(LSHIFT), h: '5'}
+  - {t: ctrl, h: sticky}
+  - {t: ▽, type: trans}
+  - ⎌
+  - ✂️
+  - 📄
+  - 📋
+  - DEL
+  - LA(DOWN)
+  - {t: sa, h: sticky}
+  - {t: LC(LA(LS(DOWN))), h: LC(LA(FSLH))}
+  - {t: ca, h: sticky}
+  - LC(F)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Adjust
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Raise:
+  - LC(LA(LBKT))
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LC(LA(RBKT))
+  - CAPS
+  - {t: ▽, type: trans}
+  - '`'
+  - <
+  - '='
+  - '>'
+  - '!'
+  - ^
+  - '['
+  - '#'
+  - ']'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PSCRN
+  - {t: ▽, type: trans}
+  - _
+  - (
+  - '-'
+  - )
+  - \
+  - '%'
+  - '{'
+  - +
+  - '}'
+  - ;
+  - ''''
+  - {t: ▽, type: trans}
+  - ⎵
+  - '|'
+  - '~'
+  - '&'
+  - '@'
+  - $
+  - '*'
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Adjust
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Adjust:
+  - BOOT
+  - 🛜1
+  - 🛜2
+  - 🛜3
+  - 🛜4
+  - 🛜❌
+  - 🛜❌
+  - 🛜4
+  - 🛜3
+  - 🛜2
+  - 🛜1
+  - BOOT
+  - 'Trans
+
+    form'
+  - Reset
+  - ''
+  - LS(LA(LEFT))
+  - LS(LA(UP))
+  - LS(LA(RIGHT))
+  - ''
+  - LS(LA(F3))
+  - ''
+  - ''
+  - ''
+  - ''
+  - Reset
+  - {t: RGUI, h: sticky}
+  - {t: ▽, type: trans}
+  - LS(HOME)
+  - LS(LEFT)
+  - LS(LA(DOWN))
+  - LS(RIGHT)
+  - LS(END)
+  - LS(LC(G))
+  - {t: LC(LA(LEFT)), h: LC(LS(PG UP))}
+  - 'Split
+
+    right'
+  - {t: LC(LA(RIGHT)), h: LC(LS(PG DN))}
+  - Fold
+  - BRI UP
+  - ''
+  - LC(U)
+  - LS(LC(LEFT))
+  - LS(LA(I))
+  - LS(LC(RIGHT))
+  - ''
+  - LA(F3)
+  - {t: LC(PG UP), h: '&ctrl_k PG_UP'}
+  - 'Split
+
+    down'
+  - {t: LC(PG DN), h: '&ctrl_k PG_DN'}
+  - Unfold
+  - BRI DN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  ctrl:
+  - LC(GRAVE)
+  - LC(7)
+  - LC(5)
+  - LC(3)
+  - LC(1)
+  - LC(9)
+  - LC(0)
+  - LC(2)
+  - LC(4)
+  - LC(6)
+  - LC(8)
+  - LC(MINUS)
+  - ''
+  - LC(TAB)
+  - LC(Q)
+  - LC(W)
+  - LC(E)
+  - LC(R)
+  - LC(T)
+  - LC(Y)
+  - LC(U)
+  - LC(I)
+  - LC(O)
+  - LC(P)
+  - LC(LBKT)
+  - LC(RBKT)
+  - {t: ▽, type: trans}
+  - LC(A)
+  - LC(S)
+  - LC(D)
+  - LC(F)
+  - LC(G)
+  - LC(H)
+  - LC(J)
+  - LC(K)
+  - LC(L)
+  - LC(SEMI)
+  - {t: LC(SQT), type: held}
+  - ''
+  - ⎌
+  - LC(X)
+  - LC(C)
+  - LC(V)
+  - LC(B)
+  - LC(N)
+  - LC(M)
+  - LC(COMMA)
+  - LC(DOT)
+  - LC(FSLH)
+  - ''
+  - LC(RET)
+  - LC(BSPC)
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - LC(SPACE)
+  - ''
+  cs:
+  - LS(LC(GRAVE))
+  - LS(LC(7))
+  - LS(LC(5))
+  - LS(LC(3))
+  - LS(LC(1))
+  - LS(LC(9))
+  - LS(LC(0))
+  - LS(LC(2))
+  - LS(LC(4))
+  - LS(LC(6))
+  - LS(LC(8))
+  - LS(LC(MINUS))
+  - ''
+  - LS(LC(TAB))
+  - LS(LC(Q))
+  - LS(LC(W))
+  - LS(LC(E))
+  - LS(LC(R))
+  - LS(LC(T))
+  - LS(LC(Y))
+  - LS(LC(U))
+  - LS(LC(I))
+  - LS(LC(O))
+  - LS(LC(P))
+  - LS(LC(LBKT))
+  - LS(LC(RBKT))
+  - {t: ▽, type: trans}
+  - LS(LC(A))
+  - LS(LC(S))
+  - LS(LC(D))
+  - LS(LC(F))
+  - LS(LC(G))
+  - LS(LC(H))
+  - LS(LC(J))
+  - LS(LC(K))
+  - LS(LC(L))
+  - LS(LC(SEMI))
+  - {t: ▽, type: trans}
+  - ''
+  - LS(LC(Z))
+  - LS(LC(X))
+  - LS(LC(C))
+  - LS(LC(V))
+  - LS(LC(B))
+  - LS(LC(N))
+  - LS(LC(M))
+  - LS(LC(COMMA))
+  - LS(LC(DOT))
+  - LS(LC(FSLH))
+  - ''
+  - LS(LC(RET))
+  - LS(LC(BSPC))
+  - ''
+  - ''
+  - ''
+  - ''
+  - LS(LC(SPACE))
+  - ''
+  sa:
+  - LA(LS(GRAVE))
+  - LA(LS(7))
+  - LA(LS(5))
+  - LA(LS(3))
+  - LA(LS(1))
+  - LA(LS(9))
+  - LA(LS(0))
+  - LA(LS(2))
+  - LA(LS(4))
+  - LA(LS(6))
+  - LA(LS(8))
+  - LA(LS(MINUS))
+  - ''
+  - LA(LS(TAB))
+  - LA(LS(Q))
+  - LA(LS(W))
+  - LA(LS(E))
+  - LA(LS(R))
+  - LA(LS(T))
+  - LA(LS(Y))
+  - LA(LS(U))
+  - LA(LS(I))
+  - LA(LS(O))
+  - LA(LS(P))
+  - LA(LS(LBKT))
+  - LA(LS(RBKT))
+  - {t: ▽, type: trans}
+  - LA(LS(A))
+  - LA(LS(S))
+  - LA(LS(D))
+  - LA(LS(F))
+  - LA(LS(G))
+  - LA(LS(H))
+  - LA(LS(J))
+  - LA(LS(K))
+  - LA(LS(L))
+  - LA(LS(SEMI))
+  - LA(LS(SQT))
+  - ''
+  - LA(LS(Z))
+  - LA(LS(X))
+  - LA(LS(C))
+  - LA(LS(V))
+  - LA(LS(B))
+  - LA(LS(N))
+  - {t: LA(LS(M)), type: held}
+  - LA(LS(COMMA))
+  - LA(LS(DOT))
+  - LA(LS(FSLH))
+  - ''
+  - LA(LS(RET))
+  - LA(LS(BSPC))
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - LA(LS(SPACE))
+  - ''
+  ca:
+  - LC(LA(GRAVE))
+  - LC(LA(7))
+  - LC(LA(5))
+  - LC(LA(3))
+  - LC(LA(1))
+  - LC(LA(9))
+  - LC(LA(0))
+  - LC(LA(2))
+  - LC(LA(4))
+  - LC(LA(6))
+  - LC(LA(8))
+  - LC(LA(MINUS))
+  - ''
+  - LC(LA(TAB))
+  - LC(LA(Q))
+  - LC(LA(W))
+  - LC(LA(E))
+  - LC(LA(R))
+  - LC(LA(T))
+  - LC(LA(Y))
+  - LC(LA(U))
+  - LC(LA(I))
+  - LC(LA(O))
+  - LC(LA(P))
+  - LC(LA(LBKT))
+  - LC(LA(RBKT))
+  - {t: ▽, type: trans}
+  - LC(LA(A))
+  - LC(LA(S))
+  - LC(LA(D))
+  - LC(LA(F))
+  - LC(LA(G))
+  - LC(LA(H))
+  - LC(LA(J))
+  - LC(LA(K))
+  - LC(LA(L))
+  - LC(LA(SEMI))
+  - LC(LA(SQT))
+  - ''
+  - LC(LA(Z))
+  - LC(LA(X))
+  - LC(LA(C))
+  - LC(LA(V))
+  - LC(LA(B))
+  - LC(LA(N))
+  - LC(LA(M))
+  - LC(LA(COMMA))
+  - {t: LC(LA(DOT)), type: held}
+  - LC(LA(FSLH))
+  - ''
+  - LC(LA(RET))
+  - LC(LA(BSPC))
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - LC(LA(SPACE))
+  - ''
