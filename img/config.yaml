@@ -229,14 +229,18 @@ parse_config:
   zmk_keycode_map:
     LC(BSLH): "Split\nright"
     LA(BSLH): "Split\ndown"
-    LC(INS): '📄'
-    LS(INS): '📋'
+    LC(INS): 'Copy'
+    LS(INS): 'Paste'
     LS(DEL): '✂️'
     LC(Z): 'Undo'
     LC(LEFT): "^←"
     LC(RIGHT): "^→"
     LC(UP): "^↑"
     LC(DOWN): "^↓"
+    LS(LEFT): "Select\n←"
+    LS(RIGHT): "Select\n→"
+    LS(UP): "Select\n↑"
+    LS(DOWN): "Select\n↓"
     RSHIFT: '⇧'
     LSHIFT: '⇧'
     LC(HOME): '⇤'
