@@ -98,10 +98,10 @@ layers:
   - {t: LC(LSHIFT), h: '5'}
   - {t: ctrl, h: sticky}
   - {t: ▽, type: trans}
-  - ⎌
+  - Undo
   - ✂️
-  - 📄
-  - 📋
+  - Copy
+  - Paste
   - DEL
   - LA(DOWN)
   - {t: sa, h: sticky}
@@ -207,9 +207,13 @@ layers:
   - {t: RGUI, h: sticky}
   - {t: ▽, type: trans}
   - LS(HOME)
-  - LS(LEFT)
+  - 'Select
+
+    ←'
   - LS(LA(DOWN))
-  - LS(RIGHT)
+  - 'Select
+
+    →'
   - LS(END)
   - LS(LC(G))
   - {t: LC(LA(LEFT)), h: LC(LS(PG UP))}
@@ -281,7 +285,7 @@ layers:
   - LC(SEMI)
   - {t: LC(SQT), type: held}
   - ''
-  - ⎌
+  - Undo
   - LC(X)
   - LC(C)
   - LC(V)
