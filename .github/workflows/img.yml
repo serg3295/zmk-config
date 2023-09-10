@@ -23,14 +23,8 @@ jobs:
       - name: Install keymap-drawer (git)
         run: python3 -m pip install "git+https://github.com/caksoylar/keymap-drawer.git"
 
-      # - name: Parse keymap
-      #   run: keymap -c img/config.yaml parse -z config/mriya.keymap >img/mriya.yaml
-
-      # - name: Draw keymap
-      #   run: keymap -c img/config.yaml draw --select-layers Base Lower Raise Adjust -j config/mriya.json img/mriya.yaml >img/mriya.svg
-
       - name: Parse and Draw keymap
-        run: ./img/update
+        run: ./img/keymap-drawer
 
       - name: Commit updated images
         uses: stefanzweifel/git-auto-commit-action@v4

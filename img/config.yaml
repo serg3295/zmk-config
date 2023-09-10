@@ -145,7 +145,7 @@ parse_config:
   raw_binding_map: {
     '&key_repeat': "Repeat",
     '&ctrl_k': "^K",
-    '&show_hover': "Show\nhover",
+    '&show_hover': "Hover",
     '&bootloader': "BOOT",
     '&sys_reset': "Reset",
     '&chg_case': "Trans\nform",
@@ -232,8 +232,8 @@ parse_config:
   zmk_keycode_map:
     LC(PG_UP): "Prev Editor"
     LC(PG_DN): "Next Editor"
-    LC(LS(PG_UP)): "Move Editor ←"
-    LC(LS(PG_DN)): "Move Editor →"
+    LC(LS(PG_UP)): "Move◀ Editor"
+    LC(LS(PG_DN)): "Move▶ Editor"
     LC(LA(LEFT)): "into group"
     LC(LA(RIGHT)): "into group"
     LC(BSLH): "Split right"

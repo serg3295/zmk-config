@@ -84,8 +84,8 @@ layers:
   - 'Show
 
     hover'
-  - {t: Del word ↤, h: Del all ↤}
-  - {t: Del word ↦, h: Del all ↦}
+  - {t: Del word ↤, h: Del all}
+  - {t: Del word ↦, h: Del all}
   - Repeat
   - {t: ▽, type: trans}
   - {t: HOME, h: ⇱}
@@ -214,9 +214,9 @@ layers:
   - Select →
   - Select end
   - Git prefix
-  - {t: Move Editor ←, h: into group}
+  - {t: Move◀ Editor, h: into group}
   - Split right
-  - {t: Move Editor →, h: into group}
+  - {t: Move▶ Editor, h: into group}
   - Fold
   - BRI UP
   - ''
