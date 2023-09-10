@@ -19,7 +19,7 @@ draw_config:
   small_pad: 2.0
   legend_rel_x: 0.0
   legend_rel_y: 0.0
-  draw_key_sides: true
+  draw_key_sides: false
   key_side_pars:
     rel_x: 0
     rel_y: 4
@@ -143,6 +143,9 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map: {
+    '&key_repeat': "Repeat",
+    '&ctrl_k': "^K",
+    '&show_hover': "Show\nhover",
     '&bootloader': "BOOT",
     '&sys_reset': "Reset",
     '&chg_case': "Trans\nform",
@@ -227,26 +230,59 @@ parse_config:
     QUESTION: '?'
     QUES: '?'
   zmk_keycode_map:
-    LC(BSLH): "Split\nright"
-    LA(BSLH): "Split\ndown"
+    LC(PG_UP): "Prev Editor"
+    LC(PG_DN): "Next Editor"
+    LC(LS(PG_UP)): "Move Editor ←"
+    LC(LS(PG_DN)): "Move Editor →"
+    LC(LA(LEFT)): "into group"
+    LC(LA(RIGHT)): "into group"
+    LC(BSLH): "Split right"
+    LA(BSLH): "Split down"
+    LC(LA(LS(DOWN))): "Copy line ⬇"
+    LA(DOWN): "Move line ⬇"
+    LA(UP): "Move line ⬆"
+    LC(LA(FSLH)): "and comment"
     LC(INS): 'Copy'
     LS(INS): 'Paste'
     LS(DEL): '✂️'
+    LS(LC(G)): "Git prefix"
+    LC(U): "Cursor undo"
     LC(Z): 'Undo'
+    LC(K): '^K'
+    LC(F): '^F'
+    LC(LS(BSPC)): "Del all"
+    LC(BSPC): "Del word ↤"
+    LC(LS(DEL)): "Del all"
+    LC(DEL): "Del word ↦"
     LC(LEFT): "^←"
     LC(RIGHT): "^→"
     LC(UP): "^↑"
     LC(DOWN): "^↓"
-    LS(LEFT): "Select\n←"
-    LS(RIGHT): "Select\n→"
-    LS(UP): "Select\n↑"
-    LS(DOWN): "Select\n↓"
+    LS(LEFT): "Select ←"
+    LS(RIGHT): "Select →"
+    LS(UP): "Select ↑"
+    LS(DOWN): "Select ↓"
+    LS(LA(UP)): "Add cursor ↑"
+    LS(LA(DOWN)): "Add cursor ↓"
+    LS(HOME): "Select home"
+    LS(END): "Select end"
+    LS(LC(LEFT)): "Select word ↤"
+    LS(LC(RIGHT)): "Select word ↦"
+    LS(LA(RIGHT)): "Expand selection"
+    LS(LA(LEFT)): "Shrink selection"
+    LS(LA(I)): "Add cursors toLineEnd"
     RSHIFT: '⇧'
     LSHIFT: '⇧'
-    LC(HOME): '⇤'
-    LC(END): '⇥'
-    LC(LA(HOME)): '⇱'
-    LC(LA(END)): '⇲'
+    LC(HOME): '⇱'
+    LC(END): '⇲'
+    LC(LA(HOME)): '⭶'
+    LC(LA(END)): '⭹'
+    LA(LEFT): "Go back"
+    LA(RIGHT): "Go forward"
+    LC(LA(RBKT)): "Next change"
+    LC(LA(LBKT)): "Prev change"
+    LA(F3): "Git Next change"
+    LS(LA(F3)): "Git Prev change"
     LEFT: '←'
     RIGHT: '→'
     UP: '↑'

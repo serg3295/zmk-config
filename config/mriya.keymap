@@ -19,8 +19,8 @@
 #define COPY_LN LC(LA(FSLH)) LC(LA(LS(DOWN)))
 #define NEXT_ED PG_DN LC(PG_DN)
 #define PREV_ED PG_UP LC(PG_UP)
-#define MOVE_L  LC(LS(PG_UP)) LC(LA(LEFT))
-#define MOVE_R  LC(LS(PG_DN)) LC(LA(RIGHT))
+#define MOVE_L  LC(LA(LEFT)) LC(LS(PG_UP))
+#define MOVE_R  LC(LA(RIGHT)) LC(LS(PG_DN))
 #define K_E     LC(END) END
 #define K_H     LC(HOME) HOME
 #define F_BSPC  LC(LS(BSPC)) LC(BSPC)
@@ -180,11 +180,11 @@
       adjust_layer {
         label = "Adjust";
         bindings = <
-                    &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0  &bootloader
-          &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(LA(UP))   &kp LS(LA(RIGHT)) &none               &kp LS(LA(F3)) &none          &none         &none           &none         &sys_reset  &sk RGUI
-                    &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(LA(DOWN)) &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &mt MOVE_L     &kp LC(BSLH)  &mt MOVE_R      &fold         &kp C_BRI_UP
-                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I))    &kp LS(LC(RIGHT)) &none               &kp LA(F3)     &ht_mt PREV_ED &kp LA(BSLH)  &ht_mt NEXT_ED  &unfold       &kp C_BRI_DN
-                                              &trans           &trans           &trans            &trans              &trans         &trans         &trans        &trans
+                    &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0  &bootloader
+          &chg_case &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(UP)    &kp LS(LA(RIGHT)) &kp LS(LA(UP))      &kp LS(LA(F3)) &none          &none         &none           &none         &sys_reset  &sk RGUI
+                    &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &mt MOVE_L     &kp LC(BSLH)  &mt MOVE_R      &fold         &kp C_BRI_UP
+                    &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     &ht_mt PREV_ED &kp LA(BSLH)  &ht_mt NEXT_ED  &unfold       &kp C_BRI_DN
+                                              &trans           &trans        &trans            &trans              &trans         &trans         &trans        &trans
         >;
       };
 

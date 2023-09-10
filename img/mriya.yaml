@@ -59,7 +59,7 @@ layers:
   - ⎵
   - RALT
   Lower:
-  - LA(LEFT)
+  - Go back
   - F7
   - F5
   - F3
@@ -70,7 +70,7 @@ layers:
   - F4
   - F6
   - F8
-  - LA(RIGHT)
+  - Go forward
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PG UP
@@ -79,19 +79,21 @@ layers:
   - INS
   - F11
   - F12
-  - LC(K)
+  - ^K
   - ^↑
-  - '&show_hover'
-  - {t: LC(BSPC), h: LC(LS(BSPC))}
-  - {t: LC(DEL), h: LC(LS(DEL))}
-  - '&key_repeat'
+  - 'Show
+
+    hover'
+  - {t: Del word ↤, h: Del all ↤}
+  - {t: Del word ↦, h: Del all ↦}
+  - Repeat
   - {t: ▽, type: trans}
-  - {t: HOME, h: ⇤}
+  - {t: HOME, h: ⇱}
   - ←
   - ↓
   - →
-  - {t: END, h: ⇥}
-  - LA(UP)
+  - {t: END, h: ⇲}
+  - Move line ⬆
   - ^←
   - ^↓
   - ^→
@@ -103,11 +105,11 @@ layers:
   - Copy
   - Paste
   - DEL
-  - LA(DOWN)
+  - Move line ⬇
   - {t: sa, h: sticky}
-  - {t: LC(LA(LS(DOWN))), h: LC(LA(FSLH))}
+  - {t: Copy line ⬇, h: and comment}
   - {t: ca, h: sticky}
-  - LC(F)
+  - ^F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -118,7 +120,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Raise:
-  - LC(LA(LBKT))
+  - Prev change
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -129,7 +131,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LC(LA(RBKT))
+  - Next change
   - CAPS
   - {t: ▽, type: trans}
   - '`'
@@ -194,11 +196,11 @@ layers:
     form'
   - Reset
   - ''
-  - LS(LA(LEFT))
-  - LS(LA(UP))
-  - LS(LA(RIGHT))
-  - ''
-  - LS(LA(F3))
+  - Shrink selection
+  - Select ↑
+  - Expand selection
+  - Add cursor ↑
+  - Git Prev change
   - ''
   - ''
   - ''
@@ -206,35 +208,27 @@ layers:
   - Reset
   - {t: RGUI, h: sticky}
   - {t: ▽, type: trans}
-  - LS(HOME)
-  - 'Select
-
-    ←'
-  - LS(LA(DOWN))
-  - 'Select
-
-    →'
-  - LS(END)
-  - LS(LC(G))
-  - {t: LC(LA(LEFT)), h: LC(LS(PG UP))}
-  - 'Split
-
-    right'
-  - {t: LC(LA(RIGHT)), h: LC(LS(PG DN))}
+  - Select home
+  - Select ←
+  - Select ↓
+  - Select →
+  - Select end
+  - Git prefix
+  - {t: Move Editor ←, h: into group}
+  - Split right
+  - {t: Move Editor →, h: into group}
   - Fold
   - BRI UP
   - ''
-  - LC(U)
-  - LS(LC(LEFT))
-  - LS(LA(I))
-  - LS(LC(RIGHT))
-  - ''
-  - LA(F3)
-  - {t: LC(PG UP), h: '&ctrl_k PG_UP'}
-  - 'Split
-
-    down'
-  - {t: LC(PG DN), h: '&ctrl_k PG_DN'}
+  - Cursor undo
+  - Select word ↤
+  - Add cursors toLineEnd
+  - Select word ↦
+  - Add cursor ↓
+  - Git Next change
+  - {t: Prev Editor, h: '&ctrl_k PG_UP'}
+  - Split down
+  - {t: Next Editor, h: '&ctrl_k PG_DN'}
   - Unfold
   - BRI DN
   - {t: ▽, type: trans}
@@ -266,7 +260,7 @@ layers:
   - LC(R)
   - LC(T)
   - LC(Y)
-  - LC(U)
+  - Cursor undo
   - LC(I)
   - LC(O)
   - LC(P)
@@ -276,11 +270,11 @@ layers:
   - LC(A)
   - LC(S)
   - LC(D)
-  - LC(F)
+  - ^F
   - LC(G)
   - LC(H)
   - LC(J)
-  - LC(K)
+  - ^K
   - LC(L)
   - LC(SEMI)
   - {t: LC(SQT), type: held}
@@ -297,7 +291,7 @@ layers:
   - LC(FSLH)
   - ''
   - LC(RET)
-  - LC(BSPC)
+  - Del word ↤
   - {type: held}
   - ''
   - ''
@@ -336,7 +330,7 @@ layers:
   - LS(LC(S))
   - LS(LC(D))
   - LS(LC(F))
-  - LS(LC(G))
+  - Git prefix
   - LS(LC(H))
   - LS(LC(J))
   - LS(LC(K))
@@ -447,8 +441,8 @@ layers:
   - LC(LA(I))
   - LC(LA(O))
   - LC(LA(P))
-  - LC(LA(LBKT))
-  - LC(LA(RBKT))
+  - Prev change
+  - Next change
   - {t: ▽, type: trans}
   - LC(LA(A))
   - LC(LA(S))
@@ -471,7 +465,7 @@ layers:
   - LC(LA(M))
   - LC(LA(COMMA))
   - {t: LC(LA(DOT)), type: held}
-  - LC(LA(FSLH))
+  - and comment
   - ''
   - LC(LA(RET))
   - LC(LA(BSPC))

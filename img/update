@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+# Parse keymap
+keymap -c img/config.yaml parse -z config/mriya.keymap >img/mriya.yaml
+
+# Draw keymap
+keymap -c img/config.yaml draw --select-layers Base Lower Raise Adjust -j config/mriya.json img/mriya.yaml >img/mriya.svg
