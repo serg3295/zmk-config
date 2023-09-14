@@ -1,8 +1,5 @@
 <svg width="1124" height="1646" viewBox="0 0 1124 1646" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
-<svg id="material:splitscreen_bottom">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M180-120q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm0-390q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm600-270H180v210h600v-210ZM180-570v-210 210Z"/></svg>
-</svg>
 <svg id="mdi:apple-keyboard-shift">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
 </svg>
@@ -44,6 +41,12 @@
 </svg>
 <svg id="mdi:keyboard-tab">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-keyboard-tab" viewBox="0 0 24 24"><path d="M20,18H22V6H20M11.59,7.41L15.17,11H1V13H15.17L11.59,16.58L13,18L19,12L13,6L11.59,7.41Z" /></svg>
+</svg>
+<svg id="split_down">
+<svg viewBox="0 0 32 32">
+<path d="M180-120q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm0-390q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm600-270H180v210h600v-210ZM180-570v-210 210Z"/>
+</svg>
+
 </svg>
 </defs>/* end glyphs */
 <style>/* inherit to force styles through use tags */
@@ -579,7 +582,7 @@ path.combo {
 </g>
 <g transform="translate(924, 175)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">^⇮</text>
+<text x="0" y="0" class="key tap">^⇧</text>
 <text x="0" y="24" class="key hold">5</text>
 </g>
 <g transform="translate(980, 182)" class="key keypos-37">
@@ -1171,7 +1174,7 @@ path.combo {
 </g>
 <g transform="translate(812, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#material:splitscreen_bottom" xlink:href="#material:splitscreen_bottom" x="-4" y="-7" height="14" width="7.0" class="key tap glyph material:splitscreen_bottom"/>
+<use href="#split_down" xlink:href="#split_down" x="-7" y="-7" height="14" width="14.0" class="key tap glyph split_down"/>
 <text x="0" y="-24" class="key shifted">Split</text>
 </g>
 <g transform="translate(868, 210)" class="key keypos-47">

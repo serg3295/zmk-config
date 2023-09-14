@@ -135,31 +135,29 @@
         bindings = <&ht_k J LS(LC(RBKT))>, <&ctrl_k RBKT>;
       };
 
-      td_home: home_actions {
-        compatible = "zmk,behavior-tap-dance";
-        label = "HOME_ACT";
-        #binding-cells = <0>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
-      };
-      td_end: end_actions {
-        compatible = "zmk,behavior-tap-dance";
-        label = "END_ACT";
-        #binding-cells = <0>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&ht3 LC(END) END>, <LC(LA(DOWN))>;
-      };
+      // td_home: home_actions {
+      //   compatible = "zmk,behavior-tap-dance";
+      //   label = "HOME_ACT";
+      //   #binding-cells = <0>;
+      //   tapping-term-ms = <300>;
+      //   // bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
+      //   bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
+      // };
+      // td_end: end_actions {
+      //   compatible = "zmk,behavior-tap-dance";
+      //   label = "END_ACT";
+      //   #binding-cells = <0>;
+      //   tapping-term-ms = <300>;
+      //   bindings = <&ht3 LC(END) END>, <LC(LA(DOWN))>;
+      // };
 
-      td_ins: ins_hover {
-        compatible = "zmk,behavior-tap-dance";
-        label = "INS_HOVER";
-        #binding-cells = <0>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&show_hover INS>;
-      };
+      // td_ins: ins_hover {
+      //   compatible = "zmk,behavior-tap-dance";
+      //   label = "INS_HOVER";
+      //   #binding-cells = <0>;
+      //   tapping-term-ms = <300>;
+      //   bindings = <&show_hover INS>;
+      // };
 
     };
 
@@ -180,8 +178,10 @@
         label = "Lower";
         bindings = <
                   &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp  F8            &kp  LA(RIGHT)
-          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &td_ins      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
-                  &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &mt  CS LC(LSHIFT) &sl CTL
+          // &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &td_ins      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
+          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
+                  // &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &mt  CS LC(LSHIFT) &sl CTL
+                  &trans        &kp HOME   &kp LEFT     &kp DOWN    &kp RIGHT    &kp END        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &mt  CS LC(LSHIFT) &sl CTL
                   &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &mt COPY_LN   &unfold        &sl  SA            &trans
                                            &trans       &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;

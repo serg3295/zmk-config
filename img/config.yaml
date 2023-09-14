@@ -132,7 +132,11 @@ draw_config:
   glyph_tap_size: 14
   glyph_hold_size: 12
   glyph_shifted_size: 10
-  glyphs: {}
+  glyphs:
+    split_down: |
+      <svg width="32" height="32" viewBox="0 0 32 32">
+      <path d="M180-120q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm0-390q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm600-270H180v210h600v-210ZM180-570v-210 210Z"/>
+      </svg>
   glyph_urls:
     tabler: https://tabler-icons.io/static/tabler-icons/icons/{}.svg
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
@@ -192,7 +196,8 @@ parse_config:
       tap: "Ins"
       hold: "Hover"
     "&kp LA(BSLH)":
-      tap: $$material:splitscreen_bottom$$
+      # tap: $$material:splitscreen_bottom$$
+      tap: $$split_down$$
       shifted: "Split"
   sticky_label: sticky
   trans_legend:

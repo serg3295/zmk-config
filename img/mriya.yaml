@@ -95,7 +95,7 @@ layers:
   - ^🠜
   - ^🠟
   - ^🠞
-  - {t: ^⇮, h: '5'}
+  - {t: ^⇧, h: '5'}
   - {t: ctrl, h: sticky}
   - {t: ▽, type: trans}
   - $$mdi:arrow-u-left-top$$
@@ -229,7 +229,7 @@ layers:
   - Add cursor 🠝
   - Git Next change
   - {t: Prev Editor, h: '&ctrl_k PG_UP'}
-  - {t: '$$material:splitscreen_bottom$$', s: Split}
+  - {t: $$split_down$$, s: Split}
   - {t: Next Editor, h: '&ctrl_k PG_DN'}
   - ''
   - $$mdi:brightness-5$$
