@@ -35,39 +35,41 @@
 
 &caps_word {
   mods = <(LSHIFT|RSHIFT)>;
+  // mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 / {
     macros {
-      // next_ed: next_ed {
-      //   label = "OPEN_NEXT_EDITOR";
+//       // next_ed: next_ed {
+//       //   label = "OPEN_NEXT_EDITOR";
+//       //   compatible = "zmk,behavior-macro";
+//       //   #binding-cells = <0>;
+//       //   bindings
+//       //     = <&macro_press &kp LCTRL>
+//       //     , <&macro_tap &kp K &kp PG_DN>
+//       //     , <&macro_release &kp LCTRL>
+//       //     ;
+//       // };
+//       // prev_ed: prev_ed {
+//       //   label = "OPEN_PREVIOUS_EDITOR";
+//       //   compatible = "zmk,behavior-macro";
+//       //   #binding-cells = <0>;
+//       //   bindings
+//       //     = <&macro_press &kp LCTRL>
+//       //     , <&macro_tap &kp K &kp PG_UP>
+//       //     , <&macro_release &kp LCTRL>
+//       //     ;
+//       // };
+      // show_hover: show_hover {
+      //   label = "SHOW_HOVER";
       //   compatible = "zmk,behavior-macro";
       //   #binding-cells = <0>;
-      //   bindings
-      //     = <&macro_press &kp LCTRL>
-      //     , <&macro_tap &kp K &kp PG_DN>
-      //     , <&macro_release &kp LCTRL>
-      //     ;
+      //   bindings =
+      //     <&macro_press &kp LCTRL>,
+      //     <&macro_tap &kp K &kp I>,
+      //     <&macro_release &kp LCTRL>;
       // };
-      // prev_ed: prev_ed {
-      //   label = "OPEN_PREVIOUS_EDITOR";
-      //   compatible = "zmk,behavior-macro";
-      //   #binding-cells = <0>;
-      //   bindings
-      //     = <&macro_press &kp LCTRL>
-      //     , <&macro_tap &kp K &kp PG_UP>
-      //     , <&macro_release &kp LCTRL>
-      //     ;
-      // };
-      show_hover: show_hover {
-        label = "SHOW_HOVER";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =
-          <&macro_press &kp LCTRL>,
-          <&macro_tap &kp K &kp I>,
-          <&macro_release &kp LCTRL>;
-      };
+
       transform: transform_to {
         label = "TRANSFORM_TO";
         compatible = "zmk,behavior-macro";
@@ -93,71 +95,71 @@
     };
 
     behaviors {
-/*       ht_ins: ins_hov {
+      ht_ins: ins_hov {
         compatible = "zmk,behavior-hold-tap";
         label = "INS_HOVER";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&show_hover>, <&kp>;
-      };
- */
-      ht_k: ht_ctrl_k {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOLD_TAP_CTRL_K";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
         bindings = <&ctrl_k>, <&kp>;
       };
 
+      ht_k: ht_ctrl_k {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_TAP_CTRL_K";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&kp>, <&ctrl_k>;
+      };
+
       ht3: ht_300ms {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOLD_TAP_300ms";
+        label = "HOLD_TAP_300MS";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
         bindings = <&kp>, <&kp>;
       };
 
-      fold: fold {
-        compatible = "zmk,behavior-tap-dance";
-        label = "FOLD";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&ht_k N0 LS(LC(LBKT))>, <&ctrl_k LBKT>;
-      };
-      unfold: unfold {
-        compatible = "zmk,behavior-tap-dance";
-        label = "UNFOLD";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&ht_k J LS(LC(RBKT))>, <&ctrl_k RBKT>;
-      };
+//       fold: fold {
+//         compatible = "zmk,behavior-tap-dance";
+//         label = "FOLD";
+//         #binding-cells = <0>;
+//         tapping-term-ms = <200>;
+//         bindings = <&ht_k N0 LS(LC(LBKT))>, <&ctrl_k LBKT>;
+//       };
+//       unfold: unfold {
+//         compatible = "zmk,behavior-tap-dance";
+//         label = "UNFOLD";
+//         #binding-cells = <0>;
+//         tapping-term-ms = <200>;
+//         bindings = <&ht_k J LS(LC(RBKT))>, <&ctrl_k RBKT>;
+//       };
 
-      // td_home: home_actions {
-      //   compatible = "zmk,behavior-tap-dance";
-      //   label = "HOME_ACT";
-      //   #binding-cells = <0>;
-      //   tapping-term-ms = <300>;
-      //   // bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
-      //   bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
-      // };
-      // td_end: end_actions {
-      //   compatible = "zmk,behavior-tap-dance";
-      //   label = "END_ACT";
-      //   #binding-cells = <0>;
-      //   tapping-term-ms = <300>;
-      //   bindings = <&ht3 LC(END) END>, <LC(LA(DOWN))>;
-      // };
+//       // td_home: home_actions {
+//       //   compatible = "zmk,behavior-tap-dance";
+//       //   label = "HOME_ACT";
+//       //   #binding-cells = <0>;
+//       //   tapping-term-ms = <300>;
+//       //   // bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
+//       //   bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
+//       // };
+//       // td_end: end_actions {
+//       //   compatible = "zmk,behavior-tap-dance";
+//       //   label = "END_ACT";
+//       //   #binding-cells = <0>;
+//       //   tapping-term-ms = <300>;
+//       //   bindings = <&ht3 LC(END) END>, <LC(LA(DOWN))>;
+//       // };
 
-      // td_ins: ins_hover {
-      //   compatible = "zmk,behavior-tap-dance";
-      //   label = "INS_HOVER";
-      //   #binding-cells = <0>;
-      //   tapping-term-ms = <300>;
-      //   bindings = <&show_hover INS>;
-      // };
+//       // td_ins: ins_hover {
+//       //   compatible = "zmk,behavior-tap-dance";
+//       //   label = "INS_HOVER";
+//       //   #binding-cells = <0>;
+//       //   tapping-term-ms = <300>;
+//       //   bindings = <&show_hover INS>;
+//       // };
 
     };
 
@@ -179,10 +181,11 @@
         bindings = <
                   &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp  F8            &kp  LA(RIGHT)
           // &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &td_ins      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
-          &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &kp INS      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
-                  // &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &mt  CS LC(LSHIFT) &sl CTL
-                  &trans        &kp HOME   &kp LEFT     &kp DOWN    &kp RIGHT    &kp END        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &mt  CS LC(LSHIFT) &sl CTL
-                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &mt COPY_LN   &unfold        &sl  SA            &trans
+          &trans  &trans        &ht3 LC(LS(TAB)) PG_UP  &ht3 LC(TAB) PG_DN   &kp UP      &kp INS     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 LC(LS(BSPC)) LC(BSPC)   &ht3 LC(LS(DEL)) LC(DEL)   &sl CA
+                  // &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &ht3  CS LC(LSHIFT) &sl CTL
+                  &trans        &kp HOME   &kp LEFT     &kp DOWN    &kp RIGHT    &kp END        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
+                  // &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl  SA            &trans
+                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &none         &none   &none        &sl SA            &trans
                                            &trans       &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;
       };
@@ -203,8 +206,9 @@
         bindings = <
                       &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0  &bootloader
           &transform  &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(UP)    &kp LS(LA(RIGHT)) &kp LS(LA(UP))      &kp LS(LA(F3)) &none          &none         &none           &none         &sys_reset  &sk RGUI
-                      &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &mt MOVE_L     &kp LC(BSLH)  &mt MOVE_R      &none         &kp C_BRI_UP
-                      &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     &ht_k PREV_ED  &kp LA(BSLH)  &ht_k NEXT_ED   &none         &kp C_BRI_DN
+                      &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &ht3 MOVE_L    &kp LC(BSLH)  &ht3 MOVE_R     &none         &kp C_BRI_UP
+                      // &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     &ht_k PREV_ED  &kp LA(BSLH)  &ht_k NEXT_ED   &none         &kp C_BRI_DN
+                      &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     &none  &kp LA(BSLH)  &none   &none         &kp C_BRI_DN
                                                 &trans           &trans        &trans            &trans              &trans         &trans         &trans        &trans
         >;
       };
