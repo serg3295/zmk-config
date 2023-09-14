@@ -16,14 +16,16 @@
 #define CS  5
 #define SA  6
 #define CA  7
-#define COPY_LN LC(LA(FSLH)) LC(LA(LS(DOWN)))
-#define NEXT_ED PG_DN LC(PG_DN)
-#define PREV_ED PG_UP LC(PG_UP)
-#define MOVE_L  LC(LA(LEFT)) LC(LS(PG_UP))
-#define MOVE_R  LC(LA(RIGHT)) LC(LS(PG_DN))
-#define F_BSPC  LC(LS(BSPC)) LC(BSPC)
-#define F_DEL   LC(LS(DEL)) LC(DEL)
-#define REFS    LS(LA(F12)) LS(F12)
+#define COPY_LN  LC(LA(FSLH)) LC(LA(LS(DOWN)))
+#define NEXT_ED  PG_DN LC(PG_DN)
+#define PREV_ED  PG_UP LC(PG_UP)
+#define MOVE_L   LC(LA(LEFT)) LC(LS(PG_UP))
+#define MOVE_R   LC(LA(RIGHT)) LC(LS(PG_DN))
+#define F_BSPC   LC(LS(BSPC)) LC(BSPC)
+#define F_DEL    LC(LS(DEL)) LC(DEL)
+#define REFS     LS(LA(F12)) LS(F12)
+#define PGUP_TAB LC(LS(TAB)) PG_UP
+#define PGDN_TAB LC(TAB) PG_DN
 
 &lt {
   quick_tap_ms = <200>;
@@ -178,13 +180,12 @@
       lower_layer {
         label = "Lower";
         bindings = <
-                  &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp  F8            &kp  LA(RIGHT)
+                  &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp  F8            &kp LA(RIGHT)
           // &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &td_ins      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
-          &trans  &trans        &ht3 LC(LS(TAB)) PG_UP  &ht3 LC(TAB) PG_DN   &kp UP      &kp INS     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 LC(LS(BSPC)) LC(BSPC)   &ht3 LC(LS(DEL)) LC(DEL)   &sl CA
-                  // &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &ht3  CS LC(LSHIFT) &sl CTL
+          &trans  &trans        &ht3 PGUP_TAB  &ht3 PGDN_TAB   &kp UP      &kp INS     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC   &ht3 F_DEL   &sl CA
                   &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
                   // &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl  SA            &trans
-                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &none         &none   &none        &sl SA            &trans
+                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &none         &ht3 COPY_LN   &none        &sl SA            &trans
                                            &trans       &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;
       };
