@@ -1,19 +1,19 @@
 layers:
   Base:
-  - '`'
-  - '7'
-  - '5'
-  - '3'
-  - '1'
-  - '9'
-  - '0'
-  - '2'
-  - '4'
-  - '6'
-  - '8'
-  - '-'
+  - {t: '`', s: '~'}
+  - {t: '7', s: '&'}
+  - {t: '5', s: '%'}
+  - {t: '3', s: '#'}
+  - {t: '1', s: '!'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '2', s: '@'}
+  - {t: '4', s: $}
+  - {t: '6', s: ^}
+  - {t: '8', s: '*'}
+  - {t: '-', s: _}
   - {t: LGUI, h: sticky}
-  - TAB
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -24,9 +24,9 @@ layers:
   - I
   - O
   - P
-  - '['
-  - ']'
-  - ESCAPE
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - ESC
   - A
   - S
   - D
@@ -36,9 +36,9 @@ layers:
   - J
   - K
   - L
-  - ;
-  - ''''
-  - ⇧
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -46,17 +46,17 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
-  - /
-  - ⇧
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - $$mdi:apple-keyboard-shift$$
   - ⮐
-  - BSPC
+  - $$mdi:backspace$$
   - Lower
   - {t: LCTRL, h: sticky}
   - {t: LALT, h: sticky}
   - Raise
-  - ⎵
+  - $$mdi:keyboard-space$$
   - RALT
   Lower:
   - Go back
@@ -75,41 +75,39 @@ layers:
   - {t: ▽, type: trans}
   - PG UP
   - PG DN
-  - ↑
-  - INS
+  - 🠉
+  - {t: Ins, h: Hover}
   - F11
   - F12
+  - {t: REFS goto, h: find all}
+  - ^🠝
   - ^K
-  - ^↑
-  - 'Show
-
-    hover'
-  - {t: Del word ↤, h: Del all}
-  - {t: Del word ↦, h: Del all}
-  - Repeat
+  - {t: ↤del word, h: all}
+  - {t: del↦ word, h: all}
+  - {t: ca, h: sticky}
   - {t: ▽, type: trans}
-  - {t: HOME, h: ⇱}
-  - ←
-  - ↓
-  - →
-  - {t: END, h: ⇲}
-  - Move line ⬆
-  - ^←
-  - ^↓
-  - ^→
-  - {t: LC(LSHIFT), h: '5'}
+  - {t: Home, h: ⇱    ⭶}
+  - 🠈
+  - 🠋
+  - 🠊
+  - {t: End, h: ⇲    ⭹}
+  - Move line 🠝
+  - ^🠜
+  - ^🠟
+  - ^🠞
+  - {t: ^⇮, h: '5'}
   - {t: ctrl, h: sticky}
   - {t: ▽, type: trans}
-  - Undo
-  - ✂️
-  - Copy
-  - Paste
-  - DEL
-  - Move line ⬇
+  - $$mdi:arrow-u-left-top$$
+  - $$mdi:content-cut$$
+  - $$mdi:content-copy$$
+  - $$mdi:content-paste$$
+  - $$mdi:backspace-reverse-outline$$
+  - Move line 🠟
+  - Fold
+  - {t: Copy line 🠟, h: and comment}
+  - Unfold
   - {t: sa, h: sticky}
-  - {t: Copy line ⬇, h: and comment}
-  - {t: ca, h: sticky}
-  - ^F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -134,22 +132,22 @@ layers:
   - Next change
   - CAPS
   - {t: ▽, type: trans}
-  - '`'
+  - {t: '`', s: '~'}
   - <
-  - '='
+  - {t: '=', s: +}
   - '>'
   - '!'
   - ^
   - '['
   - '#'
   - ']'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - PSCRN
   - {t: ▽, type: trans}
   - _
   - (
-  - '-'
+  - {t: '-', s: _}
   - )
   - \
   - '%'
@@ -159,16 +157,16 @@ layers:
   - ;
   - ''''
   - {t: ▽, type: trans}
-  - ⎵
+  - $$mdi:keyboard-space$$
   - '|'
   - '~'
   - '&'
   - '@'
   - $
   - '*'
-  - ','
-  - .
-  - /
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -180,26 +178,30 @@ layers:
   - {t: ▽, type: trans}
   Adjust:
   - BOOT
-  - 🛜1
-  - 🛜2
-  - 🛜3
-  - 🛜4
-  - 🛜❌
-  - 🛜❌
-  - 🛜4
-  - 🛜3
-  - 🛜2
-  - 🛜1
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '4'}
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:eraser$$'}
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:eraser$$'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '4'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
   - BOOT
   - 'Trans
 
     form'
   - Reset
   - ''
-  - Shrink selection
-  - Select ↑
-  - Expand selection
-  - Add cursor ↑
+  - 'Shrink selec
+
+    tion'
+  - Select 🠝
+  - 'Expand selec
+
+    tion'
+  - Add cursor 🠝
   - Git Prev change
   - ''
   - ''
@@ -209,28 +211,28 @@ layers:
   - {t: RGUI, h: sticky}
   - {t: ▽, type: trans}
   - Select home
-  - Select ←
-  - Select ↓
-  - Select →
+  - Select 🠜
+  - Select 🠝
+  - Select 🠞
   - Select end
   - Git prefix
-  - {t: Move◀ Editor, h: into group}
+  - {t: Move Editor 🠜, h: into group}
   - Split right
-  - {t: Move▶ Editor, h: into group}
-  - Fold
-  - BRI UP
+  - {t: Move Editor 🠞, h: into group}
+  - ''
+  - $$mdi:brightness-7$$
   - ''
   - Cursor undo
   - Select word ↤
   - Add cursors toLineEnd
   - Select word ↦
-  - Add cursor ↓
+  - Add cursor 🠝
   - Git Next change
   - {t: Prev Editor, h: '&ctrl_k PG_UP'}
-  - Split down
+  - {t: '$$material:splitscreen_bottom$$', s: Split}
   - {t: Next Editor, h: '&ctrl_k PG_DN'}
-  - Unfold
-  - BRI DN
+  - ''
+  - $$mdi:brightness-5$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -279,7 +281,7 @@ layers:
   - LC(SEMI)
   - {t: LC(SQT), type: held}
   - ''
-  - Undo
+  - $$mdi:arrow-u-left-top$$
   - LC(X)
   - LC(C)
   - LC(V)
@@ -291,7 +293,7 @@ layers:
   - LC(FSLH)
   - ''
   - LC(RET)
-  - Del word ↤
+  - ↤del word
   - {type: held}
   - ''
   - ''
@@ -403,10 +405,10 @@ layers:
   - LA(LS(V))
   - LA(LS(B))
   - LA(LS(N))
-  - {t: LA(LS(M)), type: held}
+  - LA(LS(M))
   - LA(LS(COMMA))
   - LA(LS(DOT))
-  - LA(LS(FSLH))
+  - {t: LA(LS(FSLH)), type: held}
   - ''
   - LA(LS(RET))
   - LA(LS(BSPC))
@@ -442,7 +444,7 @@ layers:
   - LC(LA(O))
   - LC(LA(P))
   - Prev change
-  - Next change
+  - {t: Next change, type: held}
   - {t: ▽, type: trans}
   - LC(LA(A))
   - LC(LA(S))
@@ -464,7 +466,7 @@ layers:
   - LC(LA(N))
   - LC(LA(M))
   - LC(LA(COMMA))
-  - {t: LC(LA(DOT)), type: held}
+  - LC(LA(DOT))
   - and comment
   - ''
   - LC(LA(RET))

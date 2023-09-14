@@ -142,153 +142,163 @@ draw_config:
 parse_config:
   preprocess: true
   skip_binding_parsing: false
-  raw_binding_map: {
-    '&key_repeat': "Repeat",
-    '&ctrl_k': "^K",
-    '&show_hover': "Hover",
-    '&bootloader': "BOOT",
-    '&sys_reset': "Reset",
-    '&chg_case': "Trans\nform",
-    '&fold': "Fold",
-    '&unfold': "Unfold",
-    '&bt BT_SEL 0': 🛜1,
-    '&bt BT_SEL 1': 🛜2,
-    '&bt BT_SEL 2': 🛜3,
-    '&bt BT_SEL 3': 🛜4,
-    '&bt BT_CLR': 🛜❌
-  }
+  raw_binding_map:
+    '&key_repeat': "Repeat"
+    '&ctrl_k': "^K"
+    '&show_hover': "Hover"
+    '&bootloader': "BOOT"
+    '&sys_reset': "Reset"
+    '&transform': "Trans\nform"
+    '&td_home':
+      tap: "Home"
+      hold: "⇱    ⭶"
+    '&td_end':
+      tap: "End"
+      hold: "⇲    ⭹"
+    '&fold': "Fold"
+    '&unfold': "Unfold"
+    "&bt BT_SEL 0":
+      tap: $$mdi:bluetooth-connect$$
+      shifted: ""
+      hold: 1
+    "&bt BT_SEL 1":
+      tap: $$mdi:bluetooth-connect$$
+      shifted: ""
+      hold: 2
+    "&bt BT_SEL 2":
+      tap: $$mdi:bluetooth-connect$$
+      shifted: ""
+      hold: 3
+    "&bt BT_SEL 3":
+      tap: $$mdi:bluetooth-connect$$
+      shifted: ""
+      hold: 4
+    "&bt BT_CLR":
+      tap: $$mdi:bluetooth-settings$$
+      shifted: $$mdi:eraser$$
+    "&kp C_BRI_DN":
+      tap: $$mdi:brightness-5$$
+    "&kp C_BRI_UP":
+      tap: $$mdi:brightness-7$$
+    "&kp LC(Z)":
+      tap: $$mdi:arrow-u-left-top$$
+    "&kp LS(DEL)":
+      tap: $$mdi:content-cut$$
+    "&kp LC(INS)":
+      tap: $$mdi:content-copy$$
+    "&kp LS(INS)":
+      tap: $$mdi:content-paste$$
+    "&td_ins":
+      tap: "Ins"
+      hold: "Hover"
+    "&kp LA(BSLH)":
+      tap: $$material:splitscreen_bottom$$
+      shifted: "Split"
   sticky_label: sticky
   trans_legend:
     t: ▽
     type: trans
   mark_alternate_layer_activators: false
-  qmk_keycode_map:
-    XXXXXXX: ''
-    'NO': ''
-    MINUS: '-'
-    MINS: '-'
-    EQUAL: '='
-    EQL: '='
-    LEFT_BRACKET: '['
-    LBRC: '['
-    RIGHT_BRACKET: ']'
-    RBRC: ']'
-    BACKSLASH: \
-    BSLS: \
-    NONUS_HASH: '#'
-    NUHS: '#'
-    SEMICOLON: ;
-    SCLN: ;
-    QUOTE: ''''
-    QUOT: ''''
-    GRAVE: '`'
-    GRV: '`'
-    COMMA: ','
-    COMM: ','
-    DOT: .
-    SLASH: /
-    SLSH: /
-    TILDE: '~'
-    TILD: '~'
-    EXCLAIM: '!'
-    EXLM: '!'
-    AT: '@'
-    HASH: '#'
-    DOLLAR: $
-    DLR: $
-    PERCENT: '%'
-    PERC: '%'
-    CIRCUMFLEX: ^
-    CIRC: ^
-    AMPERSAND: '&'
-    AMPR: '&'
-    ASTERISK: '*'
-    ASTR: '*'
-    LEFT_PAREN: (
-    LPRN: (
-    RIGHT_PAREN: )
-    RPRN: )
-    UNDERSCORE: _
-    UNDS: _
-    PLUS: +
-    LEFT_CURLY_BRACE: '{'
-    LCBR: '{'
-    RIGHT_CURLY_BRACE: '}'
-    RCBR: '}'
-    PIPE: '|'
-    COLON: ':'
-    COLN: ':'
-    DOUBLE_QUOTE: '"'
-    DQUO: '"'
-    DQT: '"'
-    LEFT_ANGLE_BRACKET: <
-    LABK: <
-    LT: <
-    RIGHT_ANGLE_BRACKET: '>'
-    RABK: '>'
-    GT: '>'
-    QUESTION: '?'
-    QUES: '?'
+
   zmk_keycode_map:
+    # LC(INS): "Copy"
+    # LS(INS): "Paste"
+    # LC(Z): "Undo"
+
+    LC(LSHIFT): "^⇧"
     LC(PG_UP): "Prev Editor"
     LC(PG_DN): "Next Editor"
-    LC(LS(PG_UP)): "Move◀ Editor"
-    LC(LS(PG_DN)): "Move▶ Editor"
+    LC(LS(PG_UP)): "Move Editor 🠜"
+    LC(LS(PG_DN)): "Move Editor 🠞"
     LC(LA(LEFT)): "into group"
     LC(LA(RIGHT)): "into group"
     LC(BSLH): "Split right"
     LA(BSLH): "Split down"
-    LC(LA(LS(DOWN))): "Copy line ⬇"
-    LA(DOWN): "Move line ⬇"
-    LA(UP): "Move line ⬆"
+    LC(LA(LS(DOWN))): "Copy line 🠟"
+    LA(DOWN): "Move line 🠟"
+    LA(UP): "Move line 🠝"
     LC(LA(FSLH)): "and comment"
-    LC(INS): 'Copy'
-    LS(INS): 'Paste'
-    LS(DEL): '✂️'
+    LS(F12): "REFS goto"
+    LS(LA(F12)): "find all"
     LS(LC(G)): "Git prefix"
     LC(U): "Cursor undo"
-    LC(Z): 'Undo'
-    LC(K): '^K'
-    LC(F): '^F'
-    LC(LS(BSPC)): "Del all"
-    LC(BSPC): "Del word ↤"
-    LC(LS(DEL)): "Del all"
-    LC(DEL): "Del word ↦"
-    LC(LEFT): "^←"
-    LC(RIGHT): "^→"
-    LC(UP): "^↑"
-    LC(DOWN): "^↓"
-    LS(LEFT): "Select ←"
-    LS(RIGHT): "Select →"
-    LS(UP): "Select ↑"
-    LS(DOWN): "Select ↓"
-    LS(LA(UP)): "Add cursor ↑"
-    LS(LA(DOWN)): "Add cursor ↓"
+    LC(K): "^K"
+    LC(F): "^F"
+    LC(LS(BSPC)): "all"
+    LC(BSPC): "↤del word"
+    LC(LS(DEL)): "all"
+    LC(DEL): "del↦ word"
+    LC(LEFT): "^🠜"
+    LC(RIGHT): "^🠞"
+    LC(UP): "^🠝"
+    LC(DOWN): "^🠟"
+    LS(LEFT): "Select 🠜"
+    LS(RIGHT): "Select 🠞"
+    LS(UP): "Select 🠝"
+    LS(DOWN): "Select 🠝"
+    LS(LA(UP)): "Add cursor 🠝"
+    LS(LA(DOWN)): "Add cursor 🠝"
     LS(HOME): "Select home"
     LS(END): "Select end"
     LS(LC(LEFT)): "Select word ↤"
     LS(LC(RIGHT)): "Select word ↦"
-    LS(LA(RIGHT)): "Expand selection"
-    LS(LA(LEFT)): "Shrink selection"
+    LS(LA(RIGHT)): "Expand selec\ntion"
+    LS(LA(LEFT)): "Shrink selec\ntion"
     LS(LA(I)): "Add cursors toLineEnd"
-    RSHIFT: '⇧'
-    LSHIFT: '⇧'
-    LC(HOME): '⇱'
-    LC(END): '⇲'
-    LC(LA(HOME)): '⭶'
-    LC(LA(END)): '⭹'
     LA(LEFT): "Go back"
     LA(RIGHT): "Go forward"
     LC(LA(RBKT)): "Next change"
     LC(LA(LBKT)): "Prev change"
     LA(F3): "Git Next change"
     LS(LA(F3)): "Git Prev change"
-    LEFT: '←'
-    RIGHT: '→'
-    UP: '↑'
-    DOWN: '↓'
-    SPACE: '⎵'
+    LEFT: '🠈'
+    RIGHT: '🠊'
+    UP: '🠉'
+    DOWN: '🠋'
+
+    SPACE: $$mdi:keyboard-space$$
     RET: '⮐'
+    BSPC: $$mdi:backspace$$
+    DEL: $$mdi:backspace-reverse-outline$$
+    TAB: $$mdi:keyboard-tab$$
+    LS(TAB): $$mdi:keyboard-tab-reverse$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    LSHIFT: $$mdi:apple-keyboard-shift$$
+    # RSHIFT: 'Right ⇧'
+    # LSHIFT: 'Left ⇧'
+
+    # Numbers
+    "N1":
+      tap: '1'
+      shifted: '!'
+    "N2":
+      tap: '2'
+      shifted: '@'
+    "N3":
+      tap: '3'
+      shifted: '#'
+    "N4":
+      tap: '4'
+      shifted: '$'
+    "N5":
+      tap: '5'
+      shifted: '%'
+    "N6":
+      tap: '6'
+      shifted: '^'
+    "N7":
+      tap: '7'
+      shifted: '&'
+    "N8":
+      tap: '8'
+      shifted: '*'
+    "N9":
+      tap: '9'
+      shifted: '('
+    "N0":
+      tap: '0'
+      shifted: ')'
+
     EXCLAMATION: '!'
     EXCL: '!'
     AT_SIGN: '@'
@@ -309,13 +319,19 @@ parse_config:
     LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
-    EQUAL: '='
+    EQUAL:
+      tap: '='
+      shifted: '+'
     PLUS: +
-    MINUS: '-'
+    MINUS:
+      tap: '-'
+      shifted: '_'
     UNDERSCORE: _
     UNDER: _
     SLASH: /
-    FSLH: /
+    FSLH:
+      tap: '/'
+      shifted: '?'
     QUESTION: '?'
     QMARK: '?'
     BACKSLASH: \
@@ -324,31 +340,44 @@ parse_config:
     NON_US_BACKSLASH: \
     PIPE2: '|'
     NON_US_BSLH: '|'
-    SEMICOLON: ;
+    SEMICOLON:
+      tap: ';'
+      shifted: ':'
     SEMI: ;
     COLON: ':'
-    SINGLE_QUOTE: ''''
+    SINGLE_QUOTE:
+      tap: "'"
+      shifted: '"'
     SQT: ''''
     APOSTROPHE: <
     APOS: .
     DOUBLE_QUOTES: '"'
-    DQT: '"'
-    COMMA: ','
+    COMMA:
+      tap: ","
+      shifted: "<"
     LESS_THAN: <
     LT: <
     PERIOD: .
-    DOT: .
+    DOT:
+      tap: "."
+      shifted: ">"
     GREATER_THAN: '>'
     GT: '>'
-    LEFT_BRACKET: '['
+    LEFT_BRACKET:
+      tap: "["
+      shifted: "{"
     LBKT: '['
     LEFT_BRACE: '{'
     LBRC: '{'
-    RIGHT_BRACKET: ']'
+    RIGHT_BRACKET:
+      tap: "]"
+      shifted: "}"
     RBKT: ']'
     RIGHT_BRACE: '}'
     RBRC: '}'
-    GRAVE: '`'
+    GRAVE:
+      tap: '`'
+      shifted: '~'
     TILDE: '~'
     NON_US_HASH: '#'
     NUHS: '#'
