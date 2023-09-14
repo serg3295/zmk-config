@@ -137,21 +137,20 @@
 //         bindings = <&ht_k J LS(LC(RBKT))>, <&ctrl_k RBKT>;
 //       };
 
-//       // td_home: home_actions {
-//       //   compatible = "zmk,behavior-tap-dance";
-//       //   label = "HOME_ACT";
-//       //   #binding-cells = <0>;
-//       //   tapping-term-ms = <300>;
-//       //   // bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
-//       //   bindings = <&ht3 LC(HOME) HOME>, <LC(LA(UP))>;
-//       // };
-//       // td_end: end_actions {
-//       //   compatible = "zmk,behavior-tap-dance";
-//       //   label = "END_ACT";
-//       //   #binding-cells = <0>;
-//       //   tapping-term-ms = <300>;
-//       //   bindings = <&ht3 LC(END) END>, <LC(LA(DOWN))>;
-//       // };
+      td_home: home_actions {
+        compatible = "zmk,behavior-tap-dance";
+        label = "HOME_ACT";
+        #binding-cells = <0>;
+        tapping-term-ms = <300>;
+        bindings = <&ht3 LC(HOME) HOME>, <&kp LC(LA(UP))>;
+      };
+      td_end: end_actions {
+        compatible = "zmk,behavior-tap-dance";
+        label = "END_ACT";
+        #binding-cells = <0>;
+        tapping-term-ms = <300>;
+        bindings = <&ht3 LC(END) END>, <&kp LC(LA(DOWN))>;
+      };
 
 //       // td_ins: ins_hover {
 //       //   compatible = "zmk,behavior-tap-dance";
@@ -183,7 +182,7 @@
           // &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &td_ins      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
           &trans  &trans        &ht3 LC(LS(TAB)) PG_UP  &ht3 LC(TAB) PG_DN   &kp UP      &kp INS     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 LC(LS(BSPC)) LC(BSPC)   &ht3 LC(LS(DEL)) LC(DEL)   &sl CA
                   // &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &ht3  CS LC(LSHIFT) &sl CTL
-                  &trans        &kp HOME   &kp LEFT     &kp DOWN    &kp RIGHT    &kp END        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
+                  &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
                   // &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl  SA            &trans
                   &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &none         &none   &none        &sl SA            &trans
                                            &trans       &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
