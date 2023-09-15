@@ -62,6 +62,19 @@
           <&macro_tap &kp MACRO_PLACEHOLDER>,
           <&macro_release &kp LCTRL>;
       };
+
+      ck_key: ctrl_k_keycode {
+        label = "CTRL_K_KEYCODE";
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_press &kp LCTRL>,
+          <&macro_tap &kp K>,
+          <&macro_release &kp LCTRL>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>;
+      };
+
 //       // next_ed: next_ed {
 //       //   label = "OPEN_NEXT_EDITOR";
 //       //   compatible = "zmk,behavior-macro";
@@ -127,22 +140,23 @@
       //   #binding-cells = <2>;
       //   flavor = "tap-preferred";
       //   tapping-term-ms = <300>;
-      //   bindings = <&kp>, <&ctrl_k>;
+      //   bindings =  <&ck_ckey>, <&kp>;
       // };
-//       fold: fold {
-//         compatible = "zmk,behavior-tap-dance";
-//         label = "FOLD";
-//         #binding-cells = <0>;
-//         tapping-term-ms = <200>;
-//         bindings = <&ht_k N0 LS(LC(LBKT))>, <&ctrl_k LBKT>;
-//       };
-//       unfold: unfold {
-//         compatible = "zmk,behavior-tap-dance";
-//         label = "UNFOLD";
-//         #binding-cells = <0>;
-//         tapping-term-ms = <200>;
-//         bindings = <&ht_k J LS(LC(RBKT))>, <&ctrl_k RBKT>;
-//       };
+
+      fold: fold {
+        compatible = "zmk,behavior-tap-dance";
+        label = "FOLD";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&ht_ckck N0 LC(LS(LBKT))>, <&ck_ckey LBKT>;
+      };
+      unfold: unfold {
+        compatible = "zmk,behavior-tap-dance";
+        label = "UNFOLD";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&ht_ckck J LC(LS(RBKT))>, <&ck_ckey RBKT>;
+      };
 
       td_home: home_actions {
         compatible = "zmk,behavior-tap-dance";
@@ -190,7 +204,7 @@
           &trans  &trans        &ht3 PGUP_TAB  &ht3 PGDN_TAB   &kp UP  INS_HOV     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC   &ht3 F_DEL   &sl CA
                   &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
                   // &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl  SA            &trans
-                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &none         &ht3 COPY_LN   &none        &sl SA            &trans
+                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl SA            &trans
                                            &trans       &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;
       };
