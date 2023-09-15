@@ -18,8 +18,8 @@
 #define CA  7
 
 #define COPY_LN  LC(LA(FSLH)) LC(LA(LS(DOWN)))
-#define NEXT_ED  PG_DN LC(PG_DN)
-#define PREV_ED  PG_UP LC(PG_UP)
+#define NEXT_ED  &open_ed LC(PG_DN) PG_DN
+#define PREV_ED  &open_ed LC(PG_UP) PG_UP
 #define MOVE_L   LC(LA(LEFT)) LC(LS(PG_UP))
 #define MOVE_R   LC(LA(RIGHT)) LC(LS(PG_DN))
 #define F_BSPC   LC(LS(BSPC)) LC(BSPC)
@@ -74,39 +74,10 @@
           <&macro_param_1to1>,
           <&macro_tap &kp MACRO_PLACEHOLDER>;
       };
-
-//       // next_ed: next_ed {
-//       //   label = "OPEN_NEXT_EDITOR";
-//       //   compatible = "zmk,behavior-macro";
-//       //   #binding-cells = <0>;
-//       //   bindings
-//       //     = <&macro_press &kp LCTRL>
-//       //     , <&macro_tap &kp K &kp PG_DN>
-//       //     , <&macro_release &kp LCTRL>
-//       //     ;
-//       // };
-//       // prev_ed: prev_ed {
-//       //   label = "OPEN_PREVIOUS_EDITOR";
-//       //   compatible = "zmk,behavior-macro";
-//       //   #binding-cells = <0>;
-//       //   bindings
-//       //     = <&macro_press &kp LCTRL>
-//       //     , <&macro_tap &kp K &kp PG_UP>
-//       //     , <&macro_release &kp LCTRL>
-//       //     ;
-//       // };
-      // show_hover: show_hover {
-      //   label = "SHOW_HOVER";
-      //   compatible = "zmk,behavior-macro";
-      //   #binding-cells = <0>;
-      //   bindings =
-      //     <&macro_press &kp LCTRL>,
-      //     <&macro_tap &kp K &kp I>,
-      //     <&macro_release &kp LCTRL>;
-      // };
     };
 
     behaviors {
+    // hold-tap
       ht3: ht_300ms {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLD_TAP_300MS";
@@ -143,6 +114,16 @@
         bindings = <&ck_key>, <&kp>;
       };
 
+      open_ed: ht_open_next_prev_editor {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_OPEN_NEXT_PREV_EDITOR";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&kp>, <&ck_ckey>;
+      };
+
+    // tap-dance
       fold: fold {
         compatible = "zmk,behavior-tap-dance";
         label = "FOLD";
@@ -220,12 +201,11 @@
       adjust_layer {
         label = "Adjust";
         bindings = <
-                      &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0  &bootloader
-          &transform  &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(UP)    &kp LS(LA(RIGHT)) &kp LS(LA(UP))      &kp LS(LA(F3)) &none          &none         &none           &none         &sys_reset  &sk RGUI
-                      &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &ht3 MOVE_L    &kp LC(BSLH)  &ht3 MOVE_R     &none         &kp C_BRI_UP
-                      // &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     &ht_k PREV_ED  &kp LA(BSLH)  &ht_k NEXT_ED   &none         &kp C_BRI_DN
-                      &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     &none  &kp LA(BSLH)  &none   &none         &kp C_BRI_DN
-                                                &trans           &trans        &trans            &trans              &trans         &trans         &trans        &trans
+                      &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader
+          &transform  &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(UP)    &kp LS(LA(RIGHT)) &kp LS(LA(UP))      &kp LS(LA(F3)) &none         &none         &none         &none         &sys_reset  &sk RGUI
+                      &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &ht3 MOVE_L   &kp LC(BSLH)  &ht3 MOVE_R   &none         &kp C_BRI_UP
+                      &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     PREV_ED       &kp LA(BSLH)  NEXT_ED       &none         &kp C_BRI_DN
+                                                &trans           &trans        &trans            &trans              &trans         &trans        &trans        &trans
         >;
       };
 
