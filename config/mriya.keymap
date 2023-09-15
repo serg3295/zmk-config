@@ -134,14 +134,14 @@
         bindings = <&ck_ckey>, <&kp>;
       };
 
-      // ht_k: ht_ctrl_k {
-      //   compatible = "zmk,behavior-hold-tap";
-      //   label = "HOLD_TAP_CTRL_K";
-      //   #binding-cells = <2>;
-      //   flavor = "tap-preferred";
-      //   tapping-term-ms = <300>;
-      //   bindings =  <&ck_ckey>, <&kp>;
-      // };
+      ht_ckk: ht_ctrl_k_keycode {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_CTRL_K_KEYCODE";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&ck_key>, <&kp>;
+      };
 
       fold: fold {
         compatible = "zmk,behavior-tap-dance";
@@ -173,14 +173,13 @@
         bindings = <&ht3 LC(END) END>, <&kp LC(LA(DOWN))>;
       };
 
-//       // td_ins: ins_hover {
-//       //   compatible = "zmk,behavior-tap-dance";
-//       //   label = "INS_HOVER";
-//       //   #binding-cells = <0>;
-//       //   tapping-term-ms = <300>;
-//       //   bindings = <&show_hover INS>;
-//       // };
-
+      td_defs: defs_actions {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DEFS_ACTIONS";
+        #binding-cells = <0>;
+        tapping-term-ms = <300>;
+        bindings = <&ht_ckk F12 F12>, <&kp LA(F12)>;
+      };
     };
 
     keymap {
@@ -200,11 +199,9 @@
         label = "Lower";
         bindings = <
                   &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp  F8            &kp LA(RIGHT)
-          // &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &td_ins      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
-          &trans  &trans        &ht3 PGUP_TAB  &ht3 PGDN_TAB   &kp UP  INS_HOV     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC   &ht3 F_DEL   &sl CA
+          &trans  &trans        &ht3 PGUP_TAB  &ht3 PGDN_TAB   &kp UP  INS_HOV   &kp F11        &td_defs      &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC   &ht3 F_DEL   &sl CA
                   &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
-                  // &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl  SA            &trans
-                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl SA            &trans
+                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN  &unfold        &sl SA            &trans
                                            &trans       &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;
       };
