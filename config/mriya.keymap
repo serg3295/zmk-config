@@ -28,6 +28,7 @@
 #define PGUP_TAB LC(LS(TAB)) PG_UP
 #define PGDN_TAB LC(TAB) PG_DN
 #define W_CAPS   &ht_caps CAPS 0
+#define INS_HOV  &ht_ckck I INS
 
 &lt {
   quick_tap_ms = <200>;
@@ -48,6 +49,18 @@
           <&macro_tap &kp P>,
           <&macro_release &kp LSHIFT &kp LCTRL>,
           <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>;
+      };
+
+      ck_ckey: ctrl_k_ctrl_keycode {
+        label = "CTRL_K_CTRL_KEYCODE";
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_press &kp LCTRL>,
+          <&macro_tap &kp K>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>,
+          <&macro_release &kp LCTRL>;
       };
 //       // next_ed: next_ed {
 //       //   label = "OPEN_NEXT_EDITOR";
@@ -78,18 +91,6 @@
       //     <&macro_tap &kp K &kp I>,
       //     <&macro_release &kp LCTRL>;
       // };
-
-      // ctrl_k: ctrl_k_keycode {
-      //   label = "CTRL_K_KEYCODE";
-      //   compatible = "zmk,behavior-macro-one-param";
-      //   #binding-cells = <1>;
-      //   bindings =
-      //     <&macro_press &kp LCTRL>,
-      //     <&macro_tap &kp K>,
-      //     <&macro_param_1to1>,
-      //     <&macro_tap &kp MACRO_PLACEHOLDER>,
-      //     <&macro_release &kp LCTRL>;
-      // };
     };
 
     behaviors {
@@ -111,14 +112,14 @@
         bindings = <&kp>, <&caps_word>;
       };
 
-      // ht_ins: ins_hov {
-      //   compatible = "zmk,behavior-hold-tap";
-      //   label = "INS_HOVER";
-      //   #binding-cells = <2>;
-      //   flavor = "tap-preferred";
-      //   tapping-term-ms = <300>;
-      //   bindings = <&ctrl_k>, <&kp>;
-      // };
+      ht_ckck: ht_ctrl_k_ctrl_keycode {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_CTRL_K_CTRL_KEYCODE";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&ck_ckey>, <&kp>;
+      };
 
       // ht_k: ht_ctrl_k {
       //   compatible = "zmk,behavior-hold-tap";
@@ -186,7 +187,7 @@
         bindings = <
                   &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp  F8            &kp LA(RIGHT)
           // &trans  &trans        &kp PG_UP  &kp PG_DN    &kp UP      &td_ins      &kp F11        &kp F12       &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC        &ht3 F_DEL    &sl CA
-          &trans  &trans        &ht3 PGUP_TAB  &ht3 PGDN_TAB   &kp UP      &kp INS     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC   &ht3 F_DEL   &sl CA
+          &trans  &trans        &ht3 PGUP_TAB  &ht3 PGDN_TAB   &kp UP  INS_HOV     &kp F11        &kp F12       &none     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC   &ht3 F_DEL   &sl CA
                   &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
                   // &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN   &unfold        &sl  SA            &trans
                   &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &none         &ht3 COPY_LN   &none        &sl SA            &trans
