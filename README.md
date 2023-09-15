@@ -1,6 +1,6 @@
 # zmk-config
 
-My split keyboard is Mriya58.
+My split keyboard is Mriya58. The layout is optimized for vscode
 
 ## Keymap
 

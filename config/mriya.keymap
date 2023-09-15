@@ -16,6 +16,7 @@
 #define CS  5
 #define SA  6
 #define CA  7
+
 #define COPY_LN  LC(LA(FSLH)) LC(LA(LS(DOWN)))
 #define NEXT_ED  PG_DN LC(PG_DN)
 #define PREV_ED  PG_UP LC(PG_UP)
@@ -26,6 +27,7 @@
 #define REFS     LS(LA(F12)) LS(F12)
 #define PGUP_TAB LC(LS(TAB)) PG_UP
 #define PGDN_TAB LC(TAB) PG_DN
+#define W_CAPS   &ht_caps CAPS 0
 
 &lt {
   quick_tap_ms = <200>;
@@ -35,13 +37,18 @@
   quick_tap_ms = <200>;
 };
 
-&caps_word {
-  mods = <(LSHIFT|RSHIFT)>;
-  // mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-
 / {
     macros {
+      transform: transform_to {
+        label = "TRANSFORM_TO";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+          <&macro_press &kp LCTRL &kp LSHIFT>,
+          <&macro_tap &kp P>,
+          <&macro_release &kp LSHIFT &kp LCTRL>,
+          <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>;
+      };
 //       // next_ed: next_ed {
 //       //   label = "OPEN_NEXT_EDITOR";
 //       //   compatible = "zmk,behavior-macro";
@@ -72,49 +79,20 @@
       //     <&macro_release &kp LCTRL>;
       // };
 
-      transform: transform_to {
-        label = "TRANSFORM_TO";
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-          = <&macro_press &kp LCTRL &kp LSHIFT>
-          , <&macro_tap &kp P>
-          , <&macro_release &kp LSHIFT &kp LCTRL>
-          , <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>
-          ;
-      };
-      ctrl_k: ctrl_k_keycode {
-        label = "CTRL_K_KEYCODE";
-        compatible = "zmk,behavior-macro-one-param";
-        #binding-cells = <1>;
-        bindings =
-          <&macro_press &kp LCTRL>,
-          <&macro_tap &kp K>,
-          <&macro_param_1to1>,
-          <&macro_tap &kp MACRO_PLACEHOLDER>,
-          <&macro_release &kp LCTRL>;
-      };
+      // ctrl_k: ctrl_k_keycode {
+      //   label = "CTRL_K_KEYCODE";
+      //   compatible = "zmk,behavior-macro-one-param";
+      //   #binding-cells = <1>;
+      //   bindings =
+      //     <&macro_press &kp LCTRL>,
+      //     <&macro_tap &kp K>,
+      //     <&macro_param_1to1>,
+      //     <&macro_tap &kp MACRO_PLACEHOLDER>,
+      //     <&macro_release &kp LCTRL>;
+      // };
     };
 
     behaviors {
-      ht_ins: ins_hov {
-        compatible = "zmk,behavior-hold-tap";
-        label = "INS_HOVER";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&ctrl_k>, <&kp>;
-      };
-
-      ht_k: ht_ctrl_k {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOLD_TAP_CTRL_K";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&kp>, <&ctrl_k>;
-      };
-
       ht3: ht_300ms {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLD_TAP_300MS";
@@ -124,6 +102,32 @@
         bindings = <&kp>, <&kp>;
       };
 
+      ht_caps: mod_caps {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOD_CAPS";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&kp>, <&caps_word>;
+      };
+
+      // ht_ins: ins_hov {
+      //   compatible = "zmk,behavior-hold-tap";
+      //   label = "INS_HOVER";
+      //   #binding-cells = <2>;
+      //   flavor = "tap-preferred";
+      //   tapping-term-ms = <300>;
+      //   bindings = <&ctrl_k>, <&kp>;
+      // };
+
+      // ht_k: ht_ctrl_k {
+      //   compatible = "zmk,behavior-hold-tap";
+      //   label = "HOLD_TAP_CTRL_K";
+      //   #binding-cells = <2>;
+      //   flavor = "tap-preferred";
+      //   tapping-term-ms = <300>;
+      //   bindings = <&kp>, <&ctrl_k>;
+      // };
 //       fold: fold {
 //         compatible = "zmk,behavior-tap-dance";
 //         label = "FOLD";
@@ -193,11 +197,11 @@
       raise_layer {
         label = "Raise";
         bindings = <
-                    &kp LC(LA(LBKT))  &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans    &kp LC(LA(RBKT))
-          &kp CAPS  &trans            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &none     &none             &kp PSCRN
-                    &trans            &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp PRCNT  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI  &kp SQT
-                    &trans            &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH  &trans
-                                                 &trans    &trans     &mo ADJ   &trans           &trans     &trans    &trans     &trans
+                  &kp LC(LA(LBKT))  &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans    &kp LC(LA(RBKT))
+          W_CAPS  &trans            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &none     &none             &kp PSCRN
+                  &trans            &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp PRCNT  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI  &kp SQT
+                  &trans            &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH  &trans
+                                               &trans    &trans     &mo ADJ   &trans           &trans     &trans    &trans     &trans
         >;
       };
 
