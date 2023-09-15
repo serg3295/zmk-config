@@ -17,18 +17,18 @@
 #define SA  6
 #define CA  7
 
-#define COPY_LN  LC(LA(FSLH)) LC(LA(LS(DOWN)))
-#define NEXT_ED  &open_ed LC(PG_DN) PG_DN
-#define PREV_ED  &open_ed LC(PG_UP) PG_UP
-#define MOVE_L   LC(LA(LEFT)) LC(LS(PG_UP))
-#define MOVE_R   LC(LA(RIGHT)) LC(LS(PG_DN))
-#define F_BSPC   LC(LS(BSPC)) LC(BSPC)
-#define F_DEL    LC(LS(DEL)) LC(DEL)
-#define REFS     LS(LA(F12)) LS(F12)
-#define PGUP_TAB LC(LS(TAB)) PG_UP
-#define PGDN_TAB LC(TAB) PG_DN
-#define W_CAPS   &ht_caps CAPS 0
-#define INS_HOV  &ht_ckck I INS
+#define NEXT_ED &open_ed LC(PG_DN) PG_DN
+#define PREV_ED &open_ed LC(PG_UP) PG_UP
+#define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))
+#define MOVE_ED_R &ht3 LC(LA(RIGHT)) LC(LS(PG_DN))
+#define PGUP_TAB  &ht3 LC(LS(TAB)) PG_UP
+#define PGDN_TAB  &ht3 LC(TAB) PG_DN
+#define COPY_LN   &ht3 LC(LA(FSLH)) LC(LA(LS(DOWN)))
+#define F_BSPC    &ht3 LC(LS(BSPC)) LC(BSPC)
+#define F_DEL     &ht3 LC(LS(DEL)) LC(DEL)
+#define REFS      &ht3 LS(LA(F12)) LS(F12)
+#define W_CAPS  &ht_caps CAPS 0
+#define INS_HOV &ht_ckck I INS
 
 &lt {
   quick_tap_ms = <200>;
@@ -119,7 +119,7 @@
         label = "HT_OPEN_NEXT_PREV_EDITOR";
         #binding-cells = <2>;
         flavor = "tap-preferred";
-        tapping-term-ms = <200>;
+        tapping-term-ms = <300>;
         bindings = <&kp>, <&ck_ckey>;
       };
 
@@ -179,11 +179,11 @@
       lower_layer {
         label = "Lower";
         bindings = <
-                  &kp LA(LEFT)  &kp F7     &kp F5       &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp  F8            &kp LA(RIGHT)
-          &trans  &trans        &ht3 PGUP_TAB  &ht3 PGDN_TAB   &kp UP  INS_HOV   &kp F11        &td_defs      &ht3 REFS     &kp LC(UP)    &kp LC(K)      &ht3 F_BSPC   &ht3 F_DEL   &sl CA
-                  &trans        &td_home   &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS   &sl CTL
-                  &trans        &kp LC(Z)  &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         &ht3 COPY_LN  &unfold        &sl SA            &trans
-                                           &trans       &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
+                  &kp LA(LEFT)  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8  &kp LA(RIGHT)
+          &trans  &trans        PGUP_TAB   PGDN_TAB    &kp UP      INS_HOV      &kp F11        &td_defs      REFS          &kp LC(UP)    &kp LC(K)      F_BSPC  F_DEL         &sl CA
+                  &trans        &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS  &sl CTL
+                  &trans        &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         COPY_LN       &unfold        &sl SA  &trans
+                                           &trans      &trans      &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;
       };
 
@@ -191,7 +191,7 @@
         label = "Raise";
         bindings = <
                   &kp LC(LA(LBKT))  &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans    &kp LC(LA(RBKT))
-          W_CAPS  &trans            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &none     &none             &kp PSCRN
+          W_CAPS  &trans            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &none     &none            &kp PSCRN
                   &trans            &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp PRCNT  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI  &kp SQT
                   &trans            &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH  &trans
                                                &trans    &trans     &mo ADJ   &trans           &trans     &trans    &trans     &trans
@@ -203,7 +203,7 @@
         bindings = <
                       &bootloader &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_CLR          &bt BT_CLR     &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bootloader
           &transform  &sys_reset  &none         &kp LS(LA(LEFT)) &kp LS(UP)    &kp LS(LA(RIGHT)) &kp LS(LA(UP))      &kp LS(LA(F3)) &none         &none         &none         &none         &sys_reset  &sk RGUI
-                      &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  &ht3 MOVE_L   &kp LC(BSLH)  &ht3 MOVE_R   &none         &kp C_BRI_UP
+                      &trans      &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)         &kp LS(LC(G))  MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &none         &kp C_BRI_UP
                       &none       &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))    &kp LA(F3)     PREV_ED       &kp LA(BSLH)  NEXT_ED       &none         &kp C_BRI_DN
                                                 &trans           &trans        &trans            &trans              &trans         &trans        &trans        &trans
         >;
