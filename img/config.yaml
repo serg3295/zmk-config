@@ -132,11 +132,7 @@ draw_config:
   glyph_tap_size: 14
   glyph_hold_size: 12
   glyph_shifted_size: 10
-  glyphs:
-    split_down: |
-      <svg width="32" height="32" viewBox="0 0 32 32">
-      <path d="M180-120q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm0-390q-24 0-42-18t-18-42v-210q0-24 18-42t42-18h600q24 0 42 18t18 42v210q0 24-18 42t-42 18H180Zm600-270H180v210h600v-210ZM180-570v-210 210Z"/>
-      </svg>
+  glyphs: {}
   glyph_urls:
     tabler: https://tabler-icons.io/static/tabler-icons/icons/{}.svg
     mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
@@ -147,10 +143,8 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
-    '&caps_word': "caps word"
     '&key_repeat': "Repeat"
     '&ctrl_k': "^K"
-    '&show_hover': "Hover"
     '&bootloader': "BOOT"
     '&sys_reset': "Reset"
     '&transform': "Trans\nform"
@@ -193,13 +187,42 @@ parse_config:
       tap: $$mdi:content-copy$$
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
-    "&td_ins":
+    "INS_HOV":
       tap: "Ins"
       hold: "Hover"
+    "W_CAPS":
+      tap: "caps word"
+      hold: "CAPS"
+    "&td_defs":
+      shifted: DEFS
+      tap: "goto F12"
+      hold: "open"
+    "&sl CS":
+      shifted: "layer"
+      tap: "CS"
+      hold: "sticky"
+    "&sl SA":
+      shifted: "layer"
+      tap: "SA"
+      hold: "sticky"
+    "&sl CTL":
+      shifted: "layer"
+      tap: "Ctrl"
+      hold: "sticky"
+    "&sl CA":
+      shifted: "layer"
+      tap: "CA"
+      hold: "sticky"
+    "PREV_ED":
+      tap: "Prev Editor"
+      hold: "out group"
+    "NEXT_ED":
+      tap: "Next Editor"
+      hold: "out group"
     "&kp LA(BSLH)":
-      # tap: $$material:splitscreen_bottom$$
-      tap: $$split_down$$
+      tap: $$mdi:view-agenda-outline$$
       shifted: "Split"
+      hold: "down"
   sticky_label: sticky
   trans_legend:
     t: ▽
@@ -207,13 +230,7 @@ parse_config:
   mark_alternate_layer_activators: false
 
   zmk_keycode_map:
-    # LC(INS): "Copy"
-    # LS(INS): "Paste"
-    # LC(Z): "Undo"
-
     LC(LSHIFT): "^⇧"
-    LC(PG_UP): "Prev Editor"
-    LC(PG_DN): "Next Editor"
     LC(LS(PG_UP)): "Move Editor 🠜"
     LC(LS(PG_DN)): "Move Editor 🠞"
     LC(LA(LEFT)): "into group"
@@ -224,7 +241,9 @@ parse_config:
     LA(DOWN): "Move line 🠟"
     LA(UP): "Move line 🠝"
     LC(LA(FSLH)): "and comment"
-    LS(F12): "REFS goto"
+    LS(F12):
+      shifted: "REFS"
+      tap: "goto"
     LS(LA(F12)): "find all"
     LS(LC(G)): "Git prefix"
     LC(U): "Cursor undo"
@@ -264,10 +283,12 @@ parse_config:
 
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'
-    BSPC: $$mdi:backspace$$
+    BSPC: $$mdi:backspace-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
     TAB: $$mdi:keyboard-tab$$
     LS(TAB): $$mdi:keyboard-tab-reverse$$
+    LC(TAB): "^⇥"
+    LC(LS(TAB)): "^⇧⇥"
     RSHIFT: $$mdi:apple-keyboard-shift$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
     # RSHIFT: 'Right ⇧'
@@ -325,13 +346,9 @@ parse_config:
     LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
-    EQUAL:
-      tap: '='
-      shifted: '+'
+    EQUAL: '='
     PLUS: +
-    MINUS:
-      tap: '-'
-      shifted: '_'
+    MINUS: '-'
     UNDERSCORE: _
     UNDER: _
     SLASH: /
