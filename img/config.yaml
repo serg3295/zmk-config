@@ -154,8 +154,14 @@ parse_config:
     '&td_end':
       tap: "End"
       hold: "⇲    ⭹"
-    '&fold': "Fold"
-    '&unfold': "Unfold"
+    '&fold':
+      tap: "recursive"
+      shifted: "Fold"
+      hold: "all"
+    '&unfold':
+      tap: "recursive"
+      shifted: "Unfold"
+      hold: "all"
     "&bt BT_SEL 0":
       tap: $$mdi:bluetooth-connect$$
       shifted: ""
@@ -230,6 +236,8 @@ parse_config:
   mark_alternate_layer_activators: false
 
   zmk_keycode_map:
+    LC(LBKT): "Outdent line"
+    LC(RBKT): "Indent line"
     LC(LSHIFT): "^⇧"
     LC(LS(PG_UP)): "Move Editor 🠜"
     LC(LS(PG_DN)): "Move Editor 🠞"

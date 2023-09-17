@@ -104,9 +104,9 @@ layers:
   - $$mdi:content-paste$$
   - $$mdi:backspace-reverse-outline$$
   - Move line 🠟
-  - Fold
+  - {t: recursive, h: all, s: Fold}
   - {t: Copy line 🠟, h: and comment}
-  - Unfold
+  - {t: recursive, h: all, s: Unfold}
   - {t: SA, h: sticky, s: layer}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -192,8 +192,8 @@ layers:
   - 'Trans
 
     form'
-  - Reset
-  - ''
+  - Outdent line
+  - Indent line
   - 'Shrink selec
 
     tion'
@@ -207,7 +207,7 @@ layers:
   - ''
   - ''
   - ''
-  - Reset
+  - ''
   - {t: RGUI, h: sticky}
   - {t: ▽, type: trans}
   - Select home
@@ -266,8 +266,8 @@ layers:
   - LC(I)
   - LC(O)
   - LC(P)
-  - LC(LBKT)
-  - LC(RBKT)
+  - Outdent line
+  - Indent line
   - {t: ▽, type: trans}
   - LC(A)
   - LC(S)
