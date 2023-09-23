@@ -51,7 +51,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - ⮐
-  - $$mdi:backspace-outline$$
+  - $$mdi:backspace$$
   - Lower
   - {t: LCTRL, h: sticky}
   - {t: LALT, h: sticky}

@@ -291,7 +291,7 @@ parse_config:
 
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'
-    BSPC: $$mdi:backspace-outline$$
+    BSPC: $$mdi:backspace$$
     DEL: $$mdi:backspace-reverse-outline$$
     TAB: $$mdi:keyboard-tab$$
     LS(TAB): $$mdi:keyboard-tab-reverse$$
