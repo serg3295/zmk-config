@@ -12,7 +12,7 @@ layers:
   - {t: '6', s: ^}
   - {t: '8', s: '*'}
   - '-'
-  - {t: LGUI, h: sticky}
+  - {t: caps word, h: CAPS}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -50,14 +50,14 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
+  - {t: LGUI, h: sticky}
   - ⮐
-  - $$mdi:backspace-outline$$
-  - Lower
-  - {t: LCTRL, h: sticky}
-  - {t: LALT, h: sticky}
-  - Raise
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:backspace-outline$$', h: Lower}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: LCTRL}
+  - LALT
+  - {t: '$$mdi:keyboard-space$$', h: Raise}
   - RALT
+  - {t: Ctrl, h: sticky, s: layer}
   Lower:
   - Go back
   - F7
@@ -70,8 +70,10 @@ layers:
   - F4
   - F6
   - F8
-  - Go forward
-  - {t: ▽, type: trans}
+  - Go fwd
+  - 'Trans
+
+    form'
   - {t: ▽, type: trans}
   - {t: PG UP, h: ^⇧⇥}
   - {t: PG DN, h: ^⇥}
@@ -84,7 +86,7 @@ layers:
   - ^K
   - {t: ↤del word, h: all}
   - {t: del↦ word, h: all}
-  - {t: CA, h: sticky, s: layer}
+  - {t: goto, h: show, s: next chg}
   - {t: ▽, type: trans}
   - {t: Home, h: ⇱    ⭶}
   - 🠈
@@ -96,13 +98,13 @@ layers:
   - ^🠟
   - ^🠞
   - {t: CS, h: sticky, s: layer}
-  - {t: Ctrl, h: sticky, s: layer}
+  - {t: goto, h: show, s: prev chg}
   - {t: ▽, type: trans}
   - $$mdi:arrow-u-left-top$$
   - $$mdi:content-cut$$
   - $$mdi:content-copy$$
   - $$mdi:content-paste$$
-  - $$mdi:backspace-reverse-outline$$
+  - Git prefix
   - Move line 🠟
   - {t: recursive, h: all, s: Fold}
   - {t: Copy line 🠟, h: and comment}
@@ -118,7 +120,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Raise:
-  - Prev change
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -129,8 +131,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Next change
-  - {t: caps word, h: CAPS}
+  - ''
+  - PSCRN
   - {t: ▽, type: trans}
   - {t: '`', s: '~'}
   - <
@@ -143,7 +145,7 @@ layers:
   - ']'
   - ''
   - ''
-  - PSCRN
+  - {t: RGUI, h: sticky}
   - {t: ▽, type: trans}
   - _
   - (
@@ -177,21 +179,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Adjust:
-  - BOOT
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:bluetooth-connect$$', h: '4'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
   - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:eraser$$'}
   - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:eraser$$'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
   - {t: '$$mdi:bluetooth-connect$$', h: '4'}
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
   - BOOT
-  - 'Trans
-
-    form'
   - Outdent line
   - Indent line
   - 'Shrink selec
@@ -202,20 +202,20 @@ layers:
 
     tion'
   - Add cursor 🠝
-  - Git Prev change
   - ''
   - ''
   - ''
   - ''
   - ''
-  - {t: RGUI, h: sticky}
+  - ''
+  - BOOT
   - {t: ▽, type: trans}
   - Select home
   - Select 🠜
   - Select 🠝
   - Select 🠞
   - Select end
-  - Git prefix
+  - ''
   - {t: Move Editor 🠜, h: into group}
   - Split right
   - {t: Move Editor 🠞, h: into group}
@@ -227,7 +227,7 @@ layers:
   - Add cursors toLineEnd
   - Select word ↦
   - Add cursor 🠝
-  - Git Next change
+  - ''
   - {t: Prev Editor, h: out group}
   - {t: '$$mdi:view-agenda-outline$$', h: down, s: Split}
   - {t: Next Editor, h: out group}
@@ -292,13 +292,13 @@ layers:
   - LC(DOT)
   - LC(FSLH)
   - ''
-  - LC(RET)
-  - ↤del word
   - ''
+  - LC(RET)
   - ''
   - ''
   - ''
   - LC(SPACE)
+  - ''
   - ''
   cs:
   - LS(LC(GRAVE))
@@ -351,13 +351,13 @@ layers:
   - LS(LC(DOT))
   - LS(LC(FSLH))
   - ''
-  - LS(LC(RET))
-  - LS(LC(BSPC))
   - ''
+  - LS(LC(RET))
   - ''
   - ''
   - ''
   - LS(LC(SPACE))
+  - ''
   - ''
   sa:
   - LA(LS(GRAVE))
@@ -410,13 +410,13 @@ layers:
   - LA(LS(DOT))
   - LA(LS(FSLH))
   - ''
-  - LA(LS(RET))
-  - LA(LS(BSPC))
   - ''
+  - LA(LS(RET))
   - ''
   - ''
   - ''
   - LA(LS(SPACE))
+  - ''
   - ''
   ca:
   - LC(LA(GRAVE))
@@ -430,7 +430,7 @@ layers:
   - LC(LA(4))
   - LC(LA(6))
   - LC(LA(8))
-  - LC(LA(MINUS))
+  - Go back
   - ''
   - LC(LA(TAB))
   - LC(LA(Q))
@@ -443,8 +443,8 @@ layers:
   - LC(LA(I))
   - LC(LA(O))
   - LC(LA(P))
-  - Prev change
-  - Next change
+  - {t: goto, s: prev chg}
+  - {t: goto, s: next chg}
   - {t: ▽, type: trans}
   - LC(LA(A))
   - LC(LA(S))
@@ -469,11 +469,11 @@ layers:
   - LC(LA(DOT))
   - and comment
   - ''
-  - LC(LA(RET))
-  - LC(LA(BSPC))
   - ''
+  - LC(LA(RET))
   - ''
   - ''
   - ''
   - LC(LA(SPACE))
+  - ''
   - ''

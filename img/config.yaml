@@ -178,6 +178,10 @@ parse_config:
       tap: $$mdi:bluetooth-connect$$
       shifted: ""
       hold: 4
+    "&bt BT_SEL 4":
+      tap: $$mdi:bluetooth-connect$$
+      shifted: ""
+      hold: 5
     "&bt BT_CLR":
       tap: $$mdi:bluetooth-settings$$
       shifted: $$mdi:eraser$$
@@ -229,6 +233,10 @@ parse_config:
       tap: $$mdi:view-agenda-outline$$
       shifted: "Split"
       hold: "down"
+    "&kp LC(LA(MINUS))":
+      tap: "Go back"
+    "&kp LC(LS(MINUS))":
+      tap: "Go fwd"
   sticky_label: sticky
   trans_legend:
     t: ▽
@@ -280,10 +288,14 @@ parse_config:
     LS(LA(I)): "Add cursors toLineEnd"
     LA(LEFT): "Go back"
     LA(RIGHT): "Go forward"
-    LC(LA(RBKT)): "Next change"
-    LC(LA(LBKT)): "Prev change"
-    LA(F3): "Git Next change"
-    LS(LA(F3)): "Git Prev change"
+    LC(LA(RBKT)):
+      tap: "goto"
+      shifted: "next chg"
+    LC(LA(LBKT)):
+      tap: "goto"
+      shifted: "prev chg"
+    LA(F3): "show"
+    LS(LA(F3)): "show"
     LEFT: '🠈'
     RIGHT: '🠊'
     UP: '🠉'
