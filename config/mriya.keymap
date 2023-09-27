@@ -12,9 +12,8 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
-#define CTL 4
-#define CS  5
-#define SA  6
+#define CS  4
+#define SA  5
 
 #define NEXT_ED &open_ed LC(PG_DN) PG_DN
 #define PREV_ED &open_ed LC(PG_UP) PG_UP
@@ -213,16 +212,6 @@
                       &trans        &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)          &none       MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &none         &kp C_BRI_UP
                       &none         &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))     &none       PREV_ED       &kp LA(BSLH)  NEXT_ED       &none         &kp C_BRI_DN
                                                   &trans           &trans        &trans            &trans               &trans      &trans        &trans        &trans
-        >;
-      };
-
-      ctrl_layer {
-        bindings = <
-                &kp LC(GRAVE) &kp LC(N7)  &kp LC(N5)  &kp LC(N3)  &kp LC(N1)  &kp LC(N9)          &kp LC(N0)  &kp LC(N2)  &kp LC(N4)     &kp LC(N6)   &kp LC(N8)    &kp LC(MINUS)
-          &none &kp LC(TAB)   &kp LC(Q)   &kp LC(W)   &kp LC(E)   &kp LC(R)   &kp LC(T)           &kp LC(Y)   &kp LC(U)   &kp LC(I)      &kp LC(O)    &kp LC(P)     &kp LC(LBKT)   &kp LC(RBKT)
-                &trans        &kp LC(A)   &kp LC(S)   &kp LC(D)   &kp LC(F)   &kp LC(G)           &kp LC(H)   &kp LC(J)   &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(SQT)
-                &none         &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp LC(B)           &kp LC(N)   &kp LC(M)   &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)  &none
-                                          &none       &kp LC(RET) &none       &none               &none       &kp LC(SPACE) &none        &none
         >;
       };
 
