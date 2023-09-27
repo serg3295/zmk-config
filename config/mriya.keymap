@@ -29,10 +29,10 @@
 #define F_DEL     &ht3 LC(LS(DEL)) LC(DEL)
 #define REFS      &ht3 LS(LA(F12)) LS(F12)
 #define RET_CTL   &ht3 LC(RET) RET
+#define GO_BACK   &ht3 LA(LEFT) LC(LA(MINUS))
+#define GO_FWD    &ht3 LA(RIGHT) LC(LS(MINUS))
 #define W_CAPS  &ht_caps CAPS 0
 #define INS_HOV &ht_ckck I INS
-#define GO_BACK &kp LC(LA(MINUS))
-#define GO_FWD  &kp LC(LS(MINUS))
 
 &lt {
   tapping_term_ms = <250>;

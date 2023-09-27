@@ -59,7 +59,7 @@ layers:
   - RALT
   - {t: next, h: bottom, s: workspace}
   Lower:
-  - Go back
+  - {t: Go back, h: on win}
   - F7
   - F5
   - F3
@@ -70,7 +70,7 @@ layers:
   - F4
   - F6
   - F8
-  - Go fwd
+  - {t: Go fwd, h: on win}
   - 'Trans
 
     form'

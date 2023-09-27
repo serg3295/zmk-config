@@ -233,10 +233,12 @@ parse_config:
       tap: $$mdi:view-agenda-outline$$
       shifted: "Split"
       hold: "down"
-    "&kp LC(LA(MINUS))":
+    "GO_BACK":
       tap: "Go back"
-    "&kp LC(LS(MINUS))":
+      hold: "on win"
+    "GO_FWD":
       tap: "Go fwd"
+      hold: "on win"
     "WORKSPACE":
       shifted: "workspace"
       tap: "next"
