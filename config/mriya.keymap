@@ -15,7 +15,6 @@
 #define CTL 4
 #define CS  5
 #define SA  6
-#define CA  7
 
 #define NEXT_ED &open_ed LC(PG_DN) PG_DN
 #define PREV_ED &open_ed LC(PG_UP) PG_UP
@@ -244,16 +243,6 @@
                 &trans            &kp LA(LS(A))   &kp LA(LS(S))   &kp LA(LS(D))   &kp LA(LS(F))   &kp LA(LS(G))     &kp LA(LS(H))   &kp LA(LS(J))   &kp LA(LS(K))      &kp LA(LS(L))    &kp LA(LS(SEMI))  &kp LA(LS(SQT))
                 &none             &kp LA(LS(Z))   &kp LA(LS(X))   &kp LA(LS(C))   &kp LA(LS(V))   &kp LA(LS(B))     &kp LA(LS(N))   &kp LA(LS(M))   &kp LA(LS(COMMA))  &kp LA(LS(DOT))  &kp LA(LS(FSLH))  &none
                                                   &none           &kp LA(LS(RET)) &none           &none             &none           &kp LA(LS(SPACE)) &none             &none
-        >;
-      };
-
-      ca_layer {
-        bindings = <
-                &kp LC(LA(GRAVE)) &kp LC(LA(N7))  &kp LC(LA(N5))  &kp LC(LA(N3))  &kp LC(LA(N1))  &kp LC(LA(N9))    &kp LC(LA(N0))  &kp LC(LA(N2))  &kp LC(LA(N4))     &kp LC(LA(N6))   &kp LC(LA(N8))    &kp LC(LA(MINUS))
-          &none &kp LC(LA(TAB))   &kp LC(LA(Q))   &kp LC(LA(W))   &kp LC(LA(E))   &kp LC(LA(R))   &kp LC(LA(T))     &kp LC(LA(Y))   &kp LC(LA(U))   &kp LC(LA(I))      &kp LC(LA(O))    &kp LC(LA(P))     &kp LC(LA(LBKT))   &kp LC(LA(RBKT))
-                &trans            &kp LC(LA(A))   &kp LC(LA(S))   &kp LC(LA(D))   &kp LC(LA(F))   &kp LC(LA(G))     &kp LC(LA(H))   &kp LC(LA(J))   &kp LC(LA(K))      &kp LC(LA(L))    &kp LC(LA(SEMI))  &kp LC(LA(SQT))
-                &none             &kp LC(LA(Z))   &kp LC(LA(X))   &kp LC(LA(C))   &kp LC(LA(V))   &kp LC(LA(B))     &kp LC(LA(N))   &kp LC(LA(M))   &kp LC(LA(COMMA))  &kp LC(LA(DOT))  &kp LC(LA(FSLH))  &none
-                                                  &none           &kp LC(LA(RET))  &none          &none             &none           &kp LC(LA(SPACE)) &none             &none
         >;
       };
     };
