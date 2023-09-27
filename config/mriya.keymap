@@ -14,6 +14,22 @@
 #define ADJ 3
 #define CS  4
 #define SA  5
+#define WIN 6
+
+// Tiling window manager
+#define WS_1 &kp LG(PG_UP)
+#define WS_2 &kp LG(PG_DN)
+#define N_W  &kp LG(LC(UP))
+#define N_E  &kp LG(LC(LS(UP)))
+#define S_W  &kp LG(LC(DOWN))
+#define S_E  &kp LG(LC(LS(DOWN)))
+#define WEST &kp LG(LC(LEFT))
+#define EAST &kp LG(LC(RIGHT))
+#define HIDE &kp LG(D)
+#define MV_L &kp LG(LEFT)
+#define MV_R &kp LG(RIGHT)
+#define MV_U &kp LG(UP)
+#define MV_D &kp LG(DOWN)
 
 #define NEXT_ED &open_ed LC(PG_DN) PG_DN
 #define PREV_ED &open_ed LC(PG_UP) PG_UP
@@ -178,7 +194,7 @@
           W_CAPS  &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y   &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
                   &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H   &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
                   &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N   &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
-                                   &sk LGUI   RET_CTL  &lt LWR BSPC  &mt LCTRL DEL      &kp LALT   &lt RSE SPACE  &kp RALT   WORKSPACE
+                               &lt WIN LGUI   RET_CTL  &lt LWR BSPC  &mt LCTRL DEL      &kp LALT   &lt RSE SPACE  &kp RALT   WORKSPACE
         >;
       };
 
@@ -189,7 +205,7 @@
           &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      INS_HOV      &kp F11         &td_defs      REFS          &kp LC(UP)    &kp LC(K)      F_BSPC  F_DEL      NEXT_DIFF
                       &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end         &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS  PREV_DIFF
                       &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp LS(LC(G))   &kp LA(DOWN)  &fold         COPY_LN       &unfold        &sl SA  &trans
-                                          &trans      &trans      &trans       &trans          &trans        &mo ADJ       &trans        &trans
+                                          &none       &trans      &trans       &trans          &trans        &mo ADJ       &trans        &none
         >;
       };
 
@@ -200,7 +216,7 @@
           &kp PSCRN   &trans   &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp CARET  &kp LBKT  &kp HASH   &kp RBKT  &none     &none    &sk RGUI
                       &trans   &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp PRCNT  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI  &kp SQT
                       &trans   &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH  &trans
-                                          &trans    &trans     &mo ADJ   &trans           &trans     &trans    &trans     &trans
+                                          &none     &trans     &mo ADJ   &trans           &trans     &trans    &trans     &none
         >;
       };
 
@@ -211,7 +227,7 @@
           &bootloader &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) &kp LS(UP)    &kp LS(LA(RIGHT)) &kp LS(LA(UP))       &none       &none         &none         &none         &none         &none        &bootloader
                       &trans        &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)          &none       MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &none         &kp C_BRI_UP
                       &none         &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LA(DOWN))     &none       PREV_ED       &kp LA(BSLH)  NEXT_ED       &none         &kp C_BRI_DN
-                                                  &trans           &trans        &trans            &trans               &trans      &trans        &trans        &trans
+                                                  &none            &trans        &trans            &trans               &trans      &trans        &trans        &none
         >;
       };
 
@@ -232,6 +248,17 @@
                 &trans            &kp LA(LS(A))   &kp LA(LS(S))   &kp LA(LS(D))   &kp LA(LS(F))   &kp LA(LS(G))     &kp LA(LS(H))   &kp LA(LS(J))   &kp LA(LS(K))      &kp LA(LS(L))    &kp LA(LS(SEMI))  &kp LA(LS(SQT))
                 &none             &kp LA(LS(Z))   &kp LA(LS(X))   &kp LA(LS(C))   &kp LA(LS(V))   &kp LA(LS(B))     &kp LA(LS(N))   &kp LA(LS(M))   &kp LA(LS(COMMA))  &kp LA(LS(DOT))  &kp LA(LS(FSLH))  &none
                                                   &none           &kp LA(LS(RET)) &none           &none             &none           &kp LA(LS(SPACE)) &none             &none
+        >;
+      };
+
+      win_layer {
+        label = "Windows";
+        bindings = <
+                &none  &none  &none   &none  &none  &none       &none  &none  &none  &none  &none       &none
+          &none &none  &none  &none   &none  &none  &none       WS_1   N_W    MV_U   N_E    &kp LA(F1)  &none      &none
+                &none  &none  &none   &none  &none  &none       WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
+                &none  &none  &none   &none  &none  &none       WS_2   S_W    HIDE   S_E    &kp LA(F2)  &none
+                              &trans  &none  &none  &none       &none  &none  &none  &none
         >;
       };
     };

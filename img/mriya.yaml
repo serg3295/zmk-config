@@ -50,7 +50,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: LGUI, h: sticky}
+  - {t: LGUI, h: Windows}
   - {t: ⮐, h: ^⮐}
   - {t: '$$mdi:backspace-outline$$', h: Lower}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LCTRL}
@@ -111,14 +111,14 @@ layers:
   - {t: recursive, h: all, s: Unfold}
   - {t: SA, h: sticky, s: layer}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Adjust
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   Raise:
   - ''
   - {t: ▽, type: trans}
@@ -170,14 +170,14 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - Adjust
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   Adjust:
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
@@ -233,14 +233,14 @@ layers:
   - {t: Next Editor, h: out group}
   - ''
   - $$mdi:brightness-5$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ''
   cs:
   - LS(LC(GRAVE))
   - LS(LC(7))
@@ -357,5 +357,64 @@ layers:
   - ''
   - ''
   - LA(LS(SPACE))
+  - ''
+  - ''
+  Windows:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LG(PG UP)
+  - LG(LC(UP))
+  - LG(UP)
+  - LG(LC(LS(UP)))
+  - LA(F1)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LG(LC(LEFT))
+  - LG(LEFT)
+  - LG(DOWN)
+  - LG(RIGHT)
+  - LG(LC(RIGHT))
+  - LA(F10)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LG(PG DN)
+  - LG(LC(DOWN))
+  - LG(D)
+  - LG(LC(LS(DOWN)))
+  - LA(F2)
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
