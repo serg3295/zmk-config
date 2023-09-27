@@ -51,13 +51,13 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: LGUI, h: sticky}
-  - ⮐
+  - {t: ⮐, h: ^⮐}
   - {t: '$$mdi:backspace-outline$$', h: Lower}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LCTRL}
   - LALT
   - {t: '$$mdi:keyboard-space$$', h: Raise}
   - RALT
-  - {t: Ctrl, h: sticky, s: layer}
+  - {t: next, h: bottom, s: workspace}
   Lower:
   - Go back
   - F7
@@ -293,7 +293,7 @@ layers:
   - LC(FSLH)
   - ''
   - ''
-  - LC(RET)
+  - ^⮐
   - ''
   - ''
   - ''

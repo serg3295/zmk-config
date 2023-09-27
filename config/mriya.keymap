@@ -19,6 +19,7 @@
 
 #define NEXT_ED &open_ed LC(PG_DN) PG_DN
 #define PREV_ED &open_ed LC(PG_UP) PG_UP
+#define WORKSPACE &ht3 LG(PG_DN) LG(SPACE)
 #define NEXT_DIFF &ht3 LA(F3) LC(LA(RBKT))
 #define PREV_DIFF &ht3 LS(LA(F3)) LC(LA(LBKT))
 #define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))
@@ -29,6 +30,7 @@
 #define F_BSPC    &ht3 LC(LS(BSPC)) LC(BSPC)
 #define F_DEL     &ht3 LC(LS(DEL)) LC(DEL)
 #define REFS      &ht3 LS(LA(F12)) LS(F12)
+#define RET_CTL   &ht3 LC(RET) RET
 #define W_CAPS  &ht_caps CAPS 0
 #define INS_HOV &ht_ckck I INS
 #define GO_BACK &kp LC(LA(MINUS))
@@ -178,7 +180,7 @@
           W_CAPS  &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y   &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
                   &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H   &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
                   &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N   &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
-                                   &sk LGUI   &kp RET  &lt LWR BSPC  &mt LCTRL DEL      &kp LALT   &lt RSE SPACE  &kp RALT   &sl CTL
+                                   &sk LGUI   RET_CTL  &lt LWR BSPC  &mt LCTRL DEL      &kp LALT   &lt RSE SPACE  &kp RALT   WORKSPACE
         >;
       };
 

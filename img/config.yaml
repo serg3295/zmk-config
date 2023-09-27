@@ -237,6 +237,10 @@ parse_config:
       tap: "Go back"
     "&kp LC(LS(MINUS))":
       tap: "Go fwd"
+    "WORKSPACE":
+      shifted: "workspace"
+      tap: "next"
+      hold: "bottom"
   sticky_label: sticky
   trans_legend:
     t: ▽
@@ -303,6 +307,7 @@ parse_config:
 
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'
+    LC(RET): '^⮐'
     BSPC: $$mdi:backspace-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
     TAB: $$mdi:keyboard-tab$$
