@@ -12,7 +12,7 @@ layers:
   - {t: '6', s: ^}
   - {t: '8', s: '*'}
   - '-'
-  - {t: caps word, h: CAPS}
+  - ''
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -52,13 +52,13 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: LGUI, h: Windows}
   - {t: ⮐, h: ^⮐}
-  - {t: '$$mdi:backspace-outline$$', h: Lower}
+  - {t: '$$mdi:backspace-outline$$', h: Nav}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LCTRL}
-  - LALT
-  - {t: '$$mdi:keyboard-space$$', h: Raise}
-  - RALT
+  - {t: RALT, h: LALT}
+  - {t: '$$mdi:keyboard-space$$', h: Sym}
+  - {t: caps word, h: CAPS}
   - {t: next, h: bottom, s: workspace}
-  Lower:
+  Nav:
   - {t: Go back, h: on win}
   - F7
   - F5
@@ -71,9 +71,7 @@ layers:
   - F6
   - F8
   - {t: Go fwd, h: on win}
-  - 'Trans
-
-    form'
+  - ''
   - {t: ▽, type: trans}
   - {t: PG UP, h: ^⇧⇥}
   - {t: PG DN, h: ^⇥}
@@ -86,7 +84,7 @@ layers:
   - ^K
   - {t: ↤del word, h: all}
   - {t: del↦ word, h: all}
-  - {t: goto, h: show, s: next chg}
+  - ''
   - {t: ▽, type: trans}
   - {t: Home, h: ⇱    ⭶}
   - 🠈
@@ -110,29 +108,31 @@ layers:
   - {t: Copy line 🠟, h: and comment}
   - {t: recursive, h: all, s: Unfold}
   - {t: SA, h: sticky, s: layer}
-  - {t: ▽, type: trans}
+  - {t: goto, h: show, s: next chg}
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Adjust
-  - {t: ▽, type: trans}
-  - ''
-  Raise:
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
+  - 'Trans
+
+    form'
   - PSCRN
+  Sym:
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: '`', s: '~'}
   - <
@@ -145,7 +145,7 @@ layers:
   - ']'
   - ''
   - ''
-  - {t: RGUI, h: sticky}
+  - ''
   - {t: ▽, type: trans}
   - _
   - (
@@ -176,7 +176,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - ''
   - ''
   Adjust:
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
@@ -234,25 +234,25 @@ layers:
   - ''
   - $$mdi:brightness-5$$
   - BOOT
-  - {t: ▽, type: trans}
+  - ''
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - {type: held}
-  - {t: ▽, type: trans}
+  - ''
   - BOOT
   cs:
   - LS(LC(GRAVE))
-  - LS(LC(7))
-  - LS(LC(5))
-  - LS(LC(3))
-  - LS(LC(1))
-  - LS(LC(9))
-  - LS(LC(0))
-  - LS(LC(2))
-  - LS(LC(4))
-  - LS(LC(6))
-  - LS(LC(8))
+  - LS(LC(F7))
+  - LS(LC(F5))
+  - LS(LC(F3))
+  - LS(LC(F1))
+  - LS(LC(F9))
+  - LS(LC(F10))
+  - LS(LC(F2))
+  - LS(LC(F4))
+  - LS(LC(F6))
+  - LS(LC(F8))
   - LS(LC(MINUS))
   - ''
   - LS(LC(TAB))
@@ -279,8 +279,8 @@ layers:
   - LS(LC(K))
   - LS(LC(L))
   - LS(LC(SEMI))
-  - {t: ▽, type: trans}
-  - ''
+  - LS(LC(SQT))
+  - LS(LC(F11))
   - LS(LC(Z))
   - LS(LC(X))
   - LS(LC(C))
@@ -291,72 +291,72 @@ layers:
   - LS(LC(COMMA))
   - LS(LC(DOT))
   - LS(LC(FSLH))
-  - ''
+  - LS(LC(F12))
   - ''
   - LS(LC(RET))
   - ''
   - ''
   - ''
-  - LS(LC(SPACE))
+  - ''
   - ''
   - ''
   sa:
-  - LA(LS(GRAVE))
-  - LA(LS(7))
-  - LA(LS(5))
-  - LA(LS(3))
-  - LA(LS(1))
-  - LA(LS(9))
-  - LA(LS(0))
-  - LA(LS(2))
-  - LA(LS(4))
-  - LA(LS(6))
-  - LA(LS(8))
-  - LA(LS(MINUS))
+  - LS(LA(GRAVE))
+  - LS(LA(F7))
+  - LS(LA(F5))
+  - show
+  - LS(LA(F1))
+  - LS(LA(F9))
+  - LS(LA(F10))
+  - LS(LA(F2))
+  - LS(LA(F4))
+  - LS(LA(F6))
+  - LS(LA(F8))
+  - LS(LA(MINUS))
   - ''
-  - LA(LS(TAB))
-  - LA(LS(Q))
-  - LA(LS(W))
-  - LA(LS(E))
-  - LA(LS(R))
-  - LA(LS(T))
-  - LA(LS(Y))
-  - LA(LS(U))
-  - LA(LS(I))
-  - LA(LS(O))
-  - LA(LS(P))
-  - LA(LS(LBKT))
-  - LA(LS(RBKT))
+  - LS(LA(TAB))
+  - LS(LA(Q))
+  - LS(LA(W))
+  - LS(LA(E))
+  - LS(LA(R))
+  - LS(LA(T))
+  - LS(LA(Y))
+  - LS(LA(U))
+  - Add cursors toLineEnd
+  - LS(LA(O))
+  - LS(LA(P))
+  - LS(LA(LBKT))
+  - LS(LA(RBKT))
   - {t: ▽, type: trans}
-  - LA(LS(A))
-  - LA(LS(S))
-  - LA(LS(D))
-  - LA(LS(F))
-  - LA(LS(G))
-  - LA(LS(H))
-  - LA(LS(J))
-  - LA(LS(K))
-  - LA(LS(L))
-  - LA(LS(SEMI))
-  - LA(LS(SQT))
+  - LS(LA(A))
+  - LS(LA(S))
+  - LS(LA(D))
+  - LS(LA(F))
+  - LS(LA(G))
+  - LS(LA(H))
+  - LS(LA(J))
+  - LS(LA(K))
+  - LS(LA(L))
+  - LS(LA(SEMI))
+  - LS(LA(SQT))
+  - LS(LA(F11))
+  - LS(LA(Z))
+  - LS(LA(X))
+  - LS(LA(C))
+  - LS(LA(V))
+  - LS(LA(B))
+  - LS(LA(N))
+  - LS(LA(M))
+  - LS(LA(COMMA))
+  - LS(LA(DOT))
+  - LS(LA(FSLH))
+  - find all
   - ''
-  - LA(LS(Z))
-  - LA(LS(X))
-  - LA(LS(C))
-  - LA(LS(V))
-  - LA(LS(B))
-  - LA(LS(N))
-  - LA(LS(M))
-  - LA(LS(COMMA))
-  - LA(LS(DOT))
-  - LA(LS(FSLH))
-  - ''
-  - ''
-  - LA(LS(RET))
+  - LS(LA(RET))
   - ''
   - ''
   - ''
-  - LA(LS(SPACE))
+  - ''
   - ''
   - ''
   Windows:

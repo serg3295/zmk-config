@@ -308,6 +308,7 @@ parse_config:
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'
     LC(RET): '^⮐'
+    LC(LS(RET)): '^⇧⮐'
     BSPC: $$mdi:backspace-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
     TAB: $$mdi:keyboard-tab$$
