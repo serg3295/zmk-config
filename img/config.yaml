@@ -215,14 +215,6 @@ parse_config:
       shifted: "layer"
       tap: "SA"
       hold: "sticky"
-    "&sl CTL":
-      shifted: "layer"
-      tap: "Ctrl"
-      hold: "sticky"
-    "&sl CA":
-      shifted: "layer"
-      tap: "CA"
-      hold: "sticky"
     "PREV_ED":
       tap: "Prev Editor"
       hold: "out group"
@@ -318,8 +310,6 @@ parse_config:
     LC(LS(TAB)): "^⇧⇥"
     RSHIFT: $$mdi:apple-keyboard-shift$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
-    # RSHIFT: 'Right ⇧'
-    # LSHIFT: 'Left ⇧'
 
     # Numbers
     "N1":
