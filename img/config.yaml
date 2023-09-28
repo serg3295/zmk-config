@@ -189,6 +189,12 @@ parse_config:
       tap: $$mdi:brightness-5$$
     "&kp C_BRI_UP":
       tap: $$mdi:brightness-7$$
+    "&kp C_VOL_DN":
+      tap: $$mdi:volume-minus$$
+    "&kp C_VOL_UP":
+      tap: $$mdi:volume-plus$$
+    "&kp C_MUTE":
+      tap: $$mdi:volume-mute$$
     "&kp LC(Z)":
       tap: $$mdi:arrow-u-left-top$$
     "&kp LS(DEL)":
