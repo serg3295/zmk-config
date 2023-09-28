@@ -191,7 +191,7 @@ layers:
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
-  - BOOT
+  - ''
   - Outdent line
   - Indent line
   - 'Shrink selec
@@ -208,7 +208,7 @@ layers:
   - ''
   - ''
   - ''
-  - BOOT
+  - ''
   - {t: ▽, type: trans}
   - Select home
   - Select 🠜
@@ -233,14 +233,14 @@ layers:
   - {t: Next Editor, h: out group}
   - ''
   - $$mdi:brightness-5$$
-  - ''
+  - BOOT
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - ''
+  - BOOT
   cs:
   - LS(LC(GRAVE))
   - LS(LC(7))
