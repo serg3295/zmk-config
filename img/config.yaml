@@ -241,6 +241,33 @@ parse_config:
       shifted: "workspace"
       tap: "next"
       hold: "bottom"
+    "&cmps EQUAL C": "€"
+    "&cmps MINUS L": "£"
+    "&cmps T M": "™"
+    "&cmps O R": "®"
+    "&cmps O C": "©"
+    "&cmps X X": "×"
+    "&cmps MINUS COLON": "÷"
+    "&cmps V SLASH": "√"
+    "&cmps DOT DOT": "…"
+    "&cmps O O": "°"
+    "&cmps M U": "μ"
+    "&cmps LT LT": "«"
+    "&cmps GT GT": "»"
+    "&cmps N1 N2": "½"
+    "&cmps N1 N3": "⅓"
+    "&cmps N1 N4": "¼"
+    "&cmps N3 N4": "¾"
+    "&cmps PLUS MINUS": "±"
+    "&cmps CARET N0": "⁰"
+    "&cmps CARET N1": "¹"
+    "&cmps CARET N2": "²"
+    "&cmps CARET N3": "³"
+    "&cmps SPACE SPACE": "NBSP"
+    "&cmps2 MINUS": "—"
+    "&cmps2 DOT": "–"
+    # "&cmps ": ""
+
   sticky_label: sticky
   trans_legend:
     t: ▽
@@ -317,6 +344,8 @@ parse_config:
     LC(LS(TAB)): "^⇧⇥"
     RSHIFT: $$mdi:apple-keyboard-shift$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
+    RALT: "LANG"
+    RGUI: "Compose key"
 
     # Numbers
     "N1":

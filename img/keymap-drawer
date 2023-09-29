@@ -6,4 +6,4 @@ set -e
 keymap -c img/config.yaml parse -z config/mriya.keymap >img/mriya.yaml
 
 # Draw keymap
-keymap -c img/config.yaml draw --select-layers Base Nav Sym Adjust -j config/mriya.json img/mriya.yaml >img/mriya.svg
+keymap -c img/config.yaml draw --select-layers Base Nav Sym Adjust Compose -j config/mriya.json img/mriya.yaml >img/mriya.svg

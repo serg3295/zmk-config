@@ -12,7 +12,7 @@ layers:
   - {t: '6', s: ^}
   - {t: '8', s: '*'}
   - '-'
-  - ''
+  - {t: caps word, h: CAPS}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -54,9 +54,9 @@ layers:
   - {t: ⮐, h: ^⮐}
   - {t: '$$mdi:backspace-outline$$', h: Nav}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LCTRL}
-  - {t: RALT, h: LALT}
+  - LALT
   - {t: '$$mdi:keyboard-space$$', h: Sym}
-  - {t: caps word, h: CAPS}
+  - {t: LANG, h: Compose}
   - {t: next, h: bottom, s: workspace}
   Nav:
   - {t: Go back, h: on win}
@@ -84,7 +84,7 @@ layers:
   - ^K
   - {t: ↤del word, h: all}
   - {t: del↦ word, h: all}
-  - ''
+  - Compose key
   - {t: ▽, type: trans}
   - {t: Home, h: ⇱    ⭶}
   - 🠈
@@ -417,4 +417,63 @@ layers:
   - ''
   - ''
   - ''
+  - ''
+  Compose:
+  - ''
+  - ''
+  - ½
+  - ⅓
+  - ¼
+  - ¾
+  - ⁰
+  - ¹
+  - ²
+  - ³
+  - —
+  - –
+  - ''
+  - ''
+  - ''
+  - ''
+  - €
+  - ®
+  - ™
+  - ''
+  - ''
+  - ''
+  - °
+  - ''
+  - ''
+  - ±
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - £
+  - «
+  - »
+  - ''
+  - ''
+  - ×
+  - ©
+  - √
+  - ''
+  - ''
+  - μ
+  - ''
+  - …
+  - ÷
+  - ''
+  - ''
+  - NBSP
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
   - ''

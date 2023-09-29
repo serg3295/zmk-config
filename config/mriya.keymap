@@ -8,13 +8,26 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
-#define CS  4
-#define SA  5
-#define WIN 6
+#define DEF  0
+#define NAV  1
+#define SYM  2
+#define ADJ  3
+#define CS   4
+#define SA   5
+#define WIN  6
+#define COMP 7
+
+// Compose combinations
+#define POUND_L  &cmps MINUS L
+#define EURO     &cmps EQUAL C
+#define DIVISION &cmps MINUS COLON
+#define SQR_ROOT &cmps V SLASH
+#define UPPER_0  &cmps CARET N0
+#define UPPER_1  &cmps CARET N1
+#define UPPER_2  &cmps CARET N2
+#define UPPER_3  &cmps CARET N3
+#define NBSP     &cmps SPACE SPACE
+#define ELLIPSES &cmps DOT DOT
 
 // Tiling window manager
 #define WS_1 &kp LG(PG_UP)
@@ -47,7 +60,7 @@
 #define RET_CTL   &ht3 LC(RET) RET
 #define GO_BACK   &ht3 LA(LEFT) LC(LA(MINUS))
 #define GO_FWD    &ht3 LA(RIGHT) LC(LS(MINUS))
-#define ALTS      &ht3 LALT RALT
+
 #define W_CAPS  &ht_caps CAPS 0
 #define INS_HOV &ht_ckck I INS
 
@@ -94,6 +107,28 @@
           <&macro_press &kp LCTRL>,
           <&macro_tap &kp K>,
           <&macro_release &kp LCTRL>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>;
+      };
+
+      cmps: compose_keycode1_keycode2 {
+        label = "COMPOSE_KEYCODE1_KEYCODE2";
+        compatible = "zmk,behavior-macro-two-param";
+        #binding-cells = <2>;
+        bindings =
+          <&macro_tap &kp RIGHT_GUI>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>,
+          <&macro_param_2to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>;
+      };
+
+      cmps2: compose_2minus_keycode1 {
+        label = "COMPOSE_2MINUS_KEYCODE";
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_tap &kp RIGHT_GUI &kp MINUS &kp MINUS>,
           <&macro_param_1to1>,
           <&macro_tap &kp MACRO_PLACEHOLDER>;
       };
@@ -191,11 +226,11 @@
       default_layer {
         label = "Base";
         bindings = <
-                &kp GRAVE   &kp N7  &kp N5  &kp N3   &kp N1        &kp N9                &kp N0  &kp N2    &kp N4     &kp N6   &kp N8         &kp MINUS
-          &none &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y   &kp U     &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H   &kp J     &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
-                &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
-                             &lt WIN LGUI   RET_CTL  &lt LWR BSPC  &mt LCTRL DEL         ALTS    &lt RSE SPACE  W_CAPS  WORKSPACE
+                 &kp GRAVE   &kp N7  &kp N5  &kp N3   &kp N1        &kp N9                &kp N0    &kp N2         &kp N4         &kp N6   &kp N8         &kp MINUS
+          W_CAPS &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y     &kp U          &kp I          &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                 &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H     &kp J          &kp K          &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+                 &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N     &kp M          &kp COMMA      &kp DOT  &kp FSLH       &kp RSHIFT
+                              &lt WIN LGUI   RET_CTL  &lt NAV BSPC  &mt LCTRL DEL         &kp LALT  &lt SYM SPACE  &lt COMP RALT  WORKSPACE
         >;
       };
 
@@ -203,7 +238,7 @@
         label = "Nav";
         bindings = <
                 GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9          &kp F10       &kp F2        &kp F4        &kp F6         &kp F8  GO_FWD
-          &none &trans   PGUP_TAB   PGDN_TAB    &kp UP      INS_HOV      &kp F11         &td_defs      REFS          &kp LC(UP)    &kp LC(K)      F_BSPC  F_DEL     &none
+          &none &trans   PGUP_TAB   PGDN_TAB    &kp UP      INS_HOV      &kp F11         &td_defs      REFS          &kp LC(UP)    &kp LC(K)      F_BSPC  F_DEL     &kp RGUI
                 &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end         &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &sl CS  PREV_DIFF
                 &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp LS(LC(G))   &kp LA(DOWN)  &fold         COPY_LN       &unfold        &sl SA  NEXT_DIFF
                                     &none       &none       &trans       &trans          &trans        &mo ADJ       &transform    &kp PSCRN
@@ -260,6 +295,17 @@
                 &none  &none  &none   &none  &none  &none       WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
                 &none  &none  &none   &none  &none  &none       WS_2   S_W    HIDE   S_E    &kp LA(F2)  &none
                               &trans  &none  &none  &none       &none  &none  &none  &none
+        >;
+      };
+
+      comp_layer {
+        label = "Compose";
+        bindings = <
+                &none  &none  &cmps N1 N2  &cmps N1 N3  &cmps N1 N4  &cmps N3 N4       UPPER_0  UPPER_1    UPPER_2   UPPER_3    &cmps2 MINUS  &cmps2 DOT
+          &none &none  &none  &none        EURO         &cmps O R    &cmps T M         &none    &none      &none     &cmps O O  &none         &none       &cmps PLUS MINUS
+                &none  &none  &none        &none        &none        &none             &none    &none      &none     POUND_L    &cmps LT LT   &cmps GT GT
+                &none  &none  &cmps X X    &cmps O C    SQR_ROOT     &none             &none    &cmps M U  &none     ELLIPSES   DIVISION      &none
+                              &none        NBSP         &none        &none             &none    &none      &trans    &none
         >;
       };
     };
