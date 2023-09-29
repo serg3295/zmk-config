@@ -237,10 +237,6 @@ parse_config:
     "GO_FWD":
       tap: "Go fwd"
       hold: "on win"
-    "WORKSPACE":
-      shifted: "workspace"
-      tap: "next"
-      hold: "bottom"
     "&cmps EQUAL C": "€"
     "&cmps MINUS L": "£"
     "&cmps T M": "™"
@@ -307,9 +303,11 @@ parse_config:
     LS(LEFT): "Select 🠜"
     LS(RIGHT): "Select 🠞"
     LS(UP): "Select 🠝"
-    LS(DOWN): "Select 🠝"
+    LS(DOWN): "Select 🠟"
+    LS(LC(UP)): "Select 🠝para graph"
+    LS(LC(DOWN)): "Select 🠟para graph"
     LS(LA(UP)): "Add cursor 🠝"
-    LS(LA(DOWN)): "Add cursor 🠝"
+    LS(LA(DOWN)): "Add cursor 🠟"
     LS(HOME): "Select home"
     LS(END): "Select end"
     LS(LC(LEFT)): "Select word ↤"
@@ -331,6 +329,9 @@ parse_config:
     RIGHT: '🠊'
     UP: '🠉'
     DOWN: '🠋'
+    LG(SPACE):
+      shifted: "Next"
+      tap: "Work space"
 
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'

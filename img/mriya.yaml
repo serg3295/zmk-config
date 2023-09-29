@@ -50,14 +50,14 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: LGUI, h: Windows}
-  - {t: ⮐, h: ^⮐}
-  - {t: '$$mdi:backspace-outline$$', h: Nav}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: LCTRL}
-  - LALT
+  - {t: LGUI, h: Compose}
+  - {t: '$$mdi:backspace-outline$$', h: WinMgr}
+  - {t: ⮐, h: Nav}
+  - {t: LCTRL, h: sticky}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: LALT}
   - {t: '$$mdi:keyboard-space$$', h: Sym}
-  - {t: LANG, h: Compose}
-  - {t: next, h: bottom, s: workspace}
+  - {t: LANG, h: cs}
+  - {t: Work space, h: sa, s: Next}
   Nav:
   - {t: Go back, h: on win}
   - F7
@@ -71,7 +71,9 @@ layers:
   - F6
   - F8
   - {t: Go fwd, h: on win}
-  - ''
+  - 'Trans
+
+    form'
   - {t: ▽, type: trans}
   - {t: PG UP, h: ^⇧⇥}
   - {t: PG DN, h: ^⇥}
@@ -95,19 +97,19 @@ layers:
   - ^🠜
   - ^🠟
   - ^🠞
-  - {t: CS, h: sticky, s: layer}
+  - Repeat
   - {t: goto, h: show, s: prev chg}
   - {t: ▽, type: trans}
   - $$mdi:arrow-u-left-top$$
   - $$mdi:content-cut$$
   - $$mdi:content-copy$$
   - $$mdi:content-paste$$
-  - Git prefix
+  - $$mdi:backspace-reverse-outline$$
   - Move line 🠟
   - {t: recursive, h: all, s: Fold}
   - {t: Copy line 🠟, h: and comment}
   - {t: recursive, h: all, s: Unfold}
-  - {t: SA, h: sticky, s: layer}
+  - Git prefix
   - {t: goto, h: show, s: next chg}
   - ''
   - ''
@@ -115,10 +117,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Adjust
-  - 'Trans
-
-    form'
-  - PSCRN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Sym:
   - ''
   - {t: ▽, type: trans}
@@ -145,7 +145,7 @@ layers:
   - ']'
   - ''
   - ''
-  - ''
+  - PSCRN
   - {t: ▽, type: trans}
   - _
   - (
@@ -201,37 +201,37 @@ layers:
   - 'Expand selec
 
     tion'
-  - Add cursor 🠝
+  - Select 🠝para graph
+  - ''
+  - ''
+  - ''
+  - ''
   - $$mdi:volume-mute$$
-  - ''
-  - ''
-  - ''
-  - ''
   - ''
   - ''
   - {t: ▽, type: trans}
   - Select home
   - Select 🠜
-  - Select 🠝
+  - Select 🠟
   - Select 🠞
   - Select end
-  - $$mdi:volume-plus$$
+  - Add cursor 🠝
   - {t: Move Editor 🠜, h: into group}
   - Split right
   - {t: Move Editor 🠞, h: into group}
-  - ''
+  - $$mdi:volume-plus$$
   - $$mdi:brightness-7$$
   - ''
   - Cursor undo
   - Select word ↤
   - Add cursors toLineEnd
   - Select word ↦
-  - Add cursor 🠝
-  - $$mdi:volume-minus$$
+  - Select 🠟para graph
+  - Add cursor 🠟
   - {t: Prev Editor, h: out group}
   - {t: '$$mdi:view-agenda-outline$$', h: down, s: Split}
   - {t: Next Editor, h: out group}
-  - ''
+  - $$mdi:volume-minus$$
   - $$mdi:brightness-5$$
   - BOOT
   - ''
@@ -243,16 +243,16 @@ layers:
   - BOOT
   cs:
   - LS(LC(GRAVE))
-  - LS(LC(F7))
-  - LS(LC(F5))
-  - LS(LC(F3))
-  - LS(LC(F1))
-  - LS(LC(F9))
-  - LS(LC(F10))
-  - LS(LC(F2))
-  - LS(LC(F4))
-  - LS(LC(F6))
-  - LS(LC(F8))
+  - LS(LC(7))
+  - LS(LC(5))
+  - LS(LC(3))
+  - LS(LC(1))
+  - LS(LC(9))
+  - LS(LC(0))
+  - LS(LC(2))
+  - LS(LC(4))
+  - LS(LC(6))
+  - LS(LC(8))
   - LS(LC(MINUS))
   - ''
   - LS(LC(TAB))
@@ -280,7 +280,7 @@ layers:
   - LS(LC(L))
   - LS(LC(SEMI))
   - LS(LC(SQT))
-  - LS(LC(F11))
+  - ''
   - LS(LC(Z))
   - LS(LC(X))
   - LS(LC(C))
@@ -291,27 +291,27 @@ layers:
   - LS(LC(COMMA))
   - LS(LC(DOT))
   - LS(LC(FSLH))
-  - LS(LC(F12))
+  - ''
   - ''
   - LS(LC(RET))
   - ''
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - ''
   sa:
   - LS(LA(GRAVE))
-  - LS(LA(F7))
-  - LS(LA(F5))
-  - show
-  - LS(LA(F1))
-  - LS(LA(F9))
-  - LS(LA(F10))
-  - LS(LA(F2))
-  - LS(LA(F4))
-  - LS(LA(F6))
-  - LS(LA(F8))
+  - LS(LA(7))
+  - LS(LA(5))
+  - LS(LA(3))
+  - LS(LA(1))
+  - LS(LA(9))
+  - LS(LA(0))
+  - LS(LA(2))
+  - LS(LA(4))
+  - LS(LA(6))
+  - LS(LA(8))
   - LS(LA(MINUS))
   - ''
   - LS(LA(TAB))
@@ -339,7 +339,7 @@ layers:
   - LS(LA(L))
   - LS(LA(SEMI))
   - LS(LA(SQT))
-  - LS(LA(F11))
+  - ''
   - LS(LA(Z))
   - LS(LA(X))
   - LS(LA(C))
@@ -350,7 +350,7 @@ layers:
   - LS(LA(COMMA))
   - LS(LA(DOT))
   - LS(LA(FSLH))
-  - find all
+  - ''
   - ''
   - LS(LA(RET))
   - ''
@@ -358,8 +358,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  Windows:
+  - {type: held}
+  WinMgr:
   - ''
   - ''
   - ''
@@ -410,8 +410,8 @@ layers:
   - LG(LC(LS(DOWN)))
   - LA(F2)
   - ''
-  - {type: held}
   - ''
+  - {type: held}
   - ''
   - ''
   - ''
@@ -469,11 +469,11 @@ layers:
   - …
   - ÷
   - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
   - ''
   - NBSP
   - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
   - ''
