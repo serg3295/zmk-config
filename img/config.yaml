@@ -332,6 +332,7 @@ parse_config:
     LG(SPACE):
       shifted: "Next"
       tap: "Work space"
+    LS(LALT): "⇧Alt"
 
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'

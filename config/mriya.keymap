@@ -12,10 +12,8 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define CS   4
-#define SA   5
-#define WIN  6
-#define COMP 7
+#define WIN  4
+#define COMP 5
 
 // Compose combinations
 #define POUND_L  &cmps MINUS L
@@ -181,6 +179,15 @@
         bindings = <&kp>, <&ck_ckey>;
       };
 
+      sticky: ht_sk_kp {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_SK_KP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&sk>, <&kp>;
+      };
+
     // tap-dance
       fold: fold {
         compatible = "zmk,behavior-tap-dance";
@@ -226,11 +233,11 @@
       default_layer {
         label = "Base";
         bindings = <
-                 &kp GRAVE   &kp N7  &kp N5  &kp N3   &kp N1        &kp N9                &kp N0        &kp N2         &kp N4         &kp N6   &kp N8         &kp MINUS
-          W_CAPS &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y         &kp U          &kp I          &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                 &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H         &kp J          &kp K          &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
-                 &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N         &kp M          &kp COMMA      &kp DOT  &kp FSLH       &kp RSHIFT
-                              &lt COMP LGUI  &lt WIN BSPC  &lt NAV RET  &sk LCTRL         &mt LALT DEL  &lt SYM SPACE  &lt CS RALT    &lt SA LG(SPACE)
+                 &kp GRAVE   &kp N7  &kp N5  &kp N3   &kp N1        &kp N9                &kp N0        &kp N2         &kp N4        &kp N6       &kp N8         &kp MINUS
+          W_CAPS &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y         &kp U          &kp I         &kp O        &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                 &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H         &kp J          &kp K         &kp L        &kp SEMICOLON  &kp SINGLE_QUOTE
+                 &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N         &kp M          &kp COMMA     &kp DOT      &kp FSLH       &kp RSHIFT
+                              &lt COMP LGUI  &lt WIN BSPC  &lt NAV RET  &sk LCTRL         &mt LALT DEL  &lt SYM SPACE  &sticky LC(LSHIFT) RALT    &sticky LS(LALT) LG(SPACE)
         >;
       };
 
@@ -264,26 +271,6 @@
                 &trans        &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  &kp LS(RIGHT)     &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
                 &none         &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LC(DOWN))     &kp LS(LA(DOWN))  PREV_ED       &kp LA(BSLH)  NEXT_ED       &kp C_VOL_DN   &kp C_BRI_DN
                                             &bootloader      &none         &trans            &none                &none             &trans        &none         &bootloader
-        >;
-      };
-
-      cs_layer {
-        bindings = <
-                &kp LS(LC(GRAVE)) &kp LS(LC(N7)) &kp LS(LC(N5)) &kp LS(LC(N3))  &kp LS(LC(N1)) &kp LS(LC(N9))    &kp LS(LC(N0)) &kp LS(LC(N2)) &kp LS(LC(N4))    &kp LS(LC(N6))  &kp LS(LC(N8))   &kp LS(LC(MINUS))
-          &none &kp LS(LC(TAB))   &kp LS(LC(Q))  &kp LS(LC(W))  &kp LS(LC(E))   &kp LS(LC(R))  &kp LS(LC(T))     &kp LS(LC(Y))  &kp LS(LC(U))  &kp LS(LC(I))     &kp LS(LC(O))   &kp LS(LC(P))    &kp LS(LC(LBKT))  &kp LS(LC(RBKT))
-                &trans            &kp LS(LC(A))  &kp LS(LC(S))  &kp LS(LC(D))   &kp LS(LC(F))  &kp LS(LC(G))     &kp LS(LC(H))  &kp LS(LC(J))  &kp LS(LC(K))     &kp LS(LC(L))   &kp LS(LC(SEMI)) &kp LS(LC(SQT))
-                &none             &kp LS(LC(Z))  &kp LS(LC(X))  &kp LS(LC(C))   &kp LS(LC(V))  &kp LS(LC(B))     &kp LS(LC(N))  &kp LS(LC(M))  &kp LS(LC(COMMA)) &kp LS(LC(DOT)) &kp LS(LC(FSLH)) &none
-                                                 &none          &kp LS(LC(RET)) &none          &none             &none          &none          &trans            &none
-        >;
-      };
-
-      sa_layer {
-        bindings = <
-                &kp LS(LA(GRAVE)) &kp LS(LA(N7)) &kp LS(LA(N5)) &kp LS(LA(N3))  &kp LS(LA(N1)) &kp LS(LA(N9))    &kp LS(LA(N0)) &kp LS(LA(N2)) &kp LS(LA(N4))    &kp LS(LA(N6))  &kp LS(LA(N8))   &kp LS(LA(MINUS))
-          &none &kp LS(LA(TAB))   &kp LS(LA(Q))  &kp LS(LA(W))  &kp LS(LA(E))   &kp LS(LA(R))  &kp LS(LA(T))     &kp LS(LA(Y))  &kp LS(LA(U))  &kp LS(LA(I))     &kp LS(LA(O))   &kp LS(LA(P))    &kp LS(LA(LBKT))  &kp LS(LA(RBKT))
-                &trans            &kp LS(LA(A))  &kp LS(LA(S))  &kp LS(LA(D))   &kp LS(LA(F))  &kp LS(LA(G))     &kp LS(LA(H))  &kp LS(LA(J))  &kp LS(LA(K))     &kp LS(LA(L))   &kp LS(LA(SEMI)) &kp LS(LA(SQT))
-                &none             &kp LS(LA(Z))  &kp LS(LA(X))  &kp LS(LA(C))   &kp LS(LA(V))  &kp LS(LA(B))     &kp LS(LA(N))  &kp LS(LA(M))  &kp LS(LA(COMMA)) &kp LS(LA(DOT)) &kp LS(LA(FSLH)) &none
-                                                 &none          &kp LS(LA(RET)) &none          &none             &none          &none          &none             &trans
         >;
       };
 
