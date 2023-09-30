@@ -59,8 +59,7 @@
 #define GO_BACK   &ht3 LA(LEFT) LC(LA(MINUS))
 #define GO_FWD    &ht3 LA(RIGHT) LC(LS(MINUS))
 
-#define W_CAPS  &ht_caps CAPS 0
-#define INS_HOV &ht_ckck I INS
+#define W_CAPS &ht_caps CAPS 0
 
 &lt {
   tapping_term_ms = <250>;
@@ -179,7 +178,7 @@
         bindings = <&kp>, <&ck_ckey>;
       };
 
-      sticky: ht_sk_kp {
+      ht_sk_kp: ht_sk_kp {
         compatible = "zmk,behavior-hold-tap";
         label = "HT_SK_KP";
         #binding-cells = <2>;
@@ -233,11 +232,11 @@
       default_layer {
         label = "Base";
         bindings = <
-                 &kp GRAVE   &kp N7  &kp N5  &kp N3   &kp N1        &kp N9                &kp N0        &kp N2         &kp N4        &kp N6       &kp N8         &kp MINUS
-          W_CAPS &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y         &kp U          &kp I         &kp O        &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                 &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H         &kp J          &kp K         &kp L        &kp SEMICOLON  &kp SINGLE_QUOTE
-                 &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N         &kp M          &kp COMMA     &kp DOT      &kp FSLH       &kp RSHIFT
-                              &lt COMP LGUI  &lt WIN BSPC  &lt NAV RET  &sk LCTRL         &mt LALT DEL  &lt SYM SPACE  &sticky LC(LSHIFT) RALT    &sticky LS(LALT) LG(SPACE)
+                  &kp GRAVE   &kp N7  &kp N5  &kp N3   &kp N1        &kp N9                &kp N0        &kp N2         &kp N4        &kp N6       &kp N8         &kp MINUS
+          W_CAPS  &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y         &kp U          &kp I         &kp O        &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                  &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H         &kp J          &kp K         &kp L        &kp SEMICOLON  &kp SINGLE_QUOTE
+                  &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N         &kp M          &kp COMMA     &kp DOT      &kp FSLH       &kp RSHIFT
+                              &lt COMP LGUI  &lt WIN BSPC  &lt NAV RET  &sk LCTRL          &mt LALT DEL  &lt SYM SPACE  &ht_sk_kp LC(LSHIFT) RALT  &ht_sk_kp LS(LALT) LG(SPACE)
         >;
       };
 
@@ -245,8 +244,8 @@
         label = "Nav";
         bindings = <
                       GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8         GO_FWD
-          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      INS_HOV      &kp F11        &td_defs      REFS          &kp LC(UP)    &kp LC(K)      F_BSPC         F_DEL     &kp RGUI
-                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &key_repeat    PREV_DIFF
+          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs      REFS          &kp LC(UP)    &kp LC(K)      F_BSPC         F_DEL     &kp RGUI
+                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &ck_ckey I     PREV_DIFF
                       &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         COPY_LN       &unfold        &kp LS(LC(G))  NEXT_DIFF
                                           &none       &none       &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;

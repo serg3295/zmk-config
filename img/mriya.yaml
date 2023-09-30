@@ -78,7 +78,7 @@ layers:
   - {t: PG UP, h: ^⇧⇥}
   - {t: PG DN, h: ^⇥}
   - 🠉
-  - {t: Ins, h: Hover}
+  - INS
   - F11
   - {t: goto F12, h: open, s: DEFS}
   - {t: goto, h: find all, s: REFS}
@@ -97,7 +97,7 @@ layers:
   - ^🠜
   - ^🠟
   - ^🠞
-  - Repeat
+  - Hover
   - {t: goto, h: show, s: prev chg}
   - {t: ▽, type: trans}
   - $$mdi:arrow-u-left-top$$

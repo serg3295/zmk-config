@@ -203,9 +203,7 @@ parse_config:
       tap: $$mdi:content-copy$$
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
-    "INS_HOV":
-      tap: "Ins"
-      hold: "Hover"
+    "&ck_ckey I": "Hover"
     "W_CAPS":
       tap: "caps word"
       hold: "CAPS"
@@ -213,14 +211,6 @@ parse_config:
       shifted: DEFS
       tap: "goto F12"
       hold: "open"
-    "&sl CS":
-      shifted: "layer"
-      tap: "CS"
-      hold: "sticky"
-    "&sl SA":
-      shifted: "layer"
-      tap: "SA"
-      hold: "sticky"
     "PREV_ED":
       tap: "Prev Editor"
       hold: "out group"
