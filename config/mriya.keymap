@@ -276,11 +276,11 @@
       win_layer {
         label = "WinMgr";
         bindings = <
-                &none  &none  &none   &none   &none  &none       &none  &none  &none  &none  &none       &none
-          &none &none  &none  &none   &none   &none  &none       WS_1   N_W    MV_U   N_E    &kp LA(F1)  &none      &none
-                &none  &none  &none   &none   &none  &none       WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
-                &none  &none  &none   &none   &none  &none       WS_2   S_W    HIDE   S_E    &kp LA(F2)  &none
-                              &none   &trans  &none  &none       &none  &none  &none  &none
+                &none  &none  &none   &none       &none       &none       &none  &none  &none  &none  &none       &none
+          &none &none  &none  &none   &none       &none       &none       WS_1   N_W    MV_U   N_E    &kp LA(F5)  &none      &none
+                &none  &none  &none   &kp LA(F2)  &kp LA(F1)  &none       WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
+                &none  &none  &none   &none       &none       &none       WS_2   S_W    HIDE   S_E    &kp LA(F9)  &none
+                              &none   &trans      &none       &none       &none  &none  &kp LA(F4)    &none
         >;
       };
 

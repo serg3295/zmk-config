@@ -265,14 +265,14 @@ layers:
   - LG(LC(UP))
   - LG(UP)
   - LG(LC(LS(UP)))
+  - LA(F5)
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LA(F2)
   - LA(F1)
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - ''
   - LG(LC(LEFT))
   - LG(LEFT)
@@ -290,7 +290,7 @@ layers:
   - LG(LC(DOWN))
   - LG(D)
   - LG(LC(LS(DOWN)))
-  - LA(F2)
+  - LA(F9)
   - ''
   - ''
   - {type: held}
@@ -298,7 +298,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - LA(F4)
   - ''
   Compose:
   - ''
