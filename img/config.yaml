@@ -224,7 +224,7 @@ parse_config:
       hold: "down"
     "GO_BACK":
       tap: "Go back"
-      hold: "on win"
+      hold: "on window"
     "GO_FWD":
       tap: "Go fwd"
       hold: "on win"
@@ -324,6 +324,78 @@ parse_config:
       shifted: "Next"
       tap: "Work space"
     LS(LALT): "⇧Alt"
+
+    LG(PG_UP):
+      shifted: "Workspace"
+      tap: $$mdi:dock-top$$
+      hold: "switch"
+    LG(PG_DN):
+      shifted: "Workspace"
+      tap:  $$mdi:dock-bottom$$
+      hold: "switch"
+    LG(LC(LEFT)):
+      shifted: "Tile"
+      tap: $$mdi:dock-left$$
+      hold: "West"
+    LG(LC(RIGHT)):
+      shifted: "Tile"
+      tap: $$mdi:dock-right$$
+      hold: "East"
+    LG(LC(LS(UP))):
+      shifted: "Tile"
+      tap: "◳"
+      hold: "NE"
+    LG(LC(LS(DOWN))):
+      shifted: "Tile"
+      tap: "◲"
+      hold: "SE"
+    LG(LC(UP)):
+      shifted: "Tile"
+      tap: "◰"
+      hold: "NW"
+    LG(LC(DOWN)):
+      shifted: "Tile"
+      tap: "◱"
+      hold: "SW"
+    LG(UP):
+      shifted: "Move"
+      tap: $$mdi:chevron-up-box-outline$$
+      hold: "window"
+    LG(DOWN):
+      shifted: "Move"
+      tap: $$mdi:chevron-down-box-outline$$
+      hold: "window"
+    LG(LEFT):
+      shifted: "Move"
+      tap: $$mdi:chevron-left-box-outline$$
+      hold: "window"
+    LG(RIGHT):
+      shifted: "Move"
+      tap: $$mdi:chevron-right-box-outline$$
+      hold: "window"
+    LG(D): "Hide all win"
+    LA(F1): "Main menu"
+    LA(F2): "Run App"
+    LA(F4):
+      shifted: "Close"
+      tap: $$mdi:window-close$$
+      hold: "window"
+    LA(F5):
+      shifted: "Restore"
+      tap: $$mdi:window-restore$$
+      hold: "window"
+    LA(F8):
+      shifted: "Resize"
+      tap: $$mdi:move-resize-variant$$
+      hold: "window"
+    LA(F9):
+      shifted: "Minimize"
+      tap: $$mdi:window-minimize$$
+      hold: "window"
+    LA(F10):
+      shifted: "Toggle"
+      tap: $$mdi:window-maximize$$
+      hold: "window"
 
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'

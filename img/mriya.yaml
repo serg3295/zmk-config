@@ -59,7 +59,7 @@ layers:
   - {t: LANG, h: ^⇧}
   - {t: Work space, h: ⇧Alt, s: Next}
   Nav:
-  - {t: Go back, h: on win}
+  - {t: Go back, h: on window}
   - F7
   - F5
   - F3
@@ -261,44 +261,44 @@ layers:
   - ''
   - ''
   - ''
-  - LG(PG UP)
-  - LG(LC(UP))
-  - LG(UP)
-  - LG(LC(LS(UP)))
-  - LA(F5)
+  - {t: '$$mdi:dock-top$$', h: switch, s: Workspace}
+  - {t: ◰, h: NW, s: Tile}
+  - {t: '$$mdi:chevron-up-box-outline$$', h: window, s: Move}
+  - {t: ◳, h: NE, s: Tile}
+  - {t: '$$mdi:move-resize-variant$$', h: window, s: Resize}
   - ''
   - ''
   - ''
   - ''
   - ''
-  - LA(F2)
-  - LA(F1)
+  - Run App
+  - Main menu
   - ''
-  - LG(LC(LEFT))
-  - LG(LEFT)
-  - LG(DOWN)
-  - LG(RIGHT)
-  - LG(LC(RIGHT))
-  - LA(F10)
-  - ''
-  - ''
+  - {t: '$$mdi:dock-left$$', h: West, s: Tile}
+  - {t: '$$mdi:chevron-left-box-outline$$', h: window, s: Move}
+  - {t: '$$mdi:chevron-down-box-outline$$', h: window, s: Move}
+  - {t: '$$mdi:chevron-right-box-outline$$', h: window, s: Move}
+  - {t: '$$mdi:dock-right$$', h: East, s: Tile}
+  - {t: '$$mdi:window-maximize$$', h: window, s: Toggle}
   - ''
   - ''
   - ''
   - ''
-  - LG(PG DN)
-  - LG(LC(DOWN))
-  - LG(D)
-  - LG(LC(LS(DOWN)))
-  - LA(F9)
   - ''
+  - ''
+  - {t: '$$mdi:dock-bottom$$', h: switch, s: Workspace}
+  - {t: ◱, h: SW, s: Tile}
+  - Hide all win
+  - {t: ◲, h: SE, s: Tile}
+  - {t: '$$mdi:window-minimize$$', h: window, s: Minimize}
+  - {t: '$$mdi:window-restore$$', h: window, s: Restore}
   - ''
   - {type: held}
   - ''
   - ''
   - ''
   - ''
-  - LA(F4)
+  - {t: '$$mdi:window-close$$', h: window, s: Close}
   - ''
   Compose:
   - ''
