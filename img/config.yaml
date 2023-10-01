@@ -203,6 +203,7 @@ parse_config:
       tap: $$mdi:content-copy$$
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
+    "SHEBANG": "#!"
     "&ck_ckey I": "Hover"
     "W_CAPS":
       tap: "caps word"

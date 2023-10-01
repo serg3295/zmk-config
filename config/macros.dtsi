@@ -1,0 +1,73 @@
+/* macros.dtsi */
+
+/ {
+    macros {
+      transform: transform_to {
+        label = "TRANSFORM_TO";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+          <&macro_press &kp LCTRL &kp LSHIFT>,
+          <&macro_tap &kp P>,
+          <&macro_release &kp LSHIFT &kp LCTRL>,
+          <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>;
+      };
+
+      ck_ckey: ctrl_k_ctrl_keycode {
+        label = "CTRL_K_CTRL_KEYCODE";
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_press &kp LCTRL>,
+          <&macro_tap &kp K>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>,
+          <&macro_release &kp LCTRL>;
+      };
+
+      ck_key: ctrl_k_keycode {
+        label = "CTRL_K_KEYCODE";
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_press &kp LCTRL>,
+          <&macro_tap &kp K>,
+          <&macro_release &kp LCTRL>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>;
+      };
+
+      cmps: compose_keycode1_keycode2 {
+        label = "COMPOSE_KEYCODE1_KEYCODE2";
+        compatible = "zmk,behavior-macro-two-param";
+        #binding-cells = <2>;
+        bindings =
+          <&macro_tap &kp RIGHT_GUI>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>,
+          <&macro_param_2to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>;
+      };
+
+      cmps2: compose_2minus_keycode1 {
+        label = "COMPOSE_2MINUS_KEYCODE";
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_tap &kp RIGHT_GUI &kp MINUS &kp MINUS>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>;
+      };
+
+      bigram: bigram {
+        label = "BIGRAM";
+        compatible = "zmk,behavior-macro-two-param";
+        #binding-cells = <2>;
+        bindings =
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>,
+          <&macro_param_2to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>;
+      };
+    };
+};
