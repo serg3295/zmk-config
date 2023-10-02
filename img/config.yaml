@@ -341,11 +341,11 @@ parse_config:
       shifted: "Tile"
       tap: $$mdi:dock-right$$
       hold: "East"
-    LG(LC(LS(UP))):
+    LG(LC(LA(UP))):
       shifted: "Tile"
       tap: "◳"
       hold: "NE"
-    LG(LC(LS(DOWN))):
+    LG(LC(LA(DOWN))):
       shifted: "Tile"
       tap: "◲"
       hold: "SE"
