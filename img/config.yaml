@@ -373,7 +373,10 @@ parse_config:
       shifted: "Move"
       tap: $$mdi:chevron-right-box-outline$$
       hold: "window"
-    LG(D): "Hide all win"
+    LG(D):
+      shifted: "Show"
+      tap: $$mdi:window-closed-variant$$
+      hold: "Desktop"
     LA(F1): "Main menu"
     LA(F2): "Run App"
     LA(F4):

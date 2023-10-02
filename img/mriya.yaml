@@ -288,7 +288,7 @@ layers:
   - ''
   - {t: '$$mdi:dock-bottom$$', h: switch, s: Workspace}
   - {t: ◱, h: SW, s: Tile}
-  - Hide all win
+  - {t: '$$mdi:window-closed-variant$$', h: Desktop, s: Show}
   - {t: ◲, h: SE, s: Tile}
   - {t: '$$mdi:window-minimize$$', h: window, s: Minimize}
   - {t: '$$mdi:window-restore$$', h: window, s: Restore}

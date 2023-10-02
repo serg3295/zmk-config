@@ -84,6 +84,9 @@
 <svg id="mdi:window-close">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-window-close" viewBox="0 0 24 24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
 </svg>
+<svg id="mdi:window-closed-variant">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-window-closed-variant" viewBox="0 0 24 24"><path d="M21 20V2H3V20H1V23H23V20M19 4V11H13V4M5 4H11V11H5M5 20V13H11V20M13 20V13H19V20Z" /></svg>
+</svg>
 <svg id="mdi:window-maximize">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-window-maximize" viewBox="0 0 24 24"><path d="M4,4H20V20H4V4M6,8V18H18V8H6Z" /></svg>
 </svg>
@@ -1467,10 +1470,9 @@ path.combo {
 </g>
 <g transform="translate(812, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Hide</tspan><tspan x="0" dy="1.2em">all</tspan>
-<tspan x="0" dy="1.2em">win</tspan>
-</text>
+<use href="#mdi:window-closed-variant" xlink:href="#mdi:window-closed-variant" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:window-closed-variant"/>
+<text x="0" y="24" class="key hold">Desktop</text>
+<text x="0" y="-24" class="key shifted">Show</text>
 </g>
 <g transform="translate(868, 210)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
