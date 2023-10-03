@@ -143,6 +143,8 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
+    '&mv_line DOWN': "Move line 🠟"
+    '&mv_line UP': "Move line 🠝"
     '&key_repeat': "Repeat"
     '&ctrl_k': "^K"
     '&bootloader': "BOOT"
@@ -272,8 +274,6 @@ parse_config:
     LC(BSLH): "Split right"
     LA(BSLH): "Split down"
     LC(LA(LS(DOWN))): "Copy line 🠟"
-    LA(DOWN): "Move line 🠟"
-    LA(UP): "Move line 🠝"
     LC(LA(FSLH)): "and comment"
     LS(F12):
       shifted: "REFS"

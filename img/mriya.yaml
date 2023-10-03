@@ -116,7 +116,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Adjust
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Sym:
@@ -172,7 +172,7 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}
-  - Adjust
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
