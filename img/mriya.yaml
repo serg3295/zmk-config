@@ -51,8 +51,8 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: LGUI, h: Compose}
-  - {t: '$$mdi:backspace-outline$$', h: WinMgr}
-  - {t: ⮐, h: Nav}
+  - {t: ⮐, h: WinMgr}
+  - {t: '$$mdi:backspace-outline$$', h: Nav}
   - {t: LCTRL, h: sticky}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LALT}
   - {t: '$$mdi:keyboard-space$$', h: Sym}
@@ -84,9 +84,9 @@ layers:
   - {t: goto, h: find all, s: REFS}
   - ^🠝
   - ^K
-  - {t: ↤del word, h: all}
-  - {t: del↦ word, h: all}
-  - Compose key
+  - {t: goto, h: show, s: prev chg}
+  - {t: goto, h: show, s: next chg}
+  - Git prefix
   - {t: ▽, type: trans}
   - {t: Home, h: ⇱    ⭶}
   - 🠈
@@ -97,8 +97,8 @@ layers:
   - ^🠜
   - ^🠟
   - ^🠞
-  - Hover
-  - {t: goto, h: show, s: prev chg}
+  - {t: ↤del word, h: all}
+  - {t: del↦ word, h: all}
   - {t: ▽, type: trans}
   - $$mdi:arrow-u-left-top$$
   - $$mdi:content-cut$$
@@ -109,8 +109,8 @@ layers:
   - {t: recursive, h: all, s: Fold}
   - {t: Copy line 🠟, h: and comment}
   - {t: recursive, h: all, s: Unfold}
-  - Git prefix
-  - {t: goto, h: show, s: next chg}
+  - Hover
+  - {t: ▽, type: trans}
   - ''
   - ''
   - {type: held}
@@ -132,7 +132,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - ''
+  - Compose key
   - {t: ▽, type: trans}
   - {t: '`', s: '~'}
   - <

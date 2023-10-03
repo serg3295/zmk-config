@@ -42,6 +42,8 @@
 #define MV_U &kp LG(UP)
 #define MV_D &kp LG(DOWN)
 
+#define LANG_CS &ht_sk_kp LC(LSHIFT) RALT
+#define WSPC_SA &ht_sk_kp LS(LALT) LG(SPACE)
 #define NEXT_ED &open_ed LC(PG_DN) PG_DN
 #define PREV_ED &open_ed LC(PG_UP) PG_UP
 #define W_CAPS  &ht_caps CAPS 0
@@ -175,21 +177,21 @@
       default_layer {
         label = "Base";
         bindings = <
-                  &kp GRAVE   &kp N7  &kp N5  &kp N3   &kp N1        &kp N9                &kp N0        &kp N2         &kp N4        &kp N6       &kp N8         &kp MINUS
-          W_CAPS  &kp TAB     &kp Q   &kp W   &kp E    &kp R         &kp T                 &kp Y         &kp U          &kp I         &kp O        &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                  &kp ESC     &kp A   &kp S   &kp D    &kp F         &kp G                 &kp H         &kp J          &kp K         &kp L        &kp SEMICOLON  &kp SINGLE_QUOTE
-                  &kp LSHIFT  &kp Z   &kp X   &kp C    &kp V         &kp B                 &kp N         &kp M          &kp COMMA     &kp DOT      &kp FSLH       &kp RSHIFT
-                              &lt COMP LGUI  &lt WIN BSPC  &lt NAV RET  &sk LCTRL          &mt LALT DEL  &lt SYM SPACE  &ht_sk_kp LC(LSHIFT) RALT  &ht_sk_kp LS(LALT) LG(SPACE)
+                  &kp GRAVE   &kp N7  &kp N5         &kp N3       &kp N1        &kp N9          &kp N0        &kp N2         &kp N4     &kp N6   &kp N8         &kp MINUS
+          W_CAPS  &kp TAB     &kp Q   &kp W          &kp E        &kp R         &kp T           &kp Y         &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                  &kp ESC     &kp A   &kp S          &kp D        &kp F         &kp G           &kp H         &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+                  &kp LSHIFT  &kp Z   &kp X          &kp C        &kp V         &kp B           &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
+                                      &lt COMP LGUI  &lt WIN RET  &lt NAV BSPC  &sk LCTRL       &mt LALT DEL  &lt SYM SPACE  LANG_CS    WSPC_SA
         >;
       };
 
       nav_layer {
         label = "Nav";
         bindings = <
-                      GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8         GO_FWD
-          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs      REFS          &kp LC(UP)    &kp LC(K)      F_BSPC         F_DEL     &kp RGUI
-                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &ck_ckey I     PREV_DIFF
-                      &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         COPY_LN       &unfold        &kp LS(LC(G))  NEXT_DIFF
+                      GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &kp F10       &kp F2        &kp F4        &kp F6         &kp F8      GO_FWD
+          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs      REFS          &kp LC(UP)    &kp LC(K)      PREV_DIFF   NEXT_DIFF  &kp LS(LC(G))
+                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &kp LA(UP)    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  F_BSPC      F_DEL
+                      &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &kp LA(DOWN)  &fold         COPY_LN       &unfold        &ck_ckey I  &trans
                                           &none       &none       &trans       &trans         &trans        &mo ADJ       &trans        &trans
         >;
       };
@@ -197,11 +199,11 @@
       sym_layer {
         label = "Sym";
         bindings = <
-                &none   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans    &none
-          &none &trans  &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp PRCNT  &kp LBKT  &kp HASH   &kp RBKT  &none     SHEBANG  &kp PSCRN
-                &trans  &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp CARET  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI  &kp SQT
-                &trans  &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH  &trans
-                                   &none     &trans     &mo ADJ   &trans           &trans     &trans    &none      &none
+                    &none   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans    &trans    &none
+          &kp RGUI  &trans  &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp EXCL         &kp PRCNT  &kp LBKT  &kp HASH   &kp RBKT  &none     SHEBANG  &kp PSCRN
+                    &trans  &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp CARET  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI  &kp SQT
+                    &trans  &kp SPACE  &kp PIPE  &kp TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH  &trans
+                                       &none     &trans     &mo ADJ   &trans           &trans     &trans    &none      &none
         >;
       };
 
