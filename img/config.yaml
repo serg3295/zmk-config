@@ -283,6 +283,12 @@ parse_config:
     "&ru2 SLASH":
       tap: "/"
       shifted: "ru"
+    "&ht_not_eq EXCL EXCL":
+      tap: "="
+      hold: "!="
+    "&ht_not_eq TILDE TILDE":
+      tap: "~"
+      hold: "~="
   sticky_label: sticky
   trans_legend:
     t: ▽
