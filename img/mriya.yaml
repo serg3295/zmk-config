@@ -120,20 +120,20 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Sym:
+  - {t: '~', s: ru}
+  - {t: '&', s: ru}
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '#', s: ru}
   - ''
+  - ''
+  - ''
+  - {t: '@', s: ru}
+  - {t: $, s: ru}
+  - {t: ^, s: ru}
+  - {t: /, s: ru}
+  - {t: '|', s: ru}
   - Compose key
-  - {t: ▽, type: trans}
+  - {t: '`', s: ru}
   - {t: '`', s: '~'}
   - <
   - '='

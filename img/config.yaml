@@ -256,7 +256,33 @@ parse_config:
     "&cmps2 MINUS": "—"
     "&cmps2 DOT": "–"
     "&ck_key F10": "Panel size"
-
+    "&ru N2":
+      tap: "@"
+      shifted: "ru"
+    "&ru N3":
+      tap: "#"
+      shifted: "ru"
+    "&ru N4":
+      tap: "$"
+      shifted: "ru"
+    "&ru N6":
+      tap: "^"
+      shifted: "ru"
+    "&ru N7":
+      tap: "&"
+      shifted: "ru"
+    "&ru GRAVE":
+      tap: "~"
+      shifted: "ru"
+    "&ru2 GRAVE":
+      tap: "`"
+      shifted: "ru"
+    "&ru2 PIPE":
+      tap: "|"
+      shifted: "ru"
+    "&ru2 SLASH":
+      tap: "/"
+      shifted: "ru"
   sticky_label: sticky
   trans_legend:
     t: ▽
