@@ -44,8 +44,8 @@
 
 #define LANG_CS &ht_sk_kp LC(LSHIFT) RALT
 #define WSPC_SA &ht_sk_kp LS(LALT) LG(SPACE)
-#define NEXT_ED &open_ed LC(PG_DN) PG_DN
-#define PREV_ED &open_ed LC(PG_UP) PG_UP
+#define NEXT_ED &open_ed PG_DN LC(PG_DN)
+#define PREV_ED &open_ed PG_UP LC(PG_UP)
 #define W_CAPS  &ht_caps CAPS 0
 #define SHEBANG &bigram HASH EXCLAMATION
 
@@ -128,7 +128,7 @@
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
-        bindings = <&kp>, <&ck_ckey>;
+        bindings = <&ck_ckey>, <&kp>;
       };
 
       ht_sk_kp: ht_sk_kp {
