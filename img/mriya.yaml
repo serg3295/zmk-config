@@ -65,7 +65,7 @@ layers:
   - F3
   - F1
   - F9
-  - F10
+  - {t: F10, h: Panel size}
   - F2
   - F4
   - F6

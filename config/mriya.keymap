@@ -196,11 +196,11 @@
       nav_layer {
         label = "Nav";
         bindings = <
-                      GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &kp F10        &kp F2        &kp F4        &kp F6         &kp F8      GO_FWD
-          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs       REFS          &kp LC(UP)    &kp LC(K)      PREV_DIFF   NEXT_DIFF  &kp LS(LC(G))
-                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &mv_line UP    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  F_BSPC      F_DEL
-                      &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &mv_line DOWN  &fold         COPY_LN       &unfold        &ck_ckey I  &trans
-                                          &none       &none       &trans       &trans         &trans         &trans        &trans        &trans
+                      GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &ht_ckk F10 F10  &kp F2        &kp F4        &kp F6         &kp F8      GO_FWD
+          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs         REFS          &kp LC(UP)    &kp LC(K)      PREV_DIFF   NEXT_DIFF  &kp LS(LC(G))
+                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &mv_line UP      &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  F_BSPC      F_DEL
+                      &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &mv_line DOWN    &fold         COPY_LN       &unfold        &ck_ckey I  &trans
+                                          &none       &none       &trans       &trans         &trans           &trans        &trans        &trans
         >;
       };
 
