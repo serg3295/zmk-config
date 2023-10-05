@@ -283,7 +283,7 @@ parse_config:
     "&ru2 SLASH":
       tap: "/"
       shifted: "ru"
-    "&ht_not_eq EXCL EXCL":
+    "&ht_not_eq EXCLAMATION EQUAL":
       tap: "="
       hold: "!="
     "&ht_not_eq TILDE TILDE":

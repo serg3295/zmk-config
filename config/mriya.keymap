@@ -48,7 +48,8 @@
 #define PREV_ED &open_ed PG_UP LC(PG_UP)
 #define W_CAPS  &ht_caps CAPS 0
 #define SHEBANG &bigram HASH EXCLAMATION
-#define NEQ(sym) &ht_not_eq sym sym
+#define NEQ_EXCL  &ht_not_eq EXCLAMATION EQUAL
+#define NEQ_TILDE &ht_not_eq TILDE TILDE
 
 #define NEXT_DIFF &ht3 LA(F3) LC(LA(RBKT))
 #define PREV_DIFF &ht3 LS(LA(F3)) LC(LA(LBKT))
@@ -217,11 +218,11 @@
       sym_layer {
         label = "Sym";
         bindings = <
-                    &ru GRAVE   &ru N7     &none     &ru N3      &none     &none            &none      &ru N2    &ru N4     &ru N6    &ru2 SLASH  &ru2 PIPE
-          &kp RGUI  &ru2 GRAVE  &kp GRAVE  &kp LT    NEQ(EXCL)   &kp GT    &kp EXCL         &kp PRCNT  &kp LBKT  &kp HASH   &kp RBKT  &none       SHEBANG  &kp PSCRN
-                    &trans      &kp UNDER  &kp LPAR  &kp MINUS   &kp RPAR  &kp BSLH         &kp CARET  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI    &kp SQT
-                    &trans      &kp SPACE  &kp PIPE  NEQ(TILDE)  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH    &trans
-                                           &none     &trans      &trans    &trans           &trans     &trans    &none      &none
+                    &ru GRAVE   &ru N7     &none     &ru N3     &none     &none            &none      &ru N2    &ru N4     &ru N6    &ru2 SLASH  &ru2 PIPE
+          &kp RGUI  &ru2 GRAVE  &kp GRAVE  &kp LT    NEQ_EXCL   &kp GT    &kp EXCL         &kp PRCNT  &kp LBKT  &kp HASH   &kp RBKT  &none       SHEBANG  &kp PSCRN
+                    &trans      &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp CARET  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI    &kp SQT
+                    &trans      &kp SPACE  &kp PIPE  NEQ_TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH    &trans
+                                           &none     &trans     &trans    &trans           &trans     &trans    &none      &none
         >;
       };
 
