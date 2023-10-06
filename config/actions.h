@@ -37,8 +37,8 @@
 
 #define NEXT_DIFF &ht3 LA(F3) LC(LA(RBKT))
 #define PREV_DIFF &ht3 LS(LA(F3)) LC(LA(LBKT))
-#define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))
-#define MOVE_ED_R &ht3 LC(LA(RIGHT)) LC(LS(PG_DN))
+#define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))   // tap: move active editor left/right
+#define MOVE_ED_R &ht3 LC(LA(RIGHT)) LC(LS(PG_DN))  // hold: move editor into next/previous group
 #define PGUP_TAB  &ht3 LC(LS(TAB)) PG_UP
 #define PGDN_TAB  &ht3 LC(TAB) PG_DN
 #define COPY_LN   &ht3 LC(LA(FSLH)) LC(LA(LS(DOWN)))
@@ -51,7 +51,16 @@
 #define NEXT_ED &ht_ckk LC(PG_DN) LC(PG_DN)
 #define PREV_ED &ht_ckk LC(PG_UP) LC(PG_UP)
 
-#define JUMP_UP &ht_ckk LC(UP) LC(UP)      // focus into editor group or move cursor
+// tap: move cursor
+// hold: focus into editor group
+#define JUMP_UP &ht_ckk LC(UP) LC(UP)
 #define JUMP_DN &ht_ckk LC(DOWN) LC(DOWN)
 #define JUMP_L  &ht_ckk LC(LEFT) LC(LEFT)
 #define JUMP_R  &ht_ckk LC(RIGHT) LC(RIGHT)
+
+// tap: select left/right/up/down
+// hold: move active editor group left/right/up/down
+#define ACTION_UP    &ht_ckk UP LS(UP)
+#define ACTION_DOWN  &ht_ckk DOWN LS(DOWN)
+#define ACTION_LEFT  &ht_ckk LEFT LS(LEFT)
+#define ACTION_RIGHT &ht_ckk RIGHT LS(RIGHT)

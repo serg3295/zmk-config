@@ -197,7 +197,7 @@ layers:
   - 'Shrink selec
 
     tion'
-  - Select 🠝
+  - {t: Select 🠝, h: ^K 🠝}
   - 'Expand selec
 
     tion'
@@ -211,9 +211,9 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - Select home
-  - Select 🠜
-  - Select 🠟
-  - Select 🠞
+  - {t: Select 🠜, h: ^K 🠜}
+  - {t: Select 🠟, h: ^K 🠟}
+  - {t: Select 🠞, h: ^K 🠞}
   - Select end
   - Add cursor 🠝
   - {t: Move Editor 🠜, h: into group}
