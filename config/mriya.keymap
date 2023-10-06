@@ -15,56 +15,7 @@
 #define WIN  4
 #define COMP 5
 
-// Compose combinations
-#define POUND_L  &cmps MINUS L
-#define EURO     &cmps EQUAL C
-#define DIVISION &cmps MINUS COLON
-#define SQR_ROOT &cmps V SLASH
-#define UPPER_0  &cmps CARET N0
-#define UPPER_1  &cmps CARET N1
-#define UPPER_2  &cmps CARET N2
-#define UPPER_3  &cmps CARET N3
-#define NBSP     &cmps SPACE SPACE
-#define ELLIPSES &cmps DOT DOT
-
-// Tiling window manager
-#define WS_1 &kp LG(PG_UP)
-#define WS_2 &kp LG(PG_DN)
-#define N_W  &kp LG(LC(UP))
-#define N_E  &kp LG(LC(LA(UP)))
-#define S_W  &kp LG(LC(DOWN))
-#define S_E  &kp LG(LC(LA(DOWN)))
-#define WEST &kp LG(LC(LEFT))
-#define EAST &kp LG(LC(RIGHT))
-#define HIDE &kp LG(D)
-#define MV_L &kp LG(LEFT)
-#define MV_R &kp LG(RIGHT)
-#define MV_U &kp LG(UP)
-#define MV_D &kp LG(DOWN)
-
-#define LANG_CS &ht_sk_kp LC(LSHIFT) RALT
-#define WSPC_SA &ht_sk_kp LS(LALT) LG(SPACE)
-#define NEXT_ED &open_ed PG_DN LC(PG_DN)
-#define PREV_ED &open_ed PG_UP LC(PG_UP)
-#define W_CAPS  &ht_caps CAPS 0
-#define SHEBANG &bigram HASH EXCLAMATION
-#define NEQ_EXCL  &ht_not_eq EXCLAMATION EQUAL
-#define NEQ_TILDE &ht_not_eq TILDE TILDE
-
-#define NEXT_DIFF &ht3 LA(F3) LC(LA(RBKT))
-#define PREV_DIFF &ht3 LS(LA(F3)) LC(LA(LBKT))
-#define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))
-#define MOVE_ED_R &ht3 LC(LA(RIGHT)) LC(LS(PG_DN))
-#define PGUP_TAB  &ht3 LC(LS(TAB)) PG_UP
-#define PGDN_TAB  &ht3 LC(TAB) PG_DN
-#define COPY_LN   &ht3 LC(LA(FSLH)) LC(LA(LS(DOWN)))
-#define F_BSPC    &ht3 LC(LS(BSPC)) LC(BSPC)
-#define F_DEL     &ht3 LC(LS(DEL)) LC(DEL)
-#define REFS      &ht3 LS(LA(F12)) LS(F12)
-#define RET_CTL   &ht3 LC(RET) RET
-#define GO_BACK   &ht3 LA(LEFT) LC(LA(MINUS))
-#define GO_FWD    &ht3 LA(RIGHT) LC(LS(MINUS))
-
+#include "actions.h"
 #include "macros.dtsi"
 
 &lt {
@@ -207,11 +158,11 @@
       nav_layer {
         label = "Nav";
         bindings = <
-                      GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &ht_ckk F10 F10  &kp F2        &kp F4        &kp F6         &kp F8      GO_FWD
-          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs         REFS          &kp LC(UP)    &kp LC(K)      PREV_DIFF   NEXT_DIFF  &kp LS(LC(G))
-                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &mv_line UP      &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  F_BSPC      F_DEL
-                      &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &mv_line DOWN    &fold         COPY_LN       &unfold        &ck_ckey I  &trans
-                                          &none       &none       &trans       &trans         &trans           &trans        &trans        &trans
+                      GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &ht_ckk F10 F10  &kp F2  &kp F4   &kp F6   &kp F8     GO_FWD
+          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs         REFS    JUMP_UP  HOVER    PREV_DIFF  NEXT_DIFF  &kp LS(LC(G))
+                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &mv_line UP      JUMP_L  JUMP_DN  JUMP_R   F_BSPC     F_DEL
+                      &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &mv_line DOWN    &fold   COPY_LN  &unfold  &none      &trans
+                                          &none       &none       &trans       &trans         &trans           &trans  &trans   &trans
         >;
       };
 

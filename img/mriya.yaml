@@ -82,8 +82,8 @@ layers:
   - F11
   - {t: goto F12, h: open, s: DEFS}
   - {t: goto, h: find all, s: REFS}
-  - ^🠝
-  - ^K
+  - {t: ^🠝, h: ^K ^🠝}
+  - Hover
   - {t: goto, h: show, s: prev chg}
   - {t: goto, h: show, s: next chg}
   - Git prefix
@@ -94,9 +94,9 @@ layers:
   - 🠊
   - {t: End, h: ⇲    ⭹}
   - Move line 🠝
-  - ^🠜
-  - ^🠟
-  - ^🠞
+  - {t: ^🠜, h: ^K ^🠜}
+  - {t: ^🠟, h: ^K ^🠟}
+  - {t: ^🠞, h: ^K ^🠞}
   - {t: ↤del word, h: all}
   - {t: del↦ word, h: all}
   - {t: ▽, type: trans}
@@ -109,7 +109,7 @@ layers:
   - {t: recursive, h: all, s: Fold}
   - {t: Copy line 🠟, h: and comment}
   - {t: recursive, h: all, s: Unfold}
-  - Hover
+  - ''
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -159,7 +159,7 @@ layers:
   - ;
   - ''''
   - {t: ▽, type: trans}
-  - $$mdi:keyboard-space$$
+  - Repeat
   - '|'
   - {t: '~', h: ~=}
   - '&'
