@@ -653,16 +653,18 @@ path.combo {
 <g transform="translate(924, 175)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">↤del</tspan><tspan x="0" dy="1.2em">word</tspan>
+<tspan x="0" dy="-0.6em">word</tspan><tspan x="0" dy="1.2em">↤</tspan>
 </text>
 <text x="0" y="24" class="key hold">all</text>
+<text x="0" y="-24" class="key shifted">del</text>
 </g>
 <g transform="translate(980, 182)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">del↦</tspan><tspan x="0" dy="1.2em">word</tspan>
+<tspan x="0" dy="-0.6em">word</tspan><tspan x="0" dy="1.2em">↦</tspan>
 </text>
 <text x="0" y="24" class="key hold">all</text>
+<text x="0" y="-24" class="key shifted">del</text>
 </g>
 <g transform="translate(84, 238)" class="key trans keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>

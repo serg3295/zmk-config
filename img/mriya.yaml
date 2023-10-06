@@ -97,8 +97,8 @@ layers:
   - {t: ^🠜, h: ^K ^🠜}
   - {t: ^🠟, h: ^K ^🠟}
   - {t: ^🠞, h: ^K ^🠞}
-  - {t: ↤del word, h: all}
-  - {t: del↦ word, h: all}
+  - {t: word ↤, h: all, s: del}
+  - {t: word ↦, h: all, s: del}
   - {t: ▽, type: trans}
   - $$mdi:arrow-u-left-top$$
   - $$mdi:content-cut$$

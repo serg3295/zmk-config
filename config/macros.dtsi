@@ -13,18 +13,6 @@
           <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>;
       };
 
-      ck_ckey: ctrl_k_ctrl_keycode {
-        label = "CTRL_K_CTRL_KEYCODE";
-        compatible = "zmk,behavior-macro-one-param";
-        #binding-cells = <1>;
-        bindings =
-          <&macro_press &kp LCTRL>,
-          <&macro_tap &kp K>,
-          <&macro_param_1to1>,
-          <&macro_tap &kp MACRO_PLACEHOLDER>,
-          <&macro_release &kp LCTRL>;
-      };
-
       ck_key: ctrl_k_keycode {
         label = "CTRL_K_KEYCODE";
         compatible = "zmk,behavior-macro-one-param";

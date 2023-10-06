@@ -210,7 +210,7 @@ parse_config:
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
     "SHEBANG": "#!"
-    "&ck_ckey I": "Hover"
+    "&ck_key LC(I)": "Hover"
     "W_CAPS":
       tap: "caps word"
       hold: "CAPS"
@@ -320,9 +320,13 @@ parse_config:
     LC(K): "^K"
     LC(F): "^F"
     LC(LS(BSPC)): "all"
-    LC(BSPC): "↤del word"
+    LC(BSPC):
+      shifted: "del"
+      tap: "word ↤"
     LC(LS(DEL)): "all"
-    LC(DEL): "del↦ word"
+    LC(DEL):
+      shifted: "del"
+      tap: "word ↦"
     LC(LEFT): "^🠜"
     LC(RIGHT): "^🠞"
     LC(UP): "^🠝"

@@ -29,7 +29,7 @@
 #define LANG_CS &ht_sk_kp LC(LSHIFT) RALT    // switch language or Ctrl+Shift layer
 #define WSPC_SA &ht_sk_kp LS(LALT) LG(SPACE) // switch workspace or Shift+Alt layer
 #define W_CAPS  &ht_caps CAPS 0  // caps_word or CAPS LOCK
-#define HOVER   &ck_ckey I
+#define HOVER   &ck_key LC(I)
 
 #define NEQ_EXCL  &ht_not_eq EXCLAMATION EQUAL
 #define NEQ_TILDE &ht_not_eq TILDE TILDE
@@ -48,8 +48,8 @@
 #define GO_BACK   &ht3 LA(LEFT) LC(LA(MINUS))
 #define GO_FWD    &ht3 LA(RIGHT) LC(LS(MINUS))
 
-#define NEXT_ED &open_ed PG_DN LC(PG_DN)
-#define PREV_ED &open_ed PG_UP LC(PG_UP)
+#define NEXT_ED &ht_ckk LC(PG_DN) LC(PG_DN)
+#define PREV_ED &ht_ckk LC(PG_UP) LC(PG_UP)
 
 #define JUMP_UP &ht_ckk LC(UP) LC(UP)      // focus into editor group or move cursor
 #define JUMP_DN &ht_ckk LC(DOWN) LC(DOWN)

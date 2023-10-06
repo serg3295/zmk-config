@@ -66,15 +66,6 @@
         bindings = <&not_eq>, <&kp>;
       };
 
-      ht_ckck: ht_ctrl_k_ctrl_keycode {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HT_CTRL_K_CTRL_KEYCODE";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&ck_ckey>, <&kp>;
-      };
-
       ht_ckk: ht_ctrl_k_keycode {
         compatible = "zmk,behavior-hold-tap";
         label = "HT_CTRL_K_KEYCODE";
@@ -82,15 +73,6 @@
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
         bindings = <&ck_key>, <&kp>;
-      };
-
-      open_ed: ht_open_next_prev_editor {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HT_OPEN_NEXT_PREV_EDITOR";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <300>;
-        bindings = <&ck_ckey>, <&kp>;
       };
 
       ht_sk_kp: ht_sk_kp {
@@ -108,14 +90,14 @@
         label = "FOLD";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&ht_ckck N0 LC(LS(LBKT))>, <&ck_ckey LBKT>;
+        bindings = <&ht_ckk LC(N0) LC(LS(LBKT))>, <&ck_key LC(LBKT)>;
       };
       unfold: unfold {
         compatible = "zmk,behavior-tap-dance";
         label = "UNFOLD";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&ht_ckck J LC(LS(RBKT))>, <&ck_ckey RBKT>;
+        bindings = <&ht_ckk LC(J) LC(LS(RBKT))>, <&ck_key LC(RBKT)>;
       };
 
       td_home: home_actions {
