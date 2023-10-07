@@ -453,7 +453,7 @@ parse_config:
     TAB: $$mdi:keyboard-tab$$
     LS(TAB): $$mdi:keyboard-tab-reverse$$
     LC(TAB): "^⇥"
-    LC(LS(TAB)): "^⇧⇥"
+    LS(LC(TAB)): "⇧^⇥"
     RSHIFT: $$mdi:apple-keyboard-shift$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
     RALT: "LANG"

@@ -74,9 +74,9 @@ layers:
   - 'Trans
 
     form'
-  - {t: ▽, type: trans}
-  - {t: PG UP, h: ^⇧⇥}
-  - {t: PG DN, h: ^⇥}
+  - PG UP
+  - ⇧^⇥
+  - ^⇥
   - 🠉
   - INS
   - F11
@@ -87,7 +87,7 @@ layers:
   - {t: goto, h: show, s: prev chg}
   - {t: goto, h: show, s: next chg}
   - Git prefix
-  - {t: ▽, type: trans}
+  - PG DN
   - {t: Home, h: ⇱    ⭶}
   - 🠈
   - 🠋
@@ -146,7 +146,7 @@ layers:
   - ''
   - '#!'
   - PSCRN
-  - {t: ▽, type: trans}
+  - ''
   - _
   - (
   - '-'
@@ -209,7 +209,7 @@ layers:
   - $$mdi:volume-mute$$
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - Select home
   - {t: Select 🠜, h: ^K 🠜}
   - {t: Select 🠟, h: ^K 🠟}

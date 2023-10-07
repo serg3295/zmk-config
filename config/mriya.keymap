@@ -140,11 +140,11 @@
       nav_layer {
         label = "Nav";
         bindings = <
-                      GO_BACK  &kp F7     &kp F5      &kp F3      &kp F1       &kp F9         &ht_ckk F10 F10  &kp F2  &kp F4   &kp F6   &kp F8     GO_FWD
-          &transform  &trans   PGUP_TAB   PGDN_TAB    &kp UP      &kp INS      &kp F11        &td_defs         REFS    JUMP_UP  HOVER    PREV_DIFF  NEXT_DIFF  &kp LS(LC(G))
-                      &trans   &td_home   &kp LEFT    &kp DOWN    &kp RIGHT    &td_end        &mv_line UP      JUMP_L  JUMP_DN  JUMP_R   F_BSPC     F_DEL
-                      &trans   &kp LC(Z)  &kp LS(DEL) &kp LC(INS) &kp LS(INS)  &kp DEL        &mv_line DOWN    &fold   COPY_LN  &unfold  &none      &trans
-                                          &none       &none       &trans       &trans         &trans           &trans  &trans   &trans
+                      GO_BACK    &kp F7           &kp F5       &kp F3      &kp F1       &kp F9         &ht_ckk F10 F10  &kp F2  &kp F4   &kp F6   &kp F8     GO_FWD
+          &transform  &kp PG_UP  &kp LS(LC(TAB))  &kp LC(TAB)  &kp UP      &kp INS      &kp F11        &td_defs         REFS    JUMP_UP  HOVER    PREV_DIFF  NEXT_DIFF  &kp LS(LC(G))
+                      &kp PG_DN  &td_home         &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &mv_line UP      JUMP_L  JUMP_DN  JUMP_R   F_BSPC     F_DEL
+                      &trans     &kp LC(Z)        &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &mv_line DOWN    &fold   COPY_LN  &unfold  &none      &trans
+                                                  &none        &none       &trans       &trans         &trans           &trans  &trans   &trans
         >;
       };
 
@@ -153,7 +153,7 @@
         bindings = <
                     &ru GRAVE   &ru N7       &none     &ru N3     &none     &none            &none      &ru N2    &ru N4     &ru N6    &ru2 SLASH  &ru2 PIPE
           &kp RGUI  &ru2 GRAVE  &kp GRAVE    &kp LT    NEQ_EXCL   &kp GT    &kp EXCL         &kp PRCNT  &kp LBKT  &kp HASH   &kp RBKT  &none       SHEBANG  &kp PSCRN
-                    &trans      &kp UNDER    &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp CARET  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI    &kp SQT
+                    &none       &kp UNDER    &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp CARET  &kp LBRC  &kp PLUS   &kp RBRC  &kp SEMI    &kp SQT
                     &trans      &key_repeat  &kp PIPE  NEQ_TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &kp DOT   &kp FSLH    &trans
                                              &none     &trans     &trans    &trans           &trans     &trans    &none      &none
         >;
@@ -164,7 +164,7 @@
         bindings = <
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR           &bt BT_CLR        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0
           &none &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none          &none
-                &trans        &kp LS(HOME)  ACTION_LEFT      ACTION_DOWN   ACTION_RIGHT      &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
+                &none         &kp LS(HOME)  ACTION_LEFT      ACTION_DOWN   ACTION_RIGHT      &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
                 &none         &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LC(DOWN))     &kp LS(LA(DOWN))  PREV_ED       &kp LA(BSLH)  NEXT_ED       &kp C_VOL_DN   &kp C_BRI_DN
                                             &bootloader      &none         &trans            &none                &none             &trans        &none         &bootloader
         >;

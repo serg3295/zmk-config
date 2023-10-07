@@ -1,3 +1,4 @@
+/* actions.h */
 
 // Compose combinations
 #define POUND_L  &cmps MINUS L
@@ -39,8 +40,6 @@
 #define PREV_DIFF &ht3 LS(LA(F3)) LC(LA(LBKT))
 #define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))   // tap: move active editor left/right
 #define MOVE_ED_R &ht3 LC(LA(RIGHT)) LC(LS(PG_DN))  // hold: move editor into next/previous group
-#define PGUP_TAB  &ht3 LC(LS(TAB)) PG_UP
-#define PGDN_TAB  &ht3 LC(TAB) PG_DN
 #define COPY_LN   &ht3 LC(LA(FSLH)) LC(LA(LS(DOWN)))
 #define F_BSPC    &ht3 LC(LS(BSPC)) LC(BSPC)  // del word or del all left
 #define F_DEL     &ht3 LC(LS(DEL)) LC(DEL)    // del word or del all right
