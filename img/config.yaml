@@ -319,7 +319,7 @@ parse_config:
       shifted: "REFS"
       tap: "goto"
     LS(LA(F12)): "find all"
-    LS(LC(G)): "Git prefix"
+    LS(F10): "Show context menu"
     LC(U): "Cursor undo"
     LC(K): "^K"
     LC(F): "^F"

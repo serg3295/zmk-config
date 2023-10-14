@@ -86,7 +86,7 @@ layers:
   - Hover
   - {t: goto, h: show, s: prev chg}
   - {t: goto, h: show, s: next chg}
-  - Git prefix
+  - Show context menu
   - PG DN
   - {t: Home, h: ⇱    ⭶}
   - 🠈
