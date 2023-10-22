@@ -143,8 +143,8 @@ layers:
   - '['
   - '#'
   - ']'
-  - ''
   - '#!'
+  - ''
   - PSCRN
   - ''
   - _
@@ -159,7 +159,7 @@ layers:
   - ;
   - ''''
   - {t: ▽, type: trans}
-  - Repeat
+  - $$mdi:keyboard-space$$
   - '|'
   - {t: '~', h: ~=}
   - '&'
@@ -167,7 +167,7 @@ layers:
   - $
   - '*'
   - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - Repeat
   - {t: /, s: '?'}
   - {t: ▽, type: trans}
   - ''
