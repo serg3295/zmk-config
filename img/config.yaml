@@ -234,10 +234,10 @@ parse_config:
       hold: "down"
     "GO_BACK":
       tap: "Go back"
-      hold: "on window"
+      hold: "in vscode"
     "GO_FWD":
       tap: "Go fwd"
-      hold: "on win"
+      hold: "in vscode"
     "&cmps EQUAL C": "€"
     "&cmps MINUS L": "£"
     "&cmps T M": "™"

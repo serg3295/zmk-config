@@ -59,7 +59,7 @@ layers:
   - {t: LANG, h: ^⇧}
   - {t: Work space, h: ⇧Alt, s: Next}
   Nav:
-  - {t: Go back, h: on window}
+  - {t: Go back, h: in vscode}
   - F7
   - F5
   - F3
@@ -70,7 +70,7 @@ layers:
   - F4
   - F6
   - F8
-  - {t: Go fwd, h: on win}
+  - {t: Go fwd, h: in vscode}
   - 'Trans
 
     form'

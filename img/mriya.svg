@@ -475,7 +475,7 @@ path.combo {
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-1.2em">Go</tspan><tspan x="0" dy="1.2em">back</tspan>
 </text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 78%">on window</tspan></text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 78%">in vscode</tspan></text>
 </g>
 <g transform="translate(140, 63)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -523,7 +523,7 @@ path.combo {
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-1.2em">Go</tspan><tspan x="0" dy="1.2em">fwd</tspan>
 </text>
-<text x="0" y="24" class="key hold">on win</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 78%">in vscode</tspan></text>
 </g>
 <g transform="translate(28, 168)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

@@ -44,8 +44,8 @@
 #define F_BSPC    &ht3 LC(LS(BSPC)) LC(BSPC)  // del word or del all left
 #define F_DEL     &ht3 LC(LS(DEL)) LC(DEL)    // del word or del all right
 #define REFS      &ht3 LS(LA(F12)) LS(F12)    // referencies
-#define GO_BACK   &ht3 LA(LEFT) LC(LA(MINUS))
-#define GO_FWD    &ht3 LA(RIGHT) LC(LS(MINUS))
+#define GO_BACK   &ht3 LC(LA(MINUS)) LA(LEFT)
+#define GO_FWD    &ht3 LC(LS(MINUS)) LA(RIGHT)
 
 #define NEXT_ED &ht_ckk LC(PG_DN) LC(PG_DN)
 #define PREV_ED &ht_ckk LC(PG_UP) LC(PG_UP)
