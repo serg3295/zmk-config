@@ -121,30 +121,30 @@ layers:
   - {t: ▽, type: trans}
   Sym:
   - {t: '~', s: ru}
-  - {t: '&', s: ru}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
-  - {t: '#', s: ru}
-  - ''
-  - ''
-  - ''
-  - {t: '@', s: ru}
-  - {t: $, s: ru}
-  - {t: ^, s: ru}
-  - {t: /, s: ru}
-  - {t: '|', s: ru}
   - Compose key
   - {t: '`', s: ru}
   - {t: '`', s: '~'}
-  - <
+  - {t: <, h: ru <}
   - {t: '=', h: '!='}
-  - '>'
+  - {t: '>', h: ru >}
   - '!'
   - '%'
-  - '['
-  - '#'
-  - ']'
+  - {t: '[', h: 'ru ['}
+  - {t: '#', h: 'ru #'}
+  - {t: ']', h: 'ru ]'}
+  - {t: '#', s: ru}
   - '#!'
-  - ''
   - PSCRN
   - ''
   - _
@@ -152,23 +152,23 @@ layers:
   - '-'
   - )
   - \
-  - ^
-  - '{'
+  - {t: ^, h: ru ^}
+  - {t: '{', h: 'ru {'}
   - +
-  - '}'
-  - ;
+  - {t: '}', h: 'ru }'}
+  - '::'
   - ''''
   - {t: ▽, type: trans}
   - $$mdi:keyboard-space$$
-  - '|'
+  - {t: '|', h: ru |}
   - {t: '~', h: ~=}
-  - '&'
-  - '@'
-  - $
+  - {t: '&', h: ru &}
+  - {t: '@', h: ru @}
+  - {t: $, h: ru $}
   - '*'
   - {t: ',', s: <}
   - Repeat
-  - {t: /, s: '?'}
+  - {t: /, h: ru /}
   - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}

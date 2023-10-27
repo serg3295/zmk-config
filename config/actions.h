@@ -34,7 +34,21 @@
 
 #define NEQ_EXCL  &ht_not_eq EXCLAMATION EQUAL
 #define NEQ_TILDE &ht_not_eq TILDE TILDE
-#define SHEBANG &bigram HASH EXCLAMATION
+#define SHEBANG   &bigram HASH EXCLAMATION
+#define DBL_COLON &bigram COLON COLON
+#define AMPS_RU   &ht_ru N7 AMPERSAND
+#define HASH_RU   &ht_ru N3 HASH
+#define AT_RU     &ht_ru N2 AT_SIGN
+#define DLLR_RU   &ht_ru N4 DOLLAR
+#define CARET_RU  &ht_ru N6 CARET
+#define LBRC_RU   &ht_ru LEFT_BRACE LEFT_BRACE
+#define RBRC_RU   &ht_ru RIGHT_BRACE RIGHT_BRACE
+#define LT_RU     &ht_ru LESS_THAN LESS_THAN
+#define GT_RU     &ht_ru GREATER_THAN GREATER_THAN
+#define LBKT_RU   &ht_ru2 LEFT_BRACKET LEFT_BRACKET
+#define RBKT_RU   &ht_ru2 RIGHT_BRACKET RIGHT_BRACKET
+#define FSLH_RU   &ht_ru2 SLASH SLASH
+#define PIPE_RU   &ht_ru2 PIPE PIPE
 
 #define NEXT_DIFF &ht3 LA(F3) LC(LA(RBKT))
 #define PREV_DIFF &ht3 LS(LA(F3)) LC(LA(LBKT))

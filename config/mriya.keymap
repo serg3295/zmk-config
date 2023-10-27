@@ -66,6 +66,24 @@
         bindings = <&not_eq>, <&kp>;
       };
 
+      ht_ru: ht_ru {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_RU_SYM_ON_HOLD";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&ru>, <&kp>;
+      };
+
+      ht_ru2: ht_ru2 {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HT_RU_SYM_NO_SHIFT_ON_HOLD";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&ru2>, <&kp>;
+      };
+
       ht_ckk: ht_ctrl_k_keycode {
         compatible = "zmk,behavior-hold-tap";
         label = "HT_CTRL_K_KEYCODE";
@@ -151,10 +169,10 @@
       sym_layer {
         label = "Sym";
         bindings = <
-                    &ru GRAVE   &ru N7     &none     &ru N3     &none     &none            &none      &ru N2    &ru N4     &ru N6       &ru2 SLASH  &ru2 PIPE
-          &kp RGUI  &ru2 GRAVE  &kp GRAVE  &kp LT    NEQ_EXCL   &kp GT    &kp EXCL         &kp PRCNT  &kp LBKT  &kp HASH   &kp RBKT     SHEBANG     &none     &kp PSCRN
-                    &none       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         &kp CARET  &kp LBRC  &kp PLUS   &kp RBRC     &kp SEMI    &kp SQT
-                    &trans      &kp SPACE  &kp PIPE  NEQ_TILDE  &kp AMPS  &kp AT           &kp DLLR   &kp STAR  &kp COMMA  &key_repeat  &kp FSLH    &trans
+                    &ru GRAVE   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans       &trans     &none
+          &kp RGUI  &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3     SHEBANG  &kp PSCRN
+                    &none       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         CARET_RU   LBRC_RU   &kp PLUS   RBRC_RU      DBL_COLON  &kp SQT
+                    &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   AT_RU            DLLR_RU    &kp STAR  &kp COMMA  &key_repeat  FSLH_RU    &trans
                                            &none     &trans     &trans    &trans           &trans     &trans    &none      &none
         >;
       };

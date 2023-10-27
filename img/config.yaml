@@ -213,7 +213,65 @@ parse_config:
       tap: $$mdi:content-copy$$
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
+
+    # Symbols
+    "LT_RU":
+      tap: '<'
+      hold: "ru <"
+    "GT_RU":
+      tap: '>'
+      hold: "ru >"
+    "LBRC_RU":
+      tap: '{'
+      hold: "ru {"
+    "RBRC_RU":
+      tap: '}'
+      hold: "ru }"
+    "LBKT_RU":
+      tap: '['
+      hold: "ru ["
+    "RBKT_RU":
+      tap: ']'
+      hold: "ru ]"
+    "AMPS_RU":
+      tap: '&'
+      hold: "ru &"
+    "HASH_RU":
+      tap: '#'
+      hold: "ru #"
+    "AT_RU":
+      tap: '@'
+      hold: "ru @"
+    "DLLR_RU":
+      tap: '$'
+      hold: "ru $"
+    "CARET_RU":
+      tap: '^'
+      hold: "ru ^"
+    "FSLH_RU":
+      tap: '/'
+      hold: "ru /"
+    "PIPE_RU":
+      tap: '|'
+      hold: "ru |"
+    "&ru N3":
+      shifted: "ru"
+      tap: '#'
+    "&ru GRAVE":
+      tap: "~"
+      shifted: "ru"
+    "&ru2 GRAVE":
+      tap: "`"
+      shifted: "ru"
+    "&ht_not_eq EXCLAMATION EQUAL":
+      tap: "="
+      hold: "!="
+    "&ht_not_eq TILDE TILDE":
+      tap: "~"
+      hold: "~="
+    "DBL_COLON": "::"
     "SHEBANG": "#!"
+
     "&ck_key LC(I)": "Hover"
     "W_CAPS":
       tap: "caps word"
@@ -264,39 +322,6 @@ parse_config:
     "&cmps2 MINUS": "—"
     "&cmps2 DOT": "–"
     "&ck_key F10": "Panel size"
-    "&ru N2":
-      tap: "@"
-      shifted: "ru"
-    "&ru N3":
-      tap: "#"
-      shifted: "ru"
-    "&ru N4":
-      tap: "$"
-      shifted: "ru"
-    "&ru N6":
-      tap: "^"
-      shifted: "ru"
-    "&ru N7":
-      tap: "&"
-      shifted: "ru"
-    "&ru GRAVE":
-      tap: "~"
-      shifted: "ru"
-    "&ru2 GRAVE":
-      tap: "`"
-      shifted: "ru"
-    "&ru2 PIPE":
-      tap: "|"
-      shifted: "ru"
-    "&ru2 SLASH":
-      tap: "/"
-      shifted: "ru"
-    "&ht_not_eq EXCLAMATION EQUAL":
-      tap: "="
-      hold: "!="
-    "&ht_not_eq TILDE TILDE":
-      tap: "~"
-      hold: "~="
   sticky_label: sticky
   trans_legend:
     t: ▽
