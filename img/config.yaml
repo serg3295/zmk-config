@@ -331,6 +331,7 @@ parse_config:
   zmk_keycode_map:
     LC(LBKT): "Outdent line"
     LC(RBKT): "Indent line"
+    LS(LALT): "⇧Alt"
     LC(LSHIFT): "^⇧"
     LC(LS(PG_UP)): "Move Editor 🠜"
     LC(LS(PG_DN)): "Move Editor 🠞"
@@ -392,7 +393,7 @@ parse_config:
     LG(SPACE):
       shifted: "Next"
       tap: "Work space"
-    LS(LALT): "⇧Alt"
+    LS(LC(G)): "Git prefix"
 
     LG(PG_UP):
       shifted: "Workspace"

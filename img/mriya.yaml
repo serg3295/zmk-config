@@ -109,7 +109,7 @@ layers:
   - {t: recursive, h: all, s: Fold}
   - {t: Copy line 🠟, h: and comment}
   - {t: recursive, h: all, s: Unfold}
-  - ''
+  - Git prefix
   - {t: ▽, type: trans}
   - ''
   - ''
