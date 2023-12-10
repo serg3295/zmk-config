@@ -393,7 +393,7 @@ parse_config:
     LG(SPACE):
       shifted: "Next"
       tap: "Work space"
-    LS(LC(G)): "Git prefix"
+    LS(LA(G)): "Git prefix"
 
     LG(PG_UP):
       shifted: "Workspace"
