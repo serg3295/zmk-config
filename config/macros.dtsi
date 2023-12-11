@@ -3,7 +3,6 @@
 / {
     macros {
       transform: transform_to {
-        label = "TRANSFORM_TO";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings =
@@ -14,7 +13,6 @@
       };
 
       ck_key: ctrl_k_keycode {
-        label = "CTRL_K_KEYCODE";
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
         bindings =
@@ -26,7 +24,6 @@
       };
 
       cmps: compose_keycode1_keycode2 {
-        label = "COMPOSE_KEYCODE1_KEYCODE2";
         compatible = "zmk,behavior-macro-two-param";
         #binding-cells = <2>;
         bindings =
@@ -38,7 +35,6 @@
       };
 
       cmps2: compose_2minus_keycode1 {
-        label = "COMPOSE_2MINUS_KEYCODE";
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
         bindings =
@@ -48,7 +44,6 @@
       };
 
       bigram: bigram {
-        label = "BIGRAM";
         compatible = "zmk,behavior-macro-two-param";
         #binding-cells = <2>;
         bindings =
@@ -59,7 +54,6 @@
       };
 
       mv_line: move_line_up_down {
-        label = "MOVE_LINE_UP_DOWN";
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
         bindings =
@@ -70,7 +64,6 @@
       };
 
       ru: type_symbol_in_ru_layout {
-        label = "TYPE_SYMBOL_IN_RU_LAYOUT";
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
         bindings =
@@ -84,7 +77,6 @@
       };
 
       ru2: type_sym_no_shift_in_ru_layout {
-        label = "TYPE_SYM_NO_SHIFT_IN_RU_LAYOUT";
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
         bindings =
@@ -96,7 +88,6 @@
       };
 
       not_eq: not_equal {
-        label = "NOT_EQUAL";
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
         bindings =

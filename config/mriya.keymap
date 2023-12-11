@@ -41,7 +41,6 @@
     // hold-tap
       ht3: ht_300ms {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOLD_TAP_300MS";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
@@ -50,7 +49,6 @@
 
       ht_caps: mod_caps {
         compatible = "zmk,behavior-hold-tap";
-        label = "MOD_CAPS";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
@@ -59,7 +57,6 @@
 
       ht_not_eq: ht_not_equal {
         compatible = "zmk,behavior-hold-tap";
-        label = "HT_NOT_EQUAL";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
@@ -68,7 +65,6 @@
 
       ht_ru: ht_ru {
         compatible = "zmk,behavior-hold-tap";
-        label = "HT_RU_SYM_ON_HOLD";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <200>;
@@ -77,7 +73,6 @@
 
       ht_ru2: ht_ru2 {
         compatible = "zmk,behavior-hold-tap";
-        label = "HT_RU_SYM_NO_SHIFT_ON_HOLD";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <200>;
@@ -86,7 +81,6 @@
 
       ht_ckk: ht_ctrl_k_keycode {
         compatible = "zmk,behavior-hold-tap";
-        label = "HT_CTRL_K_KEYCODE";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
@@ -103,7 +97,6 @@
 
       ht_sk_kp: ht_sk_kp {
         compatible = "zmk,behavior-hold-tap";
-        label = "HT_SK_KP";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <300>;
@@ -113,14 +106,12 @@
     // tap-dance
       fold: fold {
         compatible = "zmk,behavior-tap-dance";
-        label = "FOLD";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&ht_ckk LC(N0) LC(LS(LBKT))>, <&ck_key LC(LBKT)>;
       };
       unfold: unfold {
         compatible = "zmk,behavior-tap-dance";
-        label = "UNFOLD";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&ht_ckk LC(J) LC(LS(RBKT))>, <&ck_key LC(RBKT)>;
@@ -128,14 +119,12 @@
 
       td_home: home_actions {
         compatible = "zmk,behavior-tap-dance";
-        label = "HOME_ACT";
         #binding-cells = <0>;
         tapping-term-ms = <300>;
         bindings = <&ht3 LC(HOME) HOME>, <&kp LC(LA(UP))>;
       };
       td_end: end_actions {
         compatible = "zmk,behavior-tap-dance";
-        label = "END_ACT";
         #binding-cells = <0>;
         tapping-term-ms = <300>;
         bindings = <&ht3 LC(END) END>, <&kp LC(LA(DOWN))>;
@@ -143,7 +132,6 @@
 
       td_defs: defs_actions {
         compatible = "zmk,behavior-tap-dance";
-        label = "DEFS_ACTIONS";
         #binding-cells = <0>;
         tapping-term-ms = <300>;
         bindings = <&ht_ckk F12 F12>, <&kp LA(F12)>;
