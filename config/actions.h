@@ -77,3 +77,7 @@
 #define ACTION_DOWN  &ht_ckk DOWN LS(DOWN)
 #define ACTION_LEFT  &ht_ckk LEFT LS(LEFT)
 #define ACTION_RIGHT &ht_ckk RIGHT LS(RIGHT)
+
+// tap:  move Editor into New window
+// hold: move Editor group into New window
+#define MV_AUX_WIN &ht_ck_ck LC(LA(LEFT_ARROW)) LC(LA(RIGHT_ARROW))

@@ -280,6 +280,10 @@ parse_config:
       shifted: DEFS
       tap: "goto F12"
       hold: "open"
+    "MV_AUX_WIN":
+      tap: "into auxWin"
+      hold: "move group"
+      shifted: "move editor"
     "PREV_ED":
       tap: "Prev Editor"
       hold: "out group"

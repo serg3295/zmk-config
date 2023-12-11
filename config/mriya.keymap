@@ -93,6 +93,14 @@
         bindings = <&ck_key>, <&kp>;
       };
 
+      ht_ck_ck: ht_ctrl_k_ctrl_k {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&ck_key>, <&ck_key>;
+      };
+
       ht_sk_kp: ht_sk_kp {
         compatible = "zmk,behavior-hold-tap";
         label = "HT_SK_KP";
@@ -181,7 +189,7 @@
         display-name = "Adjust";
         bindings = <
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR           &bt BT_CLR        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0
-          &none &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none          &none
+          &none &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none         MV_AUX_WIN
                 &none         &kp LS(HOME)  ACTION_LEFT      ACTION_DOWN   ACTION_RIGHT      &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
                 &none         &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LC(DOWN))     &kp LS(LA(DOWN))  PREV_ED       &kp LA(BSLH)  NEXT_ED       &kp C_VOL_DN   &kp C_BRI_DN
                                             &bootloader      &none         &trans            &none                &none             &trans        &none         &bootloader
