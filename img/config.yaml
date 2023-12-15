@@ -461,6 +461,10 @@ parse_config:
       shifted: "Restore"
       tap: $$mdi:window-restore$$
       hold: "window"
+    LA(F7):
+      shifted: "Move"
+      tap: $$mdi:cursor-move$$
+      hold: "window"
     LA(F8):
       shifted: "Resize"
       tap: $$mdi:move-resize-variant$$

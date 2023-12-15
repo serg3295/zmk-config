@@ -266,7 +266,7 @@ layers:
   - {t: '$$mdi:chevron-up-box-outline$$', h: window, s: Move}
   - {t: ◳, h: NE, s: Tile}
   - {t: '$$mdi:move-resize-variant$$', h: window, s: Resize}
-  - ''
+  - {t: '$$mdi:cursor-move$$', h: window, s: Move}
   - ''
   - ''
   - ''

@@ -45,6 +45,9 @@
 <svg id="mdi:content-paste">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-content-paste" viewBox="0 0 24 24"><path d="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z" /></svg>
 </svg>
+<svg id="mdi:cursor-move">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cursor-move" viewBox="0 0 24 24"><path d="M13,6V11H18V7.75L22.25,12L18,16.25V13H13V18H16.25L12,22.25L7.75,18H11V13H6V16.25L1.75,12L6,7.75V11H11V6H7.75L12,1.75L16.25,6H13Z" /></svg>
+</svg>
 <svg id="mdi:dock-bottom">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-dock-bottom" viewBox="0 0 24 24"><path d="M20 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H20A2 2 0 0 0 22 18V6A2 2 0 0 0 20 4M20 13H4V6H20Z" /></svg>
 </svg>
@@ -1408,6 +1411,9 @@ path.combo {
 </g>
 <g transform="translate(980, 126)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:cursor-move" xlink:href="#mdi:cursor-move" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:cursor-move"/>
+<text x="0" y="24" class="key hold">window</text>
+<text x="0" y="-24" class="key shifted">Move</text>
 </g>
 <g transform="translate(1036, 168)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
