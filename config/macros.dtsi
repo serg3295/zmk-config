@@ -23,6 +23,19 @@
           <&macro_tap &kp MACRO_PLACEHOLDER>;
       };
 
+      ck_ckey: ctrl_k_ctrl_keycode {
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        bindings =
+          <&macro_press &kp LCTRL>,
+          <&macro_tap &kp K>,
+          <&macro_release &kp LCTRL>,
+          <&macro_press &kp LCTRL>,
+          <&macro_param_1to1>,
+          <&macro_tap &kp MACRO_PLACEHOLDER>,
+          <&macro_release &kp LCTRL>;
+      };
+
       cmps: compose_keycode1_keycode2 {
         compatible = "zmk,behavior-macro-two-param";
         #binding-cells = <2>;

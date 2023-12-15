@@ -1148,6 +1148,10 @@ path.combo {
 </g>
 <g transform="translate(84, 182)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 78%">Set</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">Selection</tspan>
+<tspan x="0" dy="1.2em" style="font-size: 78%">Anchor</tspan>
+</text>
 </g>
 <g transform="translate(140, 175)" class="key keypos-27">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1221,6 +1225,10 @@ path.combo {
 </g>
 <g transform="translate(84, 238)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.2em">Select</tspan><tspan x="0" dy="1.2em">⚓ ⟺</tspan>
+<tspan x="0" dy="1.2em">cursor</tspan>
+</text>
 </g>
 <g transform="translate(140, 231)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

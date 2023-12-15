@@ -155,6 +155,8 @@ parse_config:
     '&ck_key RIGHT': "^K 🠞"
     '&ck_key UP': "^K 🠝"
     '&ck_key DOWN': "^K 🠟"
+    '&ck_ckey B': "Set Selection Anchor"
+    '&ck_ckey K': "Select ⚓  ⟺ cursor"
     '&bootloader': "BOOT"
     '&sys_reset': "Reset"
     '&transform': "Trans\nform"

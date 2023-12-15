@@ -209,7 +209,7 @@ layers:
   - $$mdi:volume-mute$$
   - ''
   - {t: into auxWin, h: move group, s: move editor}
-  - ''
+  - Set Selection Anchor
   - Select home
   - {t: Select 🠜, h: ^K 🠜}
   - {t: Select 🠟, h: ^K 🠟}
@@ -221,7 +221,7 @@ layers:
   - {t: Move Editor 🠞, h: into group}
   - $$mdi:volume-plus$$
   - $$mdi:brightness-7$$
-  - ''
+  - Select ⚓  ⟺ cursor
   - Cursor undo
   - Select word ↤
   - Add cursors toLineEnd
