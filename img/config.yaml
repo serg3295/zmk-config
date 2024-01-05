@@ -401,6 +401,22 @@ parse_config:
       tap: "Work space"
     LS(LA(G)): "Git prefix"
 
+# Win layer
+    LG(A):
+      tap: "Keepass"
+    LG(C):
+      tap: "Double Commander"
+    LG(F):
+      tap: "Firefox"
+    LG(Q):
+      tap: "Shut down"
+    LG(T):
+      tap: "Telegram"
+    LG(V):
+      tap: "VSCode"
+    LG(N9):
+      tap: "Terminal"
+
     LG(PG_UP):
       shifted: "Workspace"
       tap: $$mdi:dock-top$$

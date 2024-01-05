@@ -877,7 +877,6 @@ path.combo {
 </g>
 <g transform="translate(1036, 168)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">PSCRN</text>
 </g>
 <g transform="translate(84, 182)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1369,12 +1368,16 @@ path.combo {
 </g>
 <g transform="translate(28, 168)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">PSCRN</text>
 </g>
 <g transform="translate(84, 126)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 </g>
 <g transform="translate(140, 119)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Shut</tspan><tspan x="0" dy="1.2em">down</tspan>
+</text>
 </g>
 <g transform="translate(196, 98)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1384,9 +1387,13 @@ path.combo {
 </g>
 <g transform="translate(308, 98)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Run</tspan><tspan x="0" dy="1.2em">App</tspan>
+</text>
 </g>
 <g transform="translate(364, 105)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">Telegram</tspan></text>
 </g>
 <g transform="translate(700, 105)" class="key keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1432,24 +1439,24 @@ path.combo {
 </g>
 <g transform="translate(140, 175)" class="key keypos-27">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">Keepass</text>
 </g>
 <g transform="translate(196, 154)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 </g>
 <g transform="translate(252, 140)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Run</tspan><tspan x="0" dy="1.2em">App</tspan>
-</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">Terminal</tspan></text>
 </g>
 <g transform="translate(308, 154)" class="key keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">Firefox</text>
+</g>
+<g transform="translate(364, 161)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-0.6em">Main</tspan><tspan x="0" dy="1.2em">menu</tspan>
 </text>
-</g>
-<g transform="translate(364, 161)" class="key keypos-31">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 </g>
 <g transform="translate(700, 161)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1498,9 +1505,13 @@ path.combo {
 </g>
 <g transform="translate(252, 196)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em" style="font-size: 78%">Double</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">Commander</tspan>
+</text>
 </g>
 <g transform="translate(308, 210)" class="key keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">VSCode</text>
 </g>
 <g transform="translate(364, 217)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

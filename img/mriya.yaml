@@ -145,7 +145,7 @@ layers:
   - {t: ']', h: 'ru ]'}
   - {t: '#', s: ru}
   - '#!'
-  - PSCRN
+  - ''
   - ''
   - _
   - (
@@ -254,13 +254,13 @@ layers:
   - ''
   - ''
   - ''
+  - PSCRN
+  - ''
+  - Shut down
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - Run App
+  - Telegram
   - {t: '$$mdi:dock-top$$', h: switch, s: Workspace}
   - {t: ◰, h: NW, s: Tile}
   - {t: '$$mdi:chevron-up-box-outline$$', h: window, s: Move}
@@ -269,11 +269,11 @@ layers:
   - {t: '$$mdi:cursor-move$$', h: window, s: Move}
   - ''
   - ''
+  - Keepass
   - ''
-  - ''
-  - Run App
+  - Terminal
+  - Firefox
   - Main menu
-  - ''
   - {t: '$$mdi:dock-left$$', h: West, s: Tile}
   - {t: '$$mdi:chevron-left-box-outline$$', h: window, s: Move}
   - {t: '$$mdi:chevron-down-box-outline$$', h: window, s: Move}
@@ -283,8 +283,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - Double Commander
+  - VSCode
   - ''
   - {t: '$$mdi:dock-bottom$$', h: switch, s: Workspace}
   - {t: ◱, h: SW, s: Tile}

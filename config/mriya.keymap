@@ -166,7 +166,7 @@
         display-name = "Sym";
         bindings = <
                     &ru GRAVE   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans       &trans     &none
-          &kp RGUI  &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3     SHEBANG  &kp PSCRN
+          &kp RGUI  &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3     SHEBANG  &none
                     &none       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         CARET_RU   LBRC_RU   &kp PLUS   RBRC_RU      DBL_COLON  &kp SQT
                     &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   AT_RU            DLLR_RU    &kp STAR  &kp COMMA  &key_repeat  FSLH_RU    &trans
                                            &none     &trans     &trans    &trans           &trans     &trans    &none      &none
@@ -187,11 +187,11 @@
       win_layer {
         display-name = "WinMgr";
         bindings = <
-                &none  &none  &none   &none       &none       &none       &none  &none  &none  &none  &none       &none
-          &none &none  &none  &none   &none       &none       &none       WS_1   N_W    MV_U   N_E    &kp LA(F8)  &kp LA(F7)  &none
-                &none  &none  &none   &kp LA(F2)  &kp LA(F1)  &none       WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
-                &none  &none  &none   &none       &none       &none       WS_2   S_W    HIDE   S_E    &kp LA(F9)  &kp LA(F5)
-                              &none   &trans      &none       &none       &none  &none  &kp LA(F4)    &none
+                    &none  &none      &none   &none       &none      &none           &none  &none  &none  &none  &none       &none
+          &kp PSCRN &none  &kp LG(Q)  &none   &none       &kp LA(F2) &kp LG(T)       WS_1   N_W    MV_U   N_E    &kp LA(F8)  &kp LA(F7)  &none
+                    &none  &kp LG(A)  &none   &kp LG(N9)  &kp LG(F)  &kp LA(F1)      WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
+                    &none  &none      &none   &kp LG(C)   &kp LG(V)  &none           WS_2   S_W    HIDE   S_E    &kp LA(F9)  &kp LA(F5)
+                                      &none   &trans      &none      &none           &none  &none  &kp LA(F4)    &none
         >;
       };
 
