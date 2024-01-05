@@ -111,7 +111,7 @@ layers:
   - {t: recursive, h: all, s: Unfold}
   - Git prefix
   - {t: ▽, type: trans}
-  - ''
+  - $$mdi:keyboard-space$$
   - ''
   - {type: held}
   - {t: ▽, type: trans}
