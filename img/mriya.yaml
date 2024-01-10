@@ -98,7 +98,7 @@ layers:
   - {t: word ↤, h: all, s: del}
   - {t: word ↦, h: all, s: del}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-u-left-top$$
+  - $$mdi:keyboard-space$$
   - $$mdi:content-cut$$
   - $$mdi:content-copy$$
   - $$mdi:content-paste$$
@@ -109,7 +109,7 @@ layers:
   - {t: recursive, h: all, s: Unfold}
   - Git prefix
   - {t: ▽, type: trans}
-  - $$mdi:keyboard-space$$
+  - ''
   - ''
   - {type: held}
   - {t: ▽, type: trans}
