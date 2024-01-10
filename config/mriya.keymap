@@ -177,7 +177,7 @@
         display-name = "Adjust";
         bindings = <
                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR           &bt BT_CLR        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0
-          &transform  &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none         MV_AUX_WIN
+          &transform  &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none         &none
                       &ck_ckey B    &kp LS(HOME)  ACTION_LEFT      ACTION_DOWN   ACTION_RIGHT      &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
                       &ck_ckey K    &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LC(DOWN))     &kp LS(LA(DOWN))  PREV_ED       &kp LA(BSLH)  NEXT_ED       &kp C_VOL_DN   &kp C_BRI_DN
                                                   &bootloader      &none         &trans            &none                &none             &trans        &none         &bootloader
@@ -188,7 +188,7 @@
         display-name = "WinMgr";
         bindings = <
                     &none  &none      &none   &none       &none      &none           &none  &none  &none  &none  &none       &none
-          &kp PSCRN &none  &kp LG(Q)  &none   &none       &kp LA(F2) &kp LG(T)       WS_1   N_W    MV_U   N_E    &kp LA(F8)  &kp LA(F7)  &none
+          &kp PSCRN &none  &kp LG(Q)  &none   &none       &kp LA(F2) &kp LG(T)       WS_1   N_W    MV_U   N_E    &kp LA(F8)  &kp LA(F7)  MV_AUX_WIN
                     &none  &kp LG(A)  &none   &kp LG(N9)  &kp LG(F)  &kp LA(F1)      WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
                     &none  &none      &none   &kp LG(C)   &kp LG(V)  &none           WS_2   S_W    HIDE   S_E    &kp LA(F9)  &kp LA(F5)
                                       &none   &trans      &none      &none           &none  &none  &kp LA(F4)    &none

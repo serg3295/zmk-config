@@ -208,7 +208,7 @@ layers:
   - ''
   - $$mdi:volume-mute$$
   - ''
-  - {t: into auxWin, h: move group, s: move editor}
+  - ''
   - Set Selection Anchor
   - Select home
   - {t: Select 🠜, h: ^K 🠜}
@@ -267,7 +267,7 @@ layers:
   - {t: ◳, h: NE, s: Tile}
   - {t: '$$mdi:move-resize-variant$$', h: window, s: Resize}
   - {t: '$$mdi:cursor-move$$', h: window, s: Move}
-  - ''
+  - {t: into auxWin, h: move group, s: move editor}
   - ''
   - Keepass
   - ''
