@@ -71,9 +71,7 @@ layers:
   - F6
   - F8
   - {t: Go fwd, h: in vscode}
-  - 'Trans
-
-    form'
+  - ''
   - PG UP
   - ⇧^⇥
   - ^⇥
@@ -191,7 +189,9 @@ layers:
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
-  - ''
+  - 'Trans
+
+    form'
   - Outdent line
   - Indent line
   - 'Shrink selec
