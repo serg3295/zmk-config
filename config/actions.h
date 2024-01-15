@@ -27,10 +27,11 @@
 #define MV_U &kp LG(UP)
 #define MV_D &kp LG(DOWN)
 
-#define LANG_CS &ht_sk_kp LC(LSHIFT) RALT    // switch language or Ctrl+Shift layer
-#define WSPC_SA &ht_sk_kp LS(LALT) LG(SPACE) // switch workspace or Shift+Alt layer
-#define W_CAPS  &ht_caps CAPS 0  // caps_word or CAPS LOCK
-#define HOVER   &ck_key LC(I)
+#define NUM_COMP &mo_sl NUM COMP
+#define LANG_CS  &ht_sk_kp LC(LSHIFT) RALT    // switch language or Ctrl+Shift layer
+#define WSPC_SA  &ht_sk_kp LS(LALT) LG(SPACE) // switch workspace or Shift+Alt layer
+#define W_CAPS   &ht_caps CAPS 0  // caps_word or CAPS LOCK
+#define HOVER    &ck_key LC(I)
 
 #define NEQ_EXCL  &ht_not_eq EXCLAMATION EQUAL
 #define NEQ_TILDE &ht_not_eq TILDE TILDE

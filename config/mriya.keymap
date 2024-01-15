@@ -13,7 +13,8 @@
 #define SYM  2
 #define ADJ  3
 #define WIN  4
-#define COMP 5
+#define NUM  5
+#define COMP 6
 
 #include "actions.h"
 #include "macros.dtsi"
@@ -103,6 +104,14 @@
         bindings = <&sk>, <&kp>;
       };
 
+      mo_sl: mo_sl {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "hold-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&mo>, <&sl>;
+      };
+
     // tap-dance
       fold: fold {
         compatible = "zmk,behavior-tap-dance";
@@ -143,11 +152,11 @@
       default_layer {
         display-name = "Base";
         bindings = <
-                  &kp GRAVE   &kp N7  &kp N5         &kp N3       &kp N1        &kp N9          &kp N0        &kp N2         &kp N4     &kp N6   &kp N8         &kp MINUS
-          W_CAPS  &kp TAB     &kp Q   &kp W          &kp E        &kp R         &kp T           &kp Y         &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                  &kp ESC     &kp A   &kp S          &kp D        &kp F         &kp G           &kp H         &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
-                  &kp LSHIFT  &kp Z   &kp X          &kp C        &kp V         &kp B           &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
-                                      &lt COMP LGUI  &lt WIN RET  &lt NAV BSPC  &sk LCTRL       &mt LALT DEL  &lt SYM SPACE  LANG_CS    WSPC_SA
+                  &kp GRAVE   &kp N7  &kp N5    &kp N3       &kp N1        &kp N9          &kp N0        &kp N2         &kp N4     &kp N6   &kp N8         &kp MINUS
+          W_CAPS  &kp TAB     &kp Q   &kp W     &kp E        &kp R         &kp T           &kp Y         &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                  &kp ESC     &kp A   &kp S     &kp D        &kp F         &kp G           &kp H         &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+                  &kp LSHIFT  &kp Z   &kp X     &kp C        &kp V         &kp B           &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
+                                      NUM_COMP  &lt WIN RET  &lt NAV BSPC  &sk LCTRL       &mt LALT DEL  &lt SYM SPACE  LANG_CS    WSPC_SA
         >;
       };
 
@@ -165,11 +174,11 @@
       sym_layer {
         display-name = "Sym";
         bindings = <
-                    &ru GRAVE   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans       &trans     &none
-          &kp RGUI  &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3     SHEBANG  &none
-                    &none       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         CARET_RU   LBRC_RU   &kp PLUS   RBRC_RU      DBL_COLON  &kp SQT
-                    &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   AT_RU            DLLR_RU    &kp STAR  &kp COMMA  &key_repeat  FSLH_RU    &trans
-                                           &none     &trans     &trans    &trans           &trans     &trans    &none      &none
+                   &ru GRAVE   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans       &trans     &none
+          &kp LGUI &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3     SHEBANG  &kp RGUI
+                   &none       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  &kp BSLH         CARET_RU   LBRC_RU   &kp PLUS   RBRC_RU      DBL_COLON  &kp SQT
+                   &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   AT_RU            DLLR_RU    &kp STAR  &kp COMMA  &key_repeat  FSLH_RU    &trans
+                               &none      &trans    &trans     &trans                     &trans     &trans    &none      &none
         >;
       };
 
@@ -195,11 +204,22 @@
         >;
       };
 
+      num_layer {
+        display-name = "Num";
+        bindings = <
+                &none  &none          &none         &none        &none            &none          &none  &none  &none  &none  &none  &none
+          &none &none  &kp N7         &kp N5        &kp N3       &kp N1           &kp N9         &none  &none  &none  &none  &none  &none  &none
+                &none  &kp N0         &kp N2        &kp N4       &kp N6           &kp N8         &none  &none  &none  &none  &none  &none
+                &none  &kp KP_DIVIDE  &kp KP_MINUS  &kp KP_PLUS  &kp KP_ASTERISK  &none          &none  &none  &none  &none  &none  &none
+                                      &trans        &none        &none            &none          &none  &none  &none  &none
+        >;
+      };
+
       comp_layer {
         display-name = "Compose";
         bindings = <
                 &none  &none  &cmps N1 N2  &cmps N1 N3  &cmps N1 N4  &cmps N3 N4       UPPER_0  UPPER_1    UPPER_2   UPPER_3    &cmps2 MINUS  &cmps2 DOT
-          &none &none  &none  &none        EURO         &cmps O R    &cmps T M         &none    &none      &none     &cmps O O  &none         &none       &cmps PLUS MINUS
+         &none  &none  &none  &none        EURO         &cmps O R    &cmps T M         &none    &none      &none     &cmps O O  &none         &cmps PLUS MINUS  &none
                 &none  &none  &none        &none        &none        &none             &none    &none      &none     POUND_L    &cmps LT LT   &cmps GT GT
                 &none  &none  &cmps X X    &cmps O C    SQR_ROOT     &none             &none    &cmps M U  &none     ELLIPSES   DIVISION      &none
                               &trans       &none        &none        &none             &none    NBSP       &none     &none
