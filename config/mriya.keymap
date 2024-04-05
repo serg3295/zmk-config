@@ -177,7 +177,7 @@
                     &ru GRAVE   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans       &trans    &none
           &kp LGUI  &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3    SHEBANG  &kp RGUI
                     AT_RU       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  CARET_RU         DLLR_RU    LBRC_RU   &kp PLUS   RBRC_RU      &kp BSLH  &kp DOUBLE_QUOTES
-                    &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   &none            DBL_COLON  &kp STAR  &kp COMMA  &key_repeat  FSLH_RU   &trans
+                    &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   &b_comment       DBL_COLON  &kp STAR  &kp COMMA  &key_repeat  FSLH_RU   &trans
                                 &none      &trans    &trans     &trans                     &trans     &trans    &none      &none
         >;
       };
