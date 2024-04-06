@@ -160,7 +160,6 @@ parse_config:
     '&bootloader': "BOOT"
     '&sys_reset': "Reset"
     '&transform': "Trans\nform"
-    '&b_comment': "Block comment"
     '&td_home':
       tap: "Home"
       hold: "⇱    ⭶"

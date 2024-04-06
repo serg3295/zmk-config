@@ -12,13 +12,6 @@
           <&macro_tap &kp T &kp R &kp A &kp N &kp S &kp F &kp O &kp R &kp M>;
       };
 
-      b_comment: block_comment {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =
-          <&macro_tap &kp SLASH &kp STAR &kp ENTER &kp ENTER &kp STAR &kp SLASH &kp UP_ARROW>;
-      };
-
       ck_key: ctrl_k_keycode {
         compatible = "zmk,behavior-macro-one-param";
         #binding-cells = <1>;
