@@ -160,6 +160,7 @@ parse_config:
     '&bootloader': "BOOT"
     '&sys_reset': "Reset"
     '&transform': "Trans\nform"
+    '&kp LC(GRAVE)': "Goto terminal"
     '&td_home':
       tap: "Home"
       hold: "⇱    ⭶"
