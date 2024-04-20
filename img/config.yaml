@@ -217,6 +217,168 @@ parse_config:
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
 
+    # modifiers
+    "&kp LG(SPACE)":
+      shifted: "Next"
+      tap: "Work space"
+    "&kp LC(U)": "Cursor undo"
+    "&kp LC(K)": "^K"
+    "&kp LC(F)": "^F"
+    "&kp LC(LBKT)": "Outdent line"
+    "&kp LC(RBKT)": "Indent line"
+    "&kp LS(LALT)": "⇧Alt"
+    "&kp LC(LSHIFT)": "^⇧"
+    "&kp LC(LS(PG_UP))": "Move Editor 🠜"
+    "&kp LC(LS(PG_DN))": "Move Editor 🠞"
+    "&kp LC(LA(LEFT))": "into group"
+    "&kp LC(LA(RIGHT))": "into group"
+    "&kp LC(BSLH)": "Split right"
+    # "&kp LA(BSLH)": "Split down"
+    "&kp LA(BSLH)":
+      tap: $$mdi:view-agenda-outline$$
+      shifted: "Split"
+      hold: "down"
+    "&kp LC(LA(LS(DOWN)))": "Copy line 🠟"
+    "&kp LC(LA(FSLH))": "and comment"
+    "&kp LS(F12)":
+      shifted: "REFS"
+      tap: "goto"
+    "&kp LS(LA(F12))": "find all"
+    "&kp LS(F10)": "Show context menu"
+    "&kp LC(LS(BSPC))": "all"
+    "&kp LC(BSPC)":
+      shifted: "del"
+      tap: "word ↤"
+    "&kp LC(LS(DEL))": "all"
+    "&kp LC(DEL)":
+      shifted: "del"
+      tap: "word ↦"
+    "&kp LC(LEFT)": "^🠜"
+    "&kp LC(RIGHT)": "^🠞"
+    "&kp LC(UP)": "^🠝"
+    "&kp LC(DOWN)": "^🠟"
+    "&kp LS(LEFT)": "Select 🠜"
+    "&kp LS(RIGHT)": "Select 🠞"
+    "&kp LS(UP)": "Select 🠝"
+    "&kp LS(DOWN)": "Select 🠟"
+    "&kp LS(LC(UP))": "Select 🠝para graph"
+    "&kp LS(LC(DOWN))": "Select 🠟para graph"
+    "&kp LS(LA(UP))": "Add cursor 🠝"
+    "&kp LS(LA(DOWN))": "Add cursor 🠟"
+    "&kp LS(HOME)": "Select home"
+    "&kp LS(END)": "Select end"
+    "&kp LS(LC(LEFT))": "Select word ↤"
+    "&kp LS(LC(RIGHT))": "Select word ↦"
+    "&kp LS(LA(RIGHT))": "Expand selec\ntion"
+    "&kp LS(LA(LEFT))": "Shrink selec\ntion"
+    "&kp LS(LA(I))": "Add cursors toLineEnd"
+    "&kp LA(LEFT)": "Go back"
+    "&kp LA(RIGHT)": "Go forward"
+    "&kp LC(LA(RBKT))":
+      tap: "goto"
+      shifted: "next chg"
+    "&kp LC(LA(LBKT))":
+      tap: "goto"
+      shifted: "prev chg"
+    "&kp LA(F3)": "show"
+    "&kp LS(LA(F3))": "show"
+    "&kp LEFT": '🠈'
+    "&kp RIGHT": '🠊'
+    "&kp UP": '🠉'
+    "&kp DOWN": '🠋'
+    "&kp LS(LA(G))": "Git prefix"
+    "&kp LS(TAB)": $$mdi:keyboard-tab-reverse$$
+    "&kp LC(TAB)": "^⇥"
+    "&kp LS(LC(TAB))": "⇧^⇥"
+
+    # Win layer
+    "&kp LG(A)": "Keepass"
+    "&kp LG(C)": "Double Commander"
+    "&kp LG(F)": "Firefox"
+    "&kp LG(Q)": "Shut down"
+    "&kp LG(T)": "Telegram"
+    "&kp LG(V)": "VSCode"
+    "&kp LG(N9)": "Terminal"
+    "&kp LA(F1)": "Main menu"
+    "&kp LA(F2)": "Run App"
+
+    "&kp LA(F4)":
+      shifted: "Close"
+      tap: $$mdi:window-close$$
+      hold: "window"
+    "&kp LG(PG_UP)":
+      shifted: "Workspace"
+      tap: $$mdi:dock-top$$
+      hold: "switch"
+    "&kp LG(PG_DN)":
+      shifted: "Workspace"
+      tap:  $$mdi:dock-bottom$$
+      hold: "switch"
+    "&kp LG(LC(LEFT))":
+      shifted: "Tile"
+      tap: $$mdi:dock-left$$
+      hold: "West"
+    "&kp LG(LC(RIGHT))":
+      shifted: "Tile"
+      tap: $$mdi:dock-right$$
+      hold: "East"
+    "&kp LG(LC(LA(UP)))":
+      shifted: "Tile"
+      tap: "◳"
+      hold: "NE"
+    "&kp LG(LC(LA(DOWN)))":
+      shifted: "Tile"
+      tap: "◲"
+      hold: "SE"
+    "&kp LG(LC(UP))":
+      shifted: "Tile"
+      tap: "◰"
+      hold: "NW"
+    "&kp LG(LC(DOWN))":
+      shifted: "Tile"
+      tap: "◱"
+      hold: "SW"
+    "&kp LG(UP)":
+      shifted: "Move"
+      tap: $$mdi:chevron-up-box-outline$$
+      hold: "window"
+    "&kp LG(DOWN)":
+      shifted: "Move"
+      tap: $$mdi:chevron-down-box-outline$$
+      hold: "window"
+    "&kp LG(LEFT)":
+      shifted: "Move"
+      tap: $$mdi:chevron-left-box-outline$$
+      hold: "window"
+    "&kp LG(RIGHT)":
+      shifted: "Move"
+      tap: $$mdi:chevron-right-box-outline$$
+      hold: "window"
+    "&kp LG(D)":
+      shifted: "Show"
+      tap: $$mdi:window-closed-variant$$
+      hold: "Desktop"
+    "&kp LA(F5)":
+      shifted: "Restore"
+      tap: $$mdi:window-restore$$
+      hold: "window"
+    "&kp LA(F7)":
+      shifted: "Move"
+      tap: $$mdi:cursor-move$$
+      hold: "window"
+    "&kp LA(F8)":
+      shifted: "Resize"
+      tap: $$mdi:move-resize-variant$$
+      hold: "window"
+    "&kp LA(F9)":
+      shifted: "Minimize"
+      tap: $$mdi:window-minimize$$
+      hold: "window"
+    "&kp LA(F10)":
+      shifted: "Toggle"
+      tap: $$mdi:window-maximize$$
+      hold: "window"
+
     # Symbols
     "LT_RU":
       tap: '<'
@@ -293,10 +455,6 @@ parse_config:
     "NEXT_ED":
       tap: "Next Editor"
       hold: "out group"
-    "&kp LA(BSLH)":
-      tap: $$mdi:view-agenda-outline$$
-      shifted: "Split"
-      hold: "down"
     "GO_BACK":
       tap: "Go back"
       hold: "in vscode"
@@ -336,167 +494,6 @@ parse_config:
   mark_alternate_layer_activators: false
 
   zmk_keycode_map:
-    LC(LBKT): "Outdent line"
-    LC(RBKT): "Indent line"
-    LS(LALT): "⇧Alt"
-    LC(LSHIFT): "^⇧"
-    LC(LS(PG_UP)): "Move Editor 🠜"
-    LC(LS(PG_DN)): "Move Editor 🠞"
-    LC(LA(LEFT)): "into group"
-    LC(LA(RIGHT)): "into group"
-    LC(BSLH): "Split right"
-    LA(BSLH): "Split down"
-    LC(LA(LS(DOWN))): "Copy line 🠟"
-    LC(LA(FSLH)): "and comment"
-    LS(F12):
-      shifted: "REFS"
-      tap: "goto"
-    LS(LA(F12)): "find all"
-    LS(F10): "Show context menu"
-    LC(U): "Cursor undo"
-    LC(K): "^K"
-    LC(F): "^F"
-    LC(LS(BSPC)): "all"
-    LC(BSPC):
-      shifted: "del"
-      tap: "word ↤"
-    LC(LS(DEL)): "all"
-    LC(DEL):
-      shifted: "del"
-      tap: "word ↦"
-    LC(LEFT): "^🠜"
-    LC(RIGHT): "^🠞"
-    LC(UP): "^🠝"
-    LC(DOWN): "^🠟"
-    LS(LEFT): "Select 🠜"
-    LS(RIGHT): "Select 🠞"
-    LS(UP): "Select 🠝"
-    LS(DOWN): "Select 🠟"
-    LS(LC(UP)): "Select 🠝para graph"
-    LS(LC(DOWN)): "Select 🠟para graph"
-    LS(LA(UP)): "Add cursor 🠝"
-    LS(LA(DOWN)): "Add cursor 🠟"
-    LS(HOME): "Select home"
-    LS(END): "Select end"
-    LS(LC(LEFT)): "Select word ↤"
-    LS(LC(RIGHT)): "Select word ↦"
-    LS(LA(RIGHT)): "Expand selec\ntion"
-    LS(LA(LEFT)): "Shrink selec\ntion"
-    LS(LA(I)): "Add cursors toLineEnd"
-    LA(LEFT): "Go back"
-    LA(RIGHT): "Go forward"
-    LC(LA(RBKT)):
-      tap: "goto"
-      shifted: "next chg"
-    LC(LA(LBKT)):
-      tap: "goto"
-      shifted: "prev chg"
-    LA(F3): "show"
-    LS(LA(F3)): "show"
-    LEFT: '🠈'
-    RIGHT: '🠊'
-    UP: '🠉'
-    DOWN: '🠋'
-    LG(SPACE):
-      shifted: "Next"
-      tap: "Work space"
-    LS(LA(G)): "Git prefix"
-
-# Win layer
-    LG(A):
-      tap: "Keepass"
-    LG(C):
-      tap: "Double Commander"
-    LG(F):
-      tap: "Firefox"
-    LG(Q):
-      tap: "Shut down"
-    LG(T):
-      tap: "Telegram"
-    LG(V):
-      tap: "VSCode"
-    LG(N9):
-      tap: "Terminal"
-
-    LG(PG_UP):
-      shifted: "Workspace"
-      tap: $$mdi:dock-top$$
-      hold: "switch"
-    LG(PG_DN):
-      shifted: "Workspace"
-      tap:  $$mdi:dock-bottom$$
-      hold: "switch"
-    LG(LC(LEFT)):
-      shifted: "Tile"
-      tap: $$mdi:dock-left$$
-      hold: "West"
-    LG(LC(RIGHT)):
-      shifted: "Tile"
-      tap: $$mdi:dock-right$$
-      hold: "East"
-    LG(LC(LA(UP))):
-      shifted: "Tile"
-      tap: "◳"
-      hold: "NE"
-    LG(LC(LA(DOWN))):
-      shifted: "Tile"
-      tap: "◲"
-      hold: "SE"
-    LG(LC(UP)):
-      shifted: "Tile"
-      tap: "◰"
-      hold: "NW"
-    LG(LC(DOWN)):
-      shifted: "Tile"
-      tap: "◱"
-      hold: "SW"
-    LG(UP):
-      shifted: "Move"
-      tap: $$mdi:chevron-up-box-outline$$
-      hold: "window"
-    LG(DOWN):
-      shifted: "Move"
-      tap: $$mdi:chevron-down-box-outline$$
-      hold: "window"
-    LG(LEFT):
-      shifted: "Move"
-      tap: $$mdi:chevron-left-box-outline$$
-      hold: "window"
-    LG(RIGHT):
-      shifted: "Move"
-      tap: $$mdi:chevron-right-box-outline$$
-      hold: "window"
-    LG(D):
-      shifted: "Show"
-      tap: $$mdi:window-closed-variant$$
-      hold: "Desktop"
-    LA(F1): "Main menu"
-    LA(F2): "Run App"
-    LA(F4):
-      shifted: "Close"
-      tap: $$mdi:window-close$$
-      hold: "window"
-    LA(F5):
-      shifted: "Restore"
-      tap: $$mdi:window-restore$$
-      hold: "window"
-    LA(F7):
-      shifted: "Move"
-      tap: $$mdi:cursor-move$$
-      hold: "window"
-    LA(F8):
-      shifted: "Resize"
-      tap: $$mdi:move-resize-variant$$
-      hold: "window"
-    LA(F9):
-      shifted: "Minimize"
-      tap: $$mdi:window-minimize$$
-      hold: "window"
-    LA(F10):
-      shifted: "Toggle"
-      tap: $$mdi:window-maximize$$
-      hold: "window"
-
     SPACE: $$mdi:keyboard-space$$
     RET: '⮐'
     LC(RET): '^⮐'
@@ -504,9 +501,6 @@ parse_config:
     BSPC: $$mdi:backspace-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
     TAB: $$mdi:keyboard-tab$$
-    LS(TAB): $$mdi:keyboard-tab-reverse$$
-    LC(TAB): "^⇥"
-    LS(LC(TAB)): "⇧^⇥"
     RSHIFT: $$mdi:apple-keyboard-shift$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
     RALT: "LANG"
