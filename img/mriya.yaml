@@ -57,7 +57,7 @@ layers:
   - {t: '$$mdi:backspace-reverse-outline$$', h: LALT}
   - {t: '$$mdi:keyboard-space$$', h: Sym}
   - {t: LANG, h: ^⇧}
-  - {t: Work space, h: ⇧Alt, s: Next}
+  - Mouse
   Nav:
   - {t: Go back, h: in vscode}
   - F7
@@ -203,9 +203,9 @@ layers:
     tion'
   - Select 🠝para graph
   - ''
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
+  - ''
+  - ''
+  - ''
   - $$mdi:volume-mute$$
   - ''
   - ''
@@ -418,3 +418,62 @@ layers:
   - NBSP
   - ''
   - ''
+  Mouse:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:mouse-scroll-wheel$$
+  - ''
+  - ''
+  - ''
+  - {type: held}
