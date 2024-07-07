@@ -165,7 +165,7 @@
         display-name = "Nav";
         bindings = <
                 GO_BACK    &kp F7           &kp F5       &kp F3      &kp F1       &kp F9         &ht_ckk F10 F10  &kp F2  &kp F4   &kp F6   &kp F8        GO_FWD
-          TERM  &kp PG_UP  &kp LS(LC(TAB))  &kp LC(TAB)  &kp UP      &kp INS      &kp F11        &td_defs         REFS    JUMP_UP  HOVER    PREV_DIFF     NEXT_DIFF  &kp LS(F10)
+          TERM  &kp PG_UP  &kp LS(LC(TAB))  &kp LC(TAB)  &kp UP      &kp INS      &kp F11        &td_defs         REFS    JUMP_UP  HOVER    &kp LS(F10)   PREV_DIFF  NEXT_DIFF
                 &kp PG_DN  &td_home         &kp LEFT     &kp DOWN    &kp RIGHT    &td_end        &mv_line UP      JUMP_L  JUMP_DN  JUMP_R   F_BSPC        F_DEL
                 &trans     &kp SPACE        &kp LS(DEL)  &kp LC(INS) &kp LS(INS)  &kp DEL        &mv_line DOWN    &fold   COPY_LN  &unfold  &kp LS(LA(G)) &trans
                                             &none        &none       &trans       &trans         &trans           &trans  &trans   &trans

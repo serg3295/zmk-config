@@ -82,9 +82,9 @@ layers:
   - {t: goto, h: find all, s: REFS}
   - {t: ^🠝, h: ^K ^🠝}
   - Hover
+  - Show context menu
   - {t: goto, h: show, s: prev chg}
   - {t: goto, h: show, s: next chg}
-  - Show context menu
   - PG DN
   - {t: Home, h: ⇱    ⭶}
   - 🠈
