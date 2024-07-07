@@ -203,9 +203,9 @@ layers:
     tion'
   - Select 🠝para graph
   - ''
-  - ''
-  - ''
-  - ''
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-scroll-wheel$$
+  - $$mdi:mouse-right-click-outline$$
   - $$mdi:volume-mute$$
   - ''
   - ''

@@ -291,6 +291,11 @@ parse_config:
     "&kp LC(TAB)": "^⇥"
     "&kp LS(LC(TAB))": "⇧^⇥"
 
+    # Mouse
+    "&mkp RCLK": $$mdi:mouse-right-click-outline$$
+    "&mkp LCLK": $$mdi:mouse-left-click-outline$$
+    "&mkp MCLK": $$mdi:mouse-scroll-wheel$$
+
     # Win layer
     "&kp LG(A)": "Keepass"
     "&kp LG(C)": "Double Commander"
