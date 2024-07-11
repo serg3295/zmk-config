@@ -13,15 +13,15 @@
 #define ELLIPSES &cmps DOT DOT
 
 // Tiling window manager
-#define WS_1 &kp LG(PG_UP)   // switch to workspace
+#define WS_1 &kp LG(PG_UP)  // switch to workspace
 #define WS_2 &kp LG(PG_DN)
-#define N_W  &kp LG(LC(UP))  // tile window
+#define N_W  &kp LG(LC(UP)) // tile window
 #define N_E  &kp LG(LC(LA(UP)))
 #define S_W  &kp LG(LC(DOWN))
 #define S_E  &kp LG(LC(LA(DOWN)))
 #define WEST &kp LG(LC(LEFT))
 #define EAST &kp LG(LC(RIGHT))
-#define HIDE &kp LG(D)      // show desktop
+#define HIDE &kp LA(F9)     // minimize window
 #define MV_L &kp LG(LEFT)   // move window
 #define MV_R &kp LG(RIGHT)
 #define MV_U &kp LG(UP)
@@ -82,4 +82,4 @@
 // hold: move Editor group into New window
 #define MV_AUX_WIN &ht_ck_ck LC(LA(LEFT_ARROW)) LC(LA(RIGHT_ARROW))
 
-#define TERM &kp LC(GRAVE)
+#define TERM &ht3 F9 LC(LA(T))

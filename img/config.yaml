@@ -160,7 +160,9 @@ parse_config:
     '&bootloader': "BOOT"
     '&sys_reset': "Reset"
     '&transform': "Trans\nform"
-    '&kp LC(GRAVE)': "Goto terminal"
+    '&term':
+      tap: "toggle terminal"
+      hold: "focus tabs"
     '&td_home':
       tap: "Home"
       hold: "⇱    ⭶"
@@ -299,7 +301,7 @@ parse_config:
     "&mkp MCLK": $$mdi:mouse-scroll-wheel$$
 
     # Win layer
-    "&kp LG(A)": "Keepass"
+    "&kp LG(S)": "Keepass"
     "&kp LG(C)": "Double Commander"
     "&kp LG(F)": $$mdi:firefox$$
     "&kp LG(Q)": "Shut down"
@@ -387,6 +389,12 @@ parse_config:
       shifted: "Toggle"
       tap: $$mdi:window-maximize$$
       hold: "window"
+    "&kp LA(SPACE)":
+      shifted: "Menu"
+      tap: $$mdi:menu-open$$
+      hold: "window"
+    "&kp LGUI":
+      tap: $$mdi:microsoft-windows$$
 
     # Symbols
     "LT_RU":

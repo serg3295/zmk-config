@@ -51,7 +51,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: Compose, h: Num}
-  - {t: ⮐, h: WinMgr}
+  - {t: '$$mdi:keyboard-return$$', h: WinMgr}
   - {t: '$$mdi:backspace-outline$$', h: Nav}
   - {t: LCTRL, h: sticky}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LALT}
@@ -71,11 +71,11 @@ layers:
   - F6
   - F8
   - {t: Go fwd, h: in vscode}
-  - Goto terminal
+  - {t: toggle terminal, h: focus tabs}
   - PG UP
   - ⇧^⇥
   - ^⇥
-  - 🠉
+  - $$mdi:arrow-up$$
   - INS
   - F11
   - {t: goto F12, h: open, s: DEFS}
@@ -87,9 +87,9 @@ layers:
   - {t: goto, h: show, s: next chg}
   - PG DN
   - {t: Home, h: ⇱    ⭶}
-  - 🠈
-  - 🠋
-  - 🠊
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
   - {t: End, h: ⇲    ⭹}
   - Move line 🠝
   - {t: ^🠜, h: ^K ^🠜}
@@ -130,7 +130,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - LGUI
+  - ''
   - {t: '`', s: ru}
   - {t: '`', s: '~'}
   - {t: <, h: ru <}
@@ -260,20 +260,22 @@ layers:
   - ''
   - ''
   - Run App
-  - Telegram
+  - 'Tele
+
+    gram'
   - {t: '$$mdi:dock-top$$', h: switch, s: Workspace}
   - {t: ◰, h: NW, s: Tile}
   - {t: '$$mdi:chevron-up-box-outline$$', h: window, s: Move}
   - {t: ◳, h: NE, s: Tile}
-  - {t: '$$mdi:move-resize-variant$$', h: window, s: Resize}
   - {t: '$$mdi:cursor-move$$', h: window, s: Move}
+  - {t: '$$mdi:move-resize-variant$$', h: window, s: Resize}
   - {t: into auxWin, h: move group, s: move editor}
   - ''
-  - Keepass
-  - ''
-  - Terminal
-  - Firefox
   - Main menu
+  - Keepass
+  - {t: '$$mdi:window-closed-variant$$', h: Desktop, s: Show}
+  - $$mdi:firefox$$
+  - $$mdi:microsoft-windows$$
   - {t: '$$mdi:dock-left$$', h: West, s: Tile}
   - {t: '$$mdi:chevron-left-box-outline$$', h: window, s: Move}
   - {t: '$$mdi:chevron-down-box-outline$$', h: window, s: Move}
@@ -281,24 +283,24 @@ layers:
   - {t: '$$mdi:dock-right$$', h: East, s: Tile}
   - {t: '$$mdi:window-maximize$$', h: window, s: Toggle}
   - ''
-  - ''
+  - {t: '$$mdi:window-close$$', h: window, s: Close}
   - ''
   - Double Commander
-  - VSCode
-  - ''
+  - $$mdi:microsoft-visual-studio-code$$
+  - {t: '$$mdi:console$$', h: Double Cmd}
   - {t: '$$mdi:dock-bottom$$', h: switch, s: Workspace}
   - {t: ◱, h: SW, s: Tile}
-  - {t: '$$mdi:window-closed-variant$$', h: Desktop, s: Show}
-  - {t: ◲, h: SE, s: Tile}
   - {t: '$$mdi:window-minimize$$', h: window, s: Minimize}
+  - {t: ◲, h: SE, s: Tile}
   - {t: '$$mdi:window-restore$$', h: window, s: Restore}
+  - {t: '$$mdi:menu-open$$', h: window, s: Menu}
   - ''
   - {type: held}
   - ''
   - ''
   - ''
   - ''
-  - {t: '$$mdi:window-close$$', h: window, s: Close}
+  - ''
   - ''
   Num:
   - ''
