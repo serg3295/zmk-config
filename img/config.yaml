@@ -233,8 +233,7 @@ parse_config:
     "&kp LC(LA(LEFT))": "into group"
     "&kp LC(LA(RIGHT))": "into group"
     "&kp LC(BSLH)": "Split right"
-    # "&kp LA(BSLH)": "Split down"
-    "&kp LA(BSLH)":
+    "&kp LA(BSLH)": # Split down
       tap: $$mdi:view-agenda-outline$$
       shifted: "Split"
       hold: "down"
@@ -282,10 +281,13 @@ parse_config:
       shifted: "prev chg"
     "&kp LA(F3)": "show"
     "&kp LS(LA(F3))": "show"
-    "&kp LEFT": '🠈'
-    "&kp RIGHT": '🠊'
-    "&kp UP": '🠉'
-    "&kp DOWN": '🠋'
+
+    # Arrows
+    "&kp LEFT": $$mdi:arrow-left$$  # '🠈'
+    "&kp RIGHT": $$mdi:arrow-right$$ #'🠊'
+    "&kp UP": $$mdi:arrow-up$$ # '🠉'
+    "&kp DOWN": $$mdi:arrow-down$$ #'🠋'
+
     "&kp LS(LA(G))": "Git prefix"
     "&kp LS(TAB)": $$mdi:keyboard-tab-reverse$$
     "&kp LC(TAB)": "^⇥"
@@ -299,11 +301,13 @@ parse_config:
     # Win layer
     "&kp LG(A)": "Keepass"
     "&kp LG(C)": "Double Commander"
-    "&kp LG(F)": "Firefox"
+    "&kp LG(F)": $$mdi:firefox$$
     "&kp LG(Q)": "Shut down"
-    "&kp LG(T)": "Telegram"
-    "&kp LG(V)": "VSCode"
-    "&kp LG(N9)": "Terminal"
+    "&kp LG(T)": "Tele\ngram"
+    "&kp LG(V)": $$mdi:microsoft-visual-studio-code$$
+    "TERM":
+      tap: $$mdi:console$$ #"Terminal"
+      hold: "Double Cmd"
     "&kp LA(F1)": "Main menu"
     "&kp LA(F2)": "Run App"
 
@@ -500,7 +504,7 @@ parse_config:
 
   zmk_keycode_map:
     SPACE: $$mdi:keyboard-space$$
-    RET: '⮐'
+    RET: $$mdi:keyboard-return$$
     LC(RET): '^⮐'
     LC(LS(RET)): '^⇧⮐'
     BSPC: $$mdi:backspace-outline$$
