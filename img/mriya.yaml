@@ -56,7 +56,7 @@ layers:
   - {t: LCTRL, h: sticky}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LALT}
   - {t: '$$mdi:keyboard-space$$', h: Sym}
-  - {t: LANG, h: ^⇧}
+  - {t: LANG, h: $$control_shift$$}
   - Mouse
   Nav:
   - {t: Go back, h: in vscode}
@@ -73,8 +73,8 @@ layers:
   - {t: Go fwd, h: in vscode}
   - {t: toggle terminal, h: focus tabs, s: VS Code}
   - PG UP
-  - ⇧^⇥
-  - ^⇥
+  - $$control_shift_tab$$
+  - $$control_tab$$
   - $$mdi:arrow-up$$
   - INS
   - F11
@@ -107,7 +107,7 @@ layers:
   - {t: recursive, h: all, s: Fold}
   - {t: Copy line 🠟, h: and comment}
   - {t: recursive, h: all, s: Unfold}
-  - Git prefix
+  - {t: '$$mdi:git$$', h: prefix}
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -223,9 +223,9 @@ layers:
   - $$mdi:brightness-7$$
   - Select ⚓  ⟺ cursor
   - Cursor undo
-  - Select word ↤
+  - {t: Select word, h: '$$mdi:arrow-expand-left$$'}
   - Add cursors toLineEnd
-  - Select word ↦
+  - {t: Select word, h: '$$mdi:arrow-expand-right$$'}
   - Select 🠟para graph
   - Add cursor 🠟
   - {t: Prev Editor, h: out group}
@@ -260,9 +260,7 @@ layers:
   - ''
   - ''
   - Run App
-  - 'Tele
-
-    gram'
+  - $$telegram$$
   - {t: '$$mdi:dock-top$$', h: switch, s: Workspace}
   - {t: ◰, h: NW, s: Tile}
   - {t: '$$mdi:chevron-up-box-outline$$', h: window, s: Move}

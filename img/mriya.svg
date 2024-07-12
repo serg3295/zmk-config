@@ -1,10 +1,28 @@
 <svg width="1124" height="3237" viewBox="0 0 1124 3237" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<svg id="control_shift">
+<svg viewBox="0 0 48 24"><path d="M36.874 16.985v-6h2.17l-5.17-5.17-5.17 5.17h2.17v6h6m-3-14l10 10h-5v6h-10v-6h-5zM19.471 10.765l-1.42 1.41-6.36-6.36-6.36 6.36-1.42-1.41 7.78-7.78z"/></svg>
+
+</svg>
+<svg id="control_shift_tab">
+<svg viewBox="0 0 60 24"><path d="M29.51 17.69v-4.715h1.706l-4.063-4.063-4.062 4.063h1.705v4.715h4.715M27.153 6.688l7.858 7.858h-3.929v4.715h-7.858v-4.715h-3.929zM19.463 12.802l-1.116 1.108-4.997-4.998-4.998 4.998-1.116-1.108 6.114-6.114zM50.868 17.69h1.572V8.26h-1.572M44.26 9.368l2.813 2.821H35.938v1.572h11.135l-2.813 2.813 1.108 1.116 4.714-4.715-4.714-4.715z"/></svg>
+
+</svg>
+<svg id="control_tab">
+<svg viewBox="0 0 48 24"><path d="M18.115 13.157l-1.246 1.237-5.58-5.581-5.582 5.58-1.246-1.236 6.827-6.828zM39.146 18.615h1.755V8.085h-1.755m-7.38 1.237l3.142 3.15H22.473v1.755h12.435l-3.142 3.142 1.237 1.246 5.265-5.265-5.265-5.266z"/></svg>
+
+</svg>
 <svg id="mdi:apple-keyboard-shift">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
 </svg>
 <svg id="mdi:arrow-down">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-down" viewBox="0 0 24 24"><path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" /></svg>
+</svg>
+<svg id="mdi:arrow-expand-left">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-expand-left" viewBox="0 0 24 24"><path d="M20,22H22V2H20V11H5.83L11.33,5.5L9.92,4.08L2,12L9.92,19.92L11.33,18.5L5.83,13H20V22Z" /></svg>
+</svg>
+<svg id="mdi:arrow-expand-right">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-expand-right" viewBox="0 0 24 24"><path d="M4,2H2V22H4V13H18.17L12.67,18.5L14.08,19.92L22,12L14.08,4.08L12.67,5.5L18.17,11H4V2Z" /></svg>
 </svg>
 <svg id="mdi:arrow-left">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-left" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
@@ -78,6 +96,9 @@
 <svg id="mdi:firefox">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-firefox" viewBox="0 0 24 24"><path d="M9.27 7.94C9.27 7.94 9.27 7.94 9.27 7.94M6.85 6.74C6.86 6.74 6.86 6.74 6.85 6.74M21.28 8.6C20.85 7.55 19.96 6.42 19.27 6.06C19.83 7.17 20.16 8.28 20.29 9.1L20.29 9.12C19.16 6.3 17.24 5.16 15.67 2.68C15.59 2.56 15.5 2.43 15.43 2.3C15.39 2.23 15.36 2.16 15.32 2.09C15.26 1.96 15.2 1.83 15.17 1.69C15.17 1.68 15.16 1.67 15.15 1.67H15.13L15.12 1.67L15.12 1.67L15.12 1.67C12.9 2.97 11.97 5.26 11.74 6.71C11.05 6.75 10.37 6.92 9.75 7.22C9.63 7.27 9.58 7.41 9.62 7.53C9.67 7.67 9.83 7.74 9.96 7.68C10.5 7.42 11.1 7.27 11.7 7.23L11.75 7.23C11.83 7.22 11.92 7.22 12 7.22C12.5 7.21 12.97 7.28 13.44 7.42L13.5 7.44C13.6 7.46 13.67 7.5 13.75 7.5C13.8 7.54 13.86 7.56 13.91 7.58L14.05 7.64C14.12 7.67 14.19 7.7 14.25 7.73C14.28 7.75 14.31 7.76 14.34 7.78C14.41 7.82 14.5 7.85 14.54 7.89C14.58 7.91 14.62 7.94 14.66 7.96C15.39 8.41 16 9.03 16.41 9.77C15.88 9.4 14.92 9.03 14 9.19C17.6 11 16.63 17.19 11.64 16.95C11.2 16.94 10.76 16.85 10.34 16.7C10.24 16.67 10.14 16.63 10.05 16.58C10 16.56 9.93 16.53 9.88 16.5C8.65 15.87 7.64 14.68 7.5 13.23C7.5 13.23 8 11.5 10.83 11.5C11.14 11.5 12 10.64 12.03 10.4C12.03 10.31 10.29 9.62 9.61 8.95C9.24 8.59 9.07 8.42 8.92 8.29C8.84 8.22 8.75 8.16 8.66 8.1C8.43 7.3 8.42 6.45 8.63 5.65C7.6 6.12 6.8 6.86 6.22 7.5H6.22C5.82 7 5.85 5.35 5.87 5C5.86 5 5.57 5.16 5.54 5.18C5.19 5.43 4.86 5.71 4.56 6C4.21 6.37 3.9 6.74 3.62 7.14C3 8.05 2.5 9.09 2.28 10.18C2.28 10.19 2.18 10.59 2.11 11.1L2.08 11.33C2.06 11.5 2.04 11.65 2 11.91L2 11.94L2 12.27L2 12.32C2 17.85 6.5 22.33 12 22.33C16.97 22.33 21.08 18.74 21.88 14C21.9 13.89 21.91 13.76 21.93 13.63C22.13 11.91 21.91 10.11 21.28 8.6Z" /></svg>
 </svg>
+<svg id="mdi:git">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-git" viewBox="0 0 24 24"><path d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" /></svg>
+</svg>
 <svg id="mdi:keyboard-return">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-keyboard-return" viewBox="0 0 24 24"><path d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" /></svg>
 </svg>
@@ -134,6 +155,10 @@
 </svg>
 <svg id="mdi:window-restore">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-window-restore" viewBox="0 0 24 24"><path d="M4,8H8V4H20V16H16V20H4V8M16,8V14H18V6H10V8H16M6,12V18H14V12H6Z" /></svg>
+</svg>
+<svg id="telegram">
+<svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="prefix__icon prefix__icon-tabler prefix__icons-tabler-outline prefix__icon-tabler-brand-telegram"><path d="M0 0h24v24H0z" stroke="none"/><path d="M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4"/></svg>
+
 </svg>
 </defs>/* end glyphs */
 <style>/* inherit to force styles through use tags */
@@ -494,7 +519,7 @@ path.combo {
 <g transform="translate(769, 272)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">LANG</text>
-<text x="0" y="24" class="key hold">^⇧</text>
+<use href="#control_shift" xlink:href="#control_shift" x="-14" y="10" height="14" width="28.0" class="key hold glyph control_shift"/>
 </g>
 <g transform="translate(830, 278) rotate(12.0)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -576,11 +601,11 @@ path.combo {
 </g>
 <g transform="translate(140, 119)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">⇧^⇥</text>
+<use href="#control_shift_tab" xlink:href="#control_shift_tab" x="-28" y="-11" height="22" width="55.0" class="key tap glyph control_shift_tab"/>
 </g>
 <g transform="translate(196, 98)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">^⇥</text>
+<use href="#control_tab" xlink:href="#control_tab" x="-22" y="-11" height="22" width="44.0" class="key tap glyph control_tab"/>
 </g>
 <g transform="translate(252, 84)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -755,9 +780,8 @@ path.combo {
 </g>
 <g transform="translate(924, 231)" class="key keypos-48">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Git</tspan><tspan x="0" dy="1.2em">prefix</tspan>
-</text>
+<use href="#mdi:git" xlink:href="#mdi:git" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:git"/>
+<text x="0" y="24" class="key hold">prefix</text>
 </g>
 <g transform="translate(980, 238)" class="key trans keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -1077,12 +1101,12 @@ path.combo {
 <g transform="translate(364, 49)" class="key keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:bluetooth-settings" xlink:href="#mdi:bluetooth-settings" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:bluetooth-settings"/>
-<use href="#mdi:eraser" xlink:href="#mdi:eraser" x="-7" y="-24" height="14" width="14.0" class="key shifted glyph mdi:eraser"/>
+<use href="#mdi:eraser" xlink:href="#mdi:eraser" x="-6" y="-24" height="12" width="12.0" class="key shifted glyph mdi:eraser"/>
 </g>
 <g transform="translate(700, 49)" class="key keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:bluetooth-settings" xlink:href="#mdi:bluetooth-settings" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:bluetooth-settings"/>
-<use href="#mdi:eraser" xlink:href="#mdi:eraser" x="-7" y="-24" height="14" width="14.0" class="key shifted glyph mdi:eraser"/>
+<use href="#mdi:eraser" xlink:href="#mdi:eraser" x="-6" y="-24" height="12" width="12.0" class="key shifted glyph mdi:eraser"/>
 </g>
 <g transform="translate(756, 42)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1271,8 +1295,8 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-1.2em">Select</tspan><tspan x="0" dy="1.2em">word</tspan>
-<tspan x="0" dy="1.2em">↤</tspan>
 </text>
+<use href="#mdi:arrow-expand-left" xlink:href="#mdi:arrow-expand-left" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-expand-left"/>
 </g>
 <g transform="translate(252, 196)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1285,8 +1309,8 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
 <tspan x="0" dy="-1.2em">Select</tspan><tspan x="0" dy="1.2em">word</tspan>
-<tspan x="0" dy="1.2em">↦</tspan>
 </text>
+<use href="#mdi:arrow-expand-right" xlink:href="#mdi:arrow-expand-right" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-expand-right"/>
 </g>
 <g transform="translate(364, 217)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1424,9 +1448,7 @@ path.combo {
 </g>
 <g transform="translate(364, 105)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Tele</tspan><tspan x="0" dy="1.2em">gram</tspan>
-</text>
+<use href="#telegram" xlink:href="#telegram" x="-11" y="-11" height="22" width="22.0" class="key tap glyph telegram"/>
 </g>
 <g transform="translate(700, 105)" class="key keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
