@@ -129,9 +129,9 @@ draw_config:
     }
     /* End Tabler Icons Cleanup */
   shrink_wide_legends: 7
-  glyph_tap_size: 24
-  glyph_hold_size: 16
-  glyph_shifted_size: 14
+  glyph_tap_size: 22
+  glyph_hold_size: 14
+  glyph_shifted_size: 12
   glyphs: {}
   glyph_urls:
     tabler: https://tabler-icons.io/static/tabler-icons/icons/{}.svg
