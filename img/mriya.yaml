@@ -71,7 +71,7 @@ layers:
   - F6
   - F8
   - {t: Go fwd, h: in vscode}
-  - {t: toggle terminal, h: focus tabs}
+  - {t: toggle terminal, h: focus tabs, s: VS Code}
   - PG UP
   - ⇧^⇥
   - ^⇥

@@ -160,9 +160,10 @@ parse_config:
     '&bootloader': "BOOT"
     '&sys_reset': "Reset"
     '&transform': "Trans\nform"
-    '&term':
+    'VSTERM':
       tap: "toggle terminal"
       hold: "focus tabs"
+      shifted: "VS Code"
     '&td_home':
       tap: "Home"
       hold: "⇱    ⭶"

@@ -82,4 +82,10 @@
 // hold: move Editor group into New window
 #define MV_AUX_WIN &ht_ck_ck LC(LA(LEFT_ARROW)) LC(LA(RIGHT_ARROW))
 
+// tap:  View: Terminal toggle
+// hold: Terminal: Focus Terminal Tabs View
+#define VSTERM &ht3 LC(LS(BSLH)) LC(GRAVE)
+
+// tap:  Mate terminal
+// hold: Double Commander terminal
 #define TERM &ht3 F9 LC(LA(T))
