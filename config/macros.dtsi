@@ -109,5 +109,14 @@
           <&macro_tap &kp EQUAL>;
       };
 
+      ent_exit_num: enter_and_exit_num_layer {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+          <&macro_tap &kp ENTER>,
+          <&macro_tap &tog(NUM)>;
+      };
+
+
   };
 };

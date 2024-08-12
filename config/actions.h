@@ -27,7 +27,7 @@
 #define MV_U &kp LG(UP)
 #define MV_D &kp LG(DOWN)
 
-#define NUM_COMP &mo_sl NUM COMP
+#define MSE_COMP &mo_sl MOUSE COMP
 #define LANG_CS  &ht_sk_kp LC(LSHIFT) RALT    // switch language or Ctrl+Shift layer
 #define W_CAPS   &ht_caps CAPS 0  // caps_word or CAPS LOCK
 #define HOVER    &ck_key LC(I)
