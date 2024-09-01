@@ -50,7 +50,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: Num, h: toggle}
+  - Num
   - {t: '$$mdi:keyboard-return$$', h: WinMgr}
   - {t: '$$mdi:backspace-outline$$', h: Nav}
   - {t: LCTRL, h: sticky}
@@ -339,7 +339,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - +
   - .
   - '='
   - '*'
@@ -351,10 +351,10 @@ layers:
   - ''
   - ''
   - ''
+  - {type: held}
   - {t: ▽, type: trans}
-  - Enter & exit
   - {t: ▽, type: trans}
-  - +
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
@@ -410,7 +410,7 @@ layers:
   - …
   - ÷
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - ''
   - ''
   - ''
