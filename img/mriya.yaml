@@ -130,7 +130,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - ''
+  - 'Trans
+
+    form'
   - {t: '`', s: ru}
   - {t: '`', s: '~'}
   - {t: <, h: ru <}
@@ -189,9 +191,7 @@ layers:
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
-  - 'Trans
-
-    form'
+  - {t: occurrences change, h: select, s: all}
   - Outdent line
   - Indent line
   - 'Shrink selec

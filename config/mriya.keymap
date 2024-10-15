@@ -176,22 +176,22 @@
       sym_layer {
         display-name = "Sym";
         bindings = <
-                &ru GRAVE   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans       &trans    &none
-          &none &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3    SHEBANG  &kp RGUI
-                AT_RU       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  CARET_RU         DLLR_RU    LBRC_RU   &kp PLUS   RBRC_RU      &kp BSLH  &kp DOUBLE_QUOTES
-                &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   &none            DBL_COLON  &kp STAR  &kp COMMA  &key_repeat  FSLH_RU   &trans
-                            &none      &trans    &trans     &trans                     &trans     &trans    &none      &none
+                      &ru GRAVE   &trans     &trans    &trans     &trans    &trans           &trans     &trans    &trans     &trans       &trans    &none
+          &transform  &ru2 GRAVE  &kp GRAVE  LT_RU     NEQ_EXCL   GT_RU     &kp EXCL         &kp PRCNT  LBKT_RU   HASH_RU    RBKT_RU      &ru N3    SHEBANG  &kp RGUI
+                      AT_RU       &kp UNDER  &kp LPAR  &kp MINUS  &kp RPAR  CARET_RU         DLLR_RU    LBRC_RU   &kp PLUS   RBRC_RU      &kp BSLH  &kp DOUBLE_QUOTES
+                      &trans      &kp SPACE  PIPE_RU   NEQ_TILDE  AMPS_RU   &none            DBL_COLON  &kp STAR  &kp COMMA  &key_repeat  FSLH_RU   &trans
+                                  &none      &trans    &trans     &trans                     &trans     &trans    &none      &none
         >;
       };
 
       adjust_layer {
         display-name = "Adjust";
         bindings = <
-                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR           &bt BT_CLR        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0
-          &transform  &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none         &none
-                      &ck_ckey B    &kp LS(HOME)  ACTION_LEFT      ACTION_DOWN   ACTION_RIGHT      &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
-                      &ck_ckey K    &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LC(DOWN))     &kp LS(LA(DOWN))  PREV_ED       &kp LA(BSLH)  NEXT_ED       &kp C_VOL_DN   &kp C_BRI_DN
-                                                  &bootloader      &none         &trans            &none                &none             &trans        &none         &bootloader
+                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR           &bt BT_CLR        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0
+          SEL_ALL   &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none         &none
+                    &ck_ckey B    &kp LS(HOME)  ACTION_LEFT      ACTION_DOWN   ACTION_RIGHT      &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
+                    &ck_ckey K    &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LC(DOWN))     &kp LS(LA(DOWN))  PREV_ED       &kp LA(BSLH)  NEXT_ED       &kp C_VOL_DN   &kp C_BRI_DN
+                                                &bootloader      &none         &trans            &none                &none             &trans        &none         &bootloader
         >;
       };
 

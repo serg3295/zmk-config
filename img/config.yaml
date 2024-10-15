@@ -287,6 +287,11 @@ parse_config:
     "&kp LS(LA(RIGHT))": "Expand selec\ntion"
     "&kp LS(LA(LEFT))": "Shrink selec\ntion"
     "&kp LS(LA(I))": "Add cursors toLineEnd"
+    "SEL_ALL":
+      shifted: "all"
+      tap: "occurrences change"
+      hold: "select"
+
     "&kp LA(LEFT)": "Go back"
     "&kp LA(RIGHT)": "Go forward"
     "&kp LC(LA(RBKT))":
