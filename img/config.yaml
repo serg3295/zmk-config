@@ -159,8 +159,12 @@ parse_config:
     '&ck_key LC(RIGHT)': "^K ^🠞"
     '&ck_key LC(UP)': "^K ^🠝"
     '&ck_key LC(DOWN)': "^K ^🠟"
-    '&ck_key LEFT': "^K 🠜"
-    '&ck_key RIGHT': "^K 🠞"
+    '&ck_key LEFT':
+      shifted: "Move"
+      tap: "Editor 🠜Group"
+    '&ck_key RIGHT':
+      shifted: "Move"
+      tap: "Editor 🠞Group"
     '&ck_key UP': "^K 🠝"
     '&ck_key DOWN': "^K 🠟"
     '&ck_ckey B': "Set Selection Anchor"
@@ -287,6 +291,7 @@ parse_config:
     "&kp LS(LA(RIGHT))": "Expand selec\ntion"
     "&kp LS(LA(LEFT))": "Shrink selec\ntion"
     "&kp LS(LA(I))": "Add cursors toLineEnd"
+    "&kp LS(LA(M))": "to bracket"
     "SEL_ALL":
       shifted: "all"
       tap: "occurrences change"

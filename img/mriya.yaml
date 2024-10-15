@@ -197,23 +197,23 @@ layers:
   - 'Shrink selec
 
     tion'
-  - {t: Select 🠝, h: ^K 🠝}
+  - Select 🠝
   - 'Expand selec
 
     tion'
   - Select 🠝para graph
   - ''
+  - {t: Editor 🠜Group, s: Move}
   - ''
-  - ''
-  - ''
+  - {t: Editor 🠞Group, s: Move}
   - $$mdi:volume-mute$$
   - ''
   - ''
   - Set Selection Anchor
   - Select home
-  - {t: Select 🠜, h: ^K 🠜}
-  - {t: Select 🠟, h: ^K 🠟}
-  - {t: Select 🠞, h: ^K 🠞}
+  - Select 🠜
+  - Select 🠟
+  - {t: Select 🠞, h: to bracket}
   - Select end
   - Add cursor 🠝
   - {t: Move Editor 🠜, h: into group}

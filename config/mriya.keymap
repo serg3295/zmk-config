@@ -188,8 +188,8 @@
         display-name = "Adjust";
         bindings = <
                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR           &bt BT_CLR        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1   &bt BT_SEL 0
-          SEL_ALL   &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) ACTION_UP     &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &none         &none         &none         &kp C_MUTE     &none         &none
-                    &ck_ckey B    &kp LS(HOME)  ACTION_LEFT      ACTION_DOWN   ACTION_RIGHT      &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
+          SEL_ALL   &kp LC(LBKT)  &kp LC(RBKT)  &kp LS(LA(LEFT)) &kp LS(UP)    &kp LS(LA(RIGHT)) &kp LS(LC(UP))       &none             &ck_key LEFT  &none         &ck_key RIGHT &kp C_MUTE     &none         &none
+                    &ck_ckey B    &kp LS(HOME)  &kp LS(LEFT)     &kp LS(DOWN)  SELECT_BRKT       &kp LS(END)          &kp LS(LA(UP))    MOVE_ED_L     &kp LC(BSLH)  MOVE_ED_R     &kp C_VOL_UP   &kp C_BRI_UP
                     &ck_ckey K    &kp LC(U)     &kp LS(LC(LEFT)) &kp LS(LA(I)) &kp LS(LC(RIGHT)) &kp LS(LC(DOWN))     &kp LS(LA(DOWN))  PREV_ED       &kp LA(BSLH)  NEXT_ED       &kp C_VOL_DN   &kp C_BRI_DN
                                                 &bootloader      &none         &trans            &none                &none             &trans        &none         &bootloader
         >;

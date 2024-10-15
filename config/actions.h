@@ -81,12 +81,9 @@
 #define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))
 #define MOVE_ED_R &ht3 LC(LA(RIGHT)) LC(LS(PG_DN))
 
-// tap: select left/right/up/down
-// hold: move active editor group left/right/up/down
-#define ACTION_UP    &ht_ckk UP LS(UP)
-#define ACTION_DOWN  &ht_ckk DOWN LS(DOWN)
-#define ACTION_LEFT  &ht_ckk LEFT LS(LEFT)
-#define ACTION_RIGHT &ht_ckk RIGHT LS(RIGHT)
+// tap: select right
+// hold: select to bracket
+#define SELECT_BRKT &ht3 LS(LA(M)) LS(RIGHT)
 
 // tap:  move Editor into New window
 // hold: move Editor group into New window
