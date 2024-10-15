@@ -233,7 +233,6 @@ parse_config:
       tap: $$mdi:content-paste$$
     "&ent_exit_num": "Enter & exit"
 
-    # modifiers
     "&kp LG(SPACE)":
       shifted: "Next"
       tap: "Work space"
@@ -244,6 +243,10 @@ parse_config:
     "&kp LC(RBKT)": "Indent line"
     "&kp LS(LALT)": "⇧Alt"
     "&kp LC(LSHIFT)": $$control_shift$$
+    "&ck_ckey M":
+      shifted: "Toggle"
+      tap: "Maximize editor"
+      hold: "group"
     "&kp LC(LS(PG_UP))": "Move Editor 🠜"
     "&kp LC(LS(PG_DN))": "Move Editor 🠞"
     "&kp LC(LA(LEFT))": "into group"

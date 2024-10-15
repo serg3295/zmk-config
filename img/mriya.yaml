@@ -204,7 +204,7 @@ layers:
   - Select 🠝para graph
   - ''
   - {t: Editor 🠜Group, s: Move}
-  - ''
+  - {t: Maximize editor, h: group, s: Toggle}
   - {t: Editor 🠞Group, s: Move}
   - $$mdi:volume-mute$$
   - ''
