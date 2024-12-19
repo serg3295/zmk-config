@@ -328,6 +328,20 @@ parse_config:
     "&mkp RCLK": $$mdi:mouse-right-click-outline$$
     "&mkp LCLK": $$mdi:mouse-left-click-outline$$
     "&mkp MCLK": $$mdi:mouse-scroll-wheel$$
+    "&msc SCRL_UP": $$mdi:mouse-move-up$$
+    "&msc SCRL_DOWN": $$mdi:mouse-move-down$$
+    "&mmv MOVE_UP":
+      tap: $$mdi:mouse-outline$$
+      hold: $$mdi:arrow-up$$
+    "&mmv MOVE_DOWN":
+      tap: $$mdi:mouse-outline$$
+      hold: $$mdi:arrow-down$$
+    "&mmv MOVE_LEFT":
+      tap: $$mdi:mouse-outline$$
+      hold: $$mdi:arrow-left$$
+    "&mmv MOVE_RIGHT":
+      tap: $$mdi:mouse-outline$$
+      hold: $$mdi:arrow-right$$
 
     # Win layer
     "&kp LG(S)": "Keepass"

@@ -435,6 +435,21 @@ layers:
   - ''
   - ''
   - ''
+  - {t: '$$mdi:mouse-outline$$', h: '$$mdi:arrow-up$$'}
+  - $$mdi:mouse-move-up$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:mouse-outline$$', h: '$$mdi:arrow-left$$'}
+  - {t: '$$mdi:mouse-outline$$', h: '$$mdi:arrow-down$$'}
+  - {t: '$$mdi:mouse-outline$$', h: '$$mdi:arrow-right$$'}
   - ''
   - ''
   - ''
@@ -446,22 +461,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - $$mdi:mouse-move-down$$
   - ''
   - ''
   - ''
@@ -471,8 +471,8 @@ layers:
   - ''
   - ''
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
+  - $$mdi:mouse-right-click-outline$$
   - ''
   - ''
   - ''

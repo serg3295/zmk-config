@@ -120,6 +120,15 @@
 <svg id="mdi:mouse-left-click-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-left-click-outline" viewBox="0 0 24 24"><path d="M13 9V1.07C13.7 1.16 14.37 1.33 15 1.59C17.33 2.53 19.11 4.53 19.75 7C19.91 7.64 20 8.31 20 9H13M17.66 7C17.18 5.65 16.23 4.5 15 3.81V7H17.66M6 15V13H18V15C18 16.59 17.37 18.12 16.24 19.24C15.12 20.37 13.59 21 12 21C10.41 21 8.88 20.37 7.76 19.24C6.63 18.12 6 16.59 6 15M4 15C4 17.12 4.84 19.16 6.34 20.66C7.84 22.16 9.88 23 12 23C14.12 23 16.16 22.16 17.66 20.66C19.16 19.16 20 17.12 20 15V11H4V15M11 9V1.07C7.06 1.56 4 4.92 4 9H11Z" /></svg>
 </svg>
+<svg id="mdi:mouse-move-down">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-move-down" viewBox="0 0 24 24"><path d="M7 9H2C2 6.04 4.17 3.57 7 3.09V9M20 7H18V13H15L19 17L23 13H20V7M9 3.09V9H14C14 6.04 11.83 3.57 9 3.09M2 15C2 18.3 4.7 21 8 21S14 18.3 14 15V11H2V15Z" /></svg>
+</svg>
+<svg id="mdi:mouse-move-up">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-move-up" viewBox="0 0 24 24"><path d="M7 9H2C2 6.04 4.17 3.57 7 3.09V9M18 17H20V11H23L19 7L15 11H18V17M9 3.09V9H14C14 6.04 11.83 3.57 9 3.09M2 15C2 18.3 4.7 21 8 21S14 18.3 14 15V11H2V15Z" /></svg>
+</svg>
+<svg id="mdi:mouse-outline">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-outline" viewBox="0 0 24 24"><path d="M13 9V1.07C13.7 1.16 14.37 1.33 15 1.59C17.33 2.53 19.11 4.53 19.75 7C19.91 7.64 20 8.31 20 9H13M17.66 7C17.18 5.65 16.23 4.5 15 3.81V7H17.66M11 9V1.07C10.3 1.16 9.63 1.33 9 1.59C6.67 2.53 4.89 4.53 4.25 7C4.09 7.64 4 8.31 4 9H11M6.34 7C6.82 5.65 7.78 4.5 9 3.81V7H6.34M6 15V13H18V15C18 16.59 17.37 18.12 16.24 19.24C15.12 20.37 13.59 21 12 21C10.41 21 8.88 20.37 7.76 19.24C6.63 18.12 6 16.59 6 15M4 15C4 17.12 4.84 19.16 6.34 20.66C7.84 22.16 9.88 23 12 23C14.12 23 16.16 22.16 17.66 20.66C19.16 19.16 20 17.12 20 15V11H4V15Z" /></svg>
+</svg>
 <svg id="mdi:mouse-right-click-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-right-click-outline" viewBox="0 0 24 24"><path d="M13 9V1.07C16.94 1.56 20 4.92 20 9H13M11 9V1.07C10.3 1.16 9.63 1.33 9 1.59C6.67 2.53 4.89 4.53 4.25 7C4.09 7.64 4 8.31 4 9H11M6.34 7C6.82 5.65 7.78 4.5 9 3.81V7H6.34M6 15V13H18V15C18 16.59 17.37 18.12 16.24 19.24C15.12 20.37 13.59 21 12 21C10.41 21 8.88 20.37 7.76 19.24C6.63 18.12 6 16.59 6 15M4 15C4 17.12 4.84 19.16 6.34 20.66C7.84 22.16 9.88 23 12 23C14.12 23 16.16 22.16 17.66 20.66C19.16 19.16 20 17.12 20 15V11H4V15Z" /></svg>
 </svg>
@@ -2112,9 +2121,12 @@ path.combo {
 </g>
 <g transform="translate(252, 84)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:mouse-outline" xlink:href="#mdi:mouse-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-outline"/>
+<use href="#mdi:arrow-up" xlink:href="#mdi:arrow-up" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-up"/>
 </g>
 <g transform="translate(308, 98)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:mouse-move-up" xlink:href="#mdi:mouse-move-up" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-move-up"/>
 </g>
 <g transform="translate(364, 105)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -2148,12 +2160,18 @@ path.combo {
 </g>
 <g transform="translate(196, 154)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:mouse-outline" xlink:href="#mdi:mouse-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-outline"/>
+<use href="#mdi:arrow-left" xlink:href="#mdi:arrow-left" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-left"/>
 </g>
 <g transform="translate(252, 140)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:mouse-outline" xlink:href="#mdi:mouse-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-outline"/>
+<use href="#mdi:arrow-down" xlink:href="#mdi:arrow-down" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-down"/>
 </g>
 <g transform="translate(308, 154)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:mouse-outline" xlink:href="#mdi:mouse-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-outline"/>
+<use href="#mdi:arrow-right" xlink:href="#mdi:arrow-right" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-right"/>
 </g>
 <g transform="translate(364, 161)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -2190,6 +2208,7 @@ path.combo {
 </g>
 <g transform="translate(308, 210)" class="key keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:mouse-move-down" xlink:href="#mdi:mouse-move-down" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-move-down"/>
 </g>
 <g transform="translate(364, 217)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -2221,11 +2240,11 @@ path.combo {
 </g>
 <g transform="translate(356, 279) rotate(15.0)" class="key keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:mouse-right-click-outline" xlink:href="#mdi:mouse-right-click-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-right-click-outline"/>
+<use href="#mdi:mouse-scroll-wheel" xlink:href="#mdi:mouse-scroll-wheel" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-scroll-wheel"/>
 </g>
 <g transform="translate(413, 303) rotate(30.0)" class="key keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:mouse-scroll-wheel" xlink:href="#mdi:mouse-scroll-wheel" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-scroll-wheel"/>
+<use href="#mdi:mouse-right-click-outline" xlink:href="#mdi:mouse-right-click-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:mouse-right-click-outline"/>
 </g>
 <g transform="translate(651, 303) rotate(-30.0)" class="key keypos-54">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
