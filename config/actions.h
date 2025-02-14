@@ -93,6 +93,6 @@
 // hold: Terminal: Focus Terminal Tabs View
 #define VSTERM &ht3 LC(LS(BSLH)) LC(GRAVE)
 
-// tap:  Mate terminal
+// tap:  external.linuxExec terminal
 // hold: Double Commander terminal
-#define TERM &ht3 F9 LC(LA(T))
+#define TERM &ht3 F9 LG(B)
