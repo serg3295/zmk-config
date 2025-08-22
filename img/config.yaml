@@ -231,7 +231,7 @@ parse_config:
       tap: $$mdi:content-copy$$
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
-    "&ent_exit_num": "Enter & exit"
+    "TOG_NUM": "Toggle NUM layer"
 
     "&kp LG(SPACE)":
       shifted: "Next"
@@ -436,6 +436,8 @@ parse_config:
       shifted: "Menu"
       tap: $$mdi:menu-open$$
       hold: "window"
+    "&kp LA(LC(DEL))":
+      tap: ALT+ CTRL+ DEL
 
     # Symbols
     "LT_RU":
@@ -610,12 +612,12 @@ parse_config:
     "KP_N0": "0"
 
     # Keypad Symbols / Operations
-    "KP_EQUAL": "="
+    "KP_NLCK": "Num Lock"
     "KP_COMMA": ","
-    "KP_DOT": "."
+    "KP_DOT": "Num ."
     "KP_PLUS": "+"
     "KP_DIVIDE": "/"
-    "KP_ASTERISK": "*"
+    "KP_MULTIPLY": "*"
     "KP_ENTER": "Num Enter"
     "KP_MINUS": "-"
 

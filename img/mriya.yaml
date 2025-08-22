@@ -51,7 +51,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - Num
+  - Toggle NUM layer
   - {t: '$$mdi:keyboard-return$$', h: WinMgr}
   - {t: '$$mdi:backspace-outline$$', h: Nav}
   - {t: LCTRL, h: sticky}
@@ -300,10 +300,14 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - ALT+ CTRL+ DEL
   Num:
   - ''
   - ''
+  - Num Lock
+  - /
+  - '*'
+  - '-'
   - ''
   - ''
   - ''
@@ -311,16 +315,12 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - Ctl+LALT
-  - $$mdi:keyboard-tab$$
-  - +
+  - {t: ▽, type: trans}
+  - INS
   - '7'
   - '8'
   - '9'
-  - '='
+  - +
   - ''
   - ''
   - ''
@@ -328,37 +328,37 @@ layers:
   - ''
   - ''
   - ''
-  - /
-  - '-'
+  - {t: ▽, type: trans}
+  - '0'
   - '4'
   - '5'
   - '6'
-  - '*'
+  - Num Enter
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - .
+  - {t: ▽, type: trans}
+  - Num .
   - '1'
   - '2'
   - '3'
   - $$mdi:backspace-reverse-outline$$
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   Compose:
   - ''

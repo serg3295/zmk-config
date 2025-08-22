@@ -148,6 +148,29 @@
         tapping-term-ms = <300>;
         bindings = <&ht_ckk F12 F12>, <&kp LA(F12)>;
       };
+
+      // toggle layer
+       tog_on: toggle_layer_on_only {
+          compatible = "zmk,behavior-toggle-layer";
+          #binding-cells = <1>;
+          display-name = "Toggle Layer On";
+          toggle-mode = "on";
+      };
+
+      tog_off: toggle_layer_off_only {
+          compatible = "zmk,behavior-toggle-layer";
+          #binding-cells = <1>;
+          display-name = "Toggle Layer Off";
+          toggle-mode = "off";
+      };
+
+      tog_l: toggle_layer_specifically {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <300>;
+        bindings = <&tog_on>, <&tog_off>;
+      };
     };
 
     keymap {
@@ -155,11 +178,11 @@
       default_layer {
         display-name = "Base";
         bindings = <
-                  &kp GRAVE   &kp N7  &kp N5    &kp N3       &kp N1        &kp N9          &kp N0        &kp N2         &kp N4     &kp N6   &kp N8         &kp MINUS
-          W_CAPS  &kp TAB     &kp Q   &kp W     &kp E        &kp R         &kp T           &kp Y         &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                  &kp ESC     &kp A   &kp S     &kp D        &kp F         &kp G           &kp H         &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
-                  &kp LSHIFT  &kp Z   &kp X     &kp C        &kp V         &kp B           &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
-                                      &mo NUM   &lt WIN RET  &lt NAV BSPC  &sk LCTRL       &mt LALT DEL  &lt SYM SPACE  LANG_CS    MSE_COMP
+                  &kp GRAVE   &kp N7  &kp N5   &kp N3       &kp N1        &kp N9          &kp N0        &kp N2         &kp N4     &kp N6   &kp N8         &kp MINUS
+          W_CAPS  &kp TAB     &kp Q   &kp W    &kp E        &kp R         &kp T           &kp Y         &kp U          &kp I      &kp O    &kp P          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                  &kp ESC     &kp A   &kp S    &kp D        &kp F         &kp G           &kp H         &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+                  &kp LSHIFT  &kp Z   &kp X    &kp C        &kp V         &kp B           &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH       &kp RSHIFT
+                                      TOG_NUM  &lt WIN RET  &lt NAV BSPC  &sk LCTRL       &mt LALT DEL  &lt SYM SPACE  LANG_CS    MSE_COMP
         >;
       };
 
@@ -199,22 +222,22 @@
       win_layer {
         display-name = "WinMgr";
         bindings = <
-                    &none  &none      &none     &none      &none      &none           &none  &none  &none  &none  &none       &none
-          &kp PSCRN &none  &kp LG(Q)  &none     &none      &kp LA(F2) &kp LG(T)       WS_1   N_W    MV_U   N_E    &kp LA(F7)  &kp LA(F8)  MV_AUX_WIN
-                    &none  &kp LA(F1) &kp LG(S) &kp LG(D)  &kp LG(F)  &kp LGUI        WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
-                    &none  &kp LA(F4) &none     &kp LG(C)  &kp LG(V)  TERM            WS_2   S_W    HIDE   S_E    &kp LA(F5)  &kp LA(SPACE)
-                                      &none     &trans     &none      &none           &none  &none  &none  &none
+                    &none  &none       &none      &none      &none       &none           &none  &none  &none  &none  &none       &none
+          &kp PSCRN &none  &kp LG(Q)   &none      &none      &kp LA(F2)  &kp LG(T)       WS_1   N_W    MV_U   N_E    &kp LA(F7)  &kp LA(F8)  MV_AUX_WIN
+                    &none  &kp LA(F1)  &kp LG(S)  &kp LG(D)  &kp LG(F)   &kp LGUI        WEST   MV_L   MV_D   MV_R   EAST        &kp LA(F10)
+                    &none  &kp LA(F4)  &none      &kp LG(C)  &kp LG(V)   TERM            WS_2   S_W    HIDE   S_E    &kp LA(F5)  &kp LA(SPACE)
+                                       &none      &trans     &none       &none           &none  &none  &none  &kp LA(LC(DEL))
         >;
       };
 
       num_layer {
         display-name = "Num";
         bindings = <
-                        &none         &none       &none      &none      &none       &none              &none  &none  &none  &none  &none  &none
-          &kp LC(LALT)  &kp TAB       &kp KP_PLUS &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_EQUAL       &none  &none  &none  &none  &none  &none  &none
-                        &kp KP_DIVIDE &kp MINUS   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_ASTERISK    &none  &none  &none  &none  &none  &none
-                        &none         &kp KP_DOT  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp DEL            &none  &none  &none  &none  &none  &none
-                                      &trans      &trans     &trans     &trans                         &none  &none  &none  &none
+                &none   &none       &kp KP_NLCK  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS     &none  &none  &none   &none   &none   &none
+          &none &trans  &kp INS     &kp KP_N7    &kp KP_N8      &kp KP_N9        &kp KP_PLUS      &none  &none  &none   &none   &none   &none  &none
+                &trans  &kp KP_N0   &kp KP_N4    &kp KP_N5      &kp KP_N6        &kp KP_ENTER     &none  &none  &none   &none   &none   &none
+                &trans  &kp KP_DOT  &kp KP_N1    &kp KP_N2      &kp KP_N3        &kp DEL          &none  &none  &trans  &trans  &none   &trans
+                                    &trans       &trans         &trans           &trans                         &trans  &trans  &trans  &none
         >;
       };
 

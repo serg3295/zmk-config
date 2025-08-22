@@ -96,3 +96,7 @@
 // tap:  external.linuxExec terminal
 // hold: Double Commander terminal
 #define TERM &ht3 F9 LG(B)
+
+// tap:  toggle layer off specifically
+// hold: toggle layer on specifically
+#define TOG_NUM &tog_l NUM NUM
