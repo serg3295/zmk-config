@@ -336,7 +336,7 @@ path.combo {
 <g transform="translate(28, 168)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">caps</tspan><tspan x="0" dy="1.2em">word</tspan>
+<tspan x="0" dy="-0.9em">caps</tspan><tspan x="0" dy="1.2em">word</tspan>
 </text>
 <text x="0" y="24" class="key hold">CAPS</text>
 </g>
@@ -549,7 +549,7 @@ path.combo {
 <g transform="translate(84, 70)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Go</tspan><tspan x="0" dy="1.2em">back</tspan>
+<tspan x="0" dy="-0.9em">Go</tspan><tspan x="0" dy="1.2em">back</tspan>
 </text>
 <text x="0" y="24" class="key hold"><tspan style="font-size: 78%">in vscode</tspan></text>
 </g>
@@ -597,7 +597,7 @@ path.combo {
 <g transform="translate(980, 70)" class="key keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Go</tspan><tspan x="0" dy="1.2em">fwd</tspan>
+<tspan x="0" dy="-0.9em">Go</tspan><tspan x="0" dy="1.2em">fwd</tspan>
 </text>
 <text x="0" y="24" class="key hold"><tspan style="font-size: 78%">in vscode</tspan></text>
 </g>
@@ -1198,7 +1198,7 @@ path.combo {
 <g transform="translate(756, 98)" class="key keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.0em">Editor</tspan><tspan x="0" dy="1.2em">🠜Group</tspan>
+<tspan x="0" dy="-0.3em">Editor</tspan><tspan x="0" dy="1.2em">🠜Group</tspan>
 </text>
 <text x="0" y="-24" class="key shifted">Move</text>
 </g>
@@ -1213,7 +1213,7 @@ path.combo {
 <g transform="translate(868, 98)" class="key keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.0em">Editor</tspan><tspan x="0" dy="1.2em">🠞Group</tspan>
+<tspan x="0" dy="-0.3em">Editor</tspan><tspan x="0" dy="1.2em">🠞Group</tspan>
 </text>
 <text x="0" y="-24" class="key shifted">Move</text>
 </g>
@@ -1254,7 +1254,7 @@ path.combo {
 <g transform="translate(308, 154)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Select</tspan><tspan x="0" dy="1.2em">🠞</tspan>
+<tspan x="0" dy="-0.9em">Select</tspan><tspan x="0" dy="1.2em">🠞</tspan>
 </text>
 <text x="0" y="24" class="key hold"><tspan style="font-size: 70%">to bracket</tspan></text>
 </g>
@@ -1313,7 +1313,7 @@ path.combo {
 <g transform="translate(196, 210)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Select</tspan><tspan x="0" dy="1.2em">word</tspan>
+<tspan x="0" dy="-0.9em">Select</tspan><tspan x="0" dy="1.2em">word</tspan>
 </text>
 <use href="#mdi:arrow-expand-left" xlink:href="#mdi:arrow-expand-left" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-expand-left"/>
 </g>
@@ -1326,7 +1326,7 @@ path.combo {
 <g transform="translate(308, 210)" class="key keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Select</tspan><tspan x="0" dy="1.2em">word</tspan>
+<tspan x="0" dy="-0.9em">Select</tspan><tspan x="0" dy="1.2em">word</tspan>
 </text>
 <use href="#mdi:arrow-expand-right" xlink:href="#mdi:arrow-expand-right" x="-7" y="10" height="14" width="14.0" class="key hold glyph mdi:arrow-expand-right"/>
 </g>
@@ -1345,7 +1345,7 @@ path.combo {
 <g transform="translate(756, 210)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Prev</tspan><tspan x="0" dy="1.2em">Editor</tspan>
+<tspan x="0" dy="-0.9em">Prev</tspan><tspan x="0" dy="1.2em">Editor</tspan>
 </text>
 <text x="0" y="24" class="key hold"><tspan style="font-size: 78%">out group</tspan></text>
 </g>
@@ -1358,7 +1358,7 @@ path.combo {
 <g transform="translate(868, 210)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">Next</tspan><tspan x="0" dy="1.2em">Editor</tspan>
+<tspan x="0" dy="-0.9em">Next</tspan><tspan x="0" dy="1.2em">Editor</tspan>
 </text>
 <text x="0" y="24" class="key hold"><tspan style="font-size: 78%">out group</tspan></text>
 </g>
