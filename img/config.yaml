@@ -252,7 +252,7 @@ parse_config:
     "&kp LC(LA(LEFT))": "into group"
     "&kp LC(LA(RIGHT))": "into group"
     "&kp LC(BSLH)": "Split right"
-    "&kp LA(BSLH)": # Split down
+    "SPLIT_ED_DOWN":
       tap: $$mdi:view-agenda-outline$$
       shifted: "Split"
       hold: "down"

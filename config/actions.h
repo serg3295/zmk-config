@@ -76,6 +76,9 @@
 // hold: select all occurrences of Find Match/All Matches
 #define SEL_ALL &ht3 LC(LS(L)) LC(F2)
 
+// split editor down
+#define SPLIT_ED_DOWN &ck_ckey BACKSLASH
+
 // tap: move active editor left/right
 // hold: move editor into next/previous group
 #define MOVE_ED_L &ht3 LC(LA(LEFT)) LC(LS(PG_UP))
