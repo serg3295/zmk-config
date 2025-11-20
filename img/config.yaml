@@ -232,6 +232,10 @@ parse_config:
     "&kp LS(INS)":
       tap: $$mdi:content-paste$$
     "TOG_NUM": "Toggle NUM layer"
+    "ENT_EXIT_NUM":
+      shifted: "Enter"
+      tap: "&exit NUM"
+      hold: "layer"
 
     "&kp LG(SPACE)":
       shifted: "Next"

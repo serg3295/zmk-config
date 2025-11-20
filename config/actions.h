@@ -103,3 +103,6 @@
 // tap:  toggle layer off specifically
 // hold: toggle layer on specifically
 #define TOG_NUM &tog_l NUM NUM
+
+// press enter and exit num layer
+#define ENT_EXIT_NUM &ent_exit_num
