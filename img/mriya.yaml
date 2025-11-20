@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: mriya}
 layers:
   Base:
   - {t: '`', s: '~'}
@@ -352,7 +353,7 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '&exit NUM', h: layer, s: Enter}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
